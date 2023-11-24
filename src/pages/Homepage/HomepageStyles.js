@@ -4,25 +4,23 @@ import { devices } from "../../theme/breakpoints";
 export const HomepageStyles = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 100px;
   position: relative;
 
   @media ${devices.bigLaptopsAndDesktops} {
-    gap: 20px;
+    gap: 100px;
   }
 
   @media ${devices.tabletsAndIpads} {
-    gap: 15px;
+    gap: 60px;
   }
 
   @media ${devices.smallTabs} {
-    gap: 10px;
+    gap: 40px;
   }
   @media ${devices.smallMobiles} {
-    gap: 3px;
+    gap: 40px;
   }
-
-  /* navbar */
 
   .homepage_header_image {
     position: absolute;
@@ -88,6 +86,7 @@ export const HomepageStyles = styled.section`
 
     @media ${devices.bigLaptopsAndDesktops} {
       width: 90%;
+      margin-top: 420px;
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -97,9 +96,12 @@ export const HomepageStyles = styled.section`
     }
 
     @media ${devices.smallTabs} {
-      width: 98%;
-      margin-top: 200px;
-      padding: 5px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 150px;
+      padding: 0;
     }
 
     @media ${devices.smallMobiles} {
@@ -109,7 +111,6 @@ export const HomepageStyles = styled.section`
       gap: 15px;
       margin-top: 130px;
       padding: 0;
-      margin-bottom: 0;
     }
   }
 
@@ -236,7 +237,6 @@ export const HomepageStyles = styled.section`
 
     @media ${devices.tabletsAndIpads} {
       height: 40px;
-
       font-size: ${({ theme }) =>
         theme.tabletAndIpadScreens.searchinputfontsize};
     }
@@ -347,6 +347,7 @@ export const HomepageStyles = styled.section`
     row-gap: 50px;
     margin-top: 40px;
     cursor: pointer;
+    justify-content: center;
 
     @media ${devices.bigLaptopsAndDesktops} {
       grid-template-columns: 280px 280px 280px;
@@ -359,13 +360,13 @@ export const HomepageStyles = styled.section`
     }
 
     @media ${devices.smallTabs} {
-      grid-template-columns: 520px;
+      grid-template-columns: 320px;
       column-gap: 20px;
       row-gap: 40px;
     }
 
     @media ${devices.smallMobiles} {
-      grid-template-columns: 320px;
+      grid-template-columns: 300px;
       column-gap: 20px;
       row-gap: 40px;
     }
@@ -383,7 +384,8 @@ export const HomepageStyles = styled.section`
     transition: all 0.6s;
   }
 
-  h1 {
+  .house_cardtexttitle {
+    text-align: center;
     font-size: ${({ theme }) => theme.bigScreens.homepageTitle};
 
     @media ${devices.tabletsAndIpads} {

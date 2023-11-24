@@ -135,6 +135,8 @@ export const NavbarStyles = styled.div`
 `;
 
 export const MobileNavStyle = styled.div`
+    display: none;
+
   @media ${devices.bigLaptopsAndDesktops} {
     display: none;
   }
@@ -164,6 +166,7 @@ export const MobileNavStyle = styled.div`
     width: 100%;
     object-fit: contain;
     display: none; */
+
 
     @media ${devices.bigLaptopsAndDesktops} {
       display: none;

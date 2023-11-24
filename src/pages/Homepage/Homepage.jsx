@@ -241,7 +241,7 @@ const Homepage = () => {
 
       <div>
         <div>
-          <h1>Rechercher par type d'hébergement</h1>
+          <h1 className="house_cardtexttitle">Rechercher par type d'hébergement</h1>
         </div>
         <div className="house_cardbox">
           <div className="house_card">

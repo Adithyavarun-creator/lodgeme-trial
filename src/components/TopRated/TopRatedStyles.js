@@ -7,6 +7,20 @@ export const TopRatedStyles = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media ${devices.bigLaptopsAndDesktops} {
+  }
+
+  @media ${devices.tabletsAndIpads} {
+  }
+
+  @media ${devices.smallTabs} {
+    margin-top: 30px;
+  }
+
+  @media ${devices.smallMobiles} {
+
+  }
+
   .toprated_house_cardbox {
     display: grid;
     grid-template-columns: 280px 280px 280px 280px;
