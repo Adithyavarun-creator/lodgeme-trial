@@ -52,6 +52,7 @@ export const NavbarStyles = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    cursor: pointer;
 
     @media ${devices.bigLaptopsAndDesktops} {
     }

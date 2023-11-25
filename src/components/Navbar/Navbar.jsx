@@ -16,13 +16,19 @@ const Navbar = () => {
         </Link>
         <div className="navbuttons">
           <div>
-            <button className="navbutton">AJOUTER VOTRE LOGEMENT</button>
+            <Link to="/add-user-houses" className="navbutton linkStyle">
+              AJOUTER VOTRE LOGEMENT
+            </Link>
           </div>
           <div>
-            <button className="navbutton">S’INSCRIRE</button>
+            <Link to="/register-user-in" className="navbutton linkStyle">
+              S’INSCRIRE
+            </Link>
           </div>
           <div>
-            <button className="navbutton">SE CONNECTER</button>
+            <Link to="/login-user-in" className="navbutton linkStyle">
+              SE CONNECTER
+            </Link>
           </div>
         </div>
       </NavbarStyles>
