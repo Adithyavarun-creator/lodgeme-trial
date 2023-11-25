@@ -71,7 +71,7 @@ export const HomepageStyles = styled.section`
     background-color: white;
     flex-direction: row;
     z-index: 20;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     border-radius: 15px;
     align-items: center;
@@ -137,7 +137,9 @@ export const HomepageStyles = styled.section`
     padding: 5px;
     height: 53px;
     border-radius: 5px;
-    font-size: ${({ theme }) => theme.bigScreens.inputFont};
+    /* font-size: ${({ theme }) => theme.bigScreens.inputFont}; */
+    font-size: 20px;
+    width: 255px;
     background: ${({ theme }) => theme.colors.primaryColor};
     color: ${({ theme }) => theme.colors.whiteColor};
     border: none;
@@ -160,9 +162,10 @@ export const HomepageStyles = styled.section`
       height: 45px;
     }
     @media ${devices.smallMobiles} {
-      font-size: ${({ theme }) => theme.mobileScreens.inputFont};
       text-align: center;
       height: 35px;
+      font-size: 14px;
+      width: 220px;
     }
   }
 
@@ -244,23 +247,24 @@ export const HomepageStyles = styled.section`
     cursor: pointer;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      height: 40px;
+      height: 50px;
       font-size: ${({ theme }) => theme.bigScreens.btnFontsize};
     }
 
     @media ${devices.tabletsAndIpads} {
       height: 40px;
-      font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont};
+      /* font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont}; */
+      font-size: 18px;
     }
 
     @media ${devices.smallTabs} {
       height: 40px;
-      font-size: ${({ theme }) => theme.smallTabScreens.inputFont};
+      font-size: 18px;
     }
 
     @media ${devices.smallMobiles} {
-      height: 40px;
-      font-size: ${({ theme }) => theme.mobileScreens.inputFont};
+      height: 50px;
+      font-size: 14px;
     }
   }
 

@@ -1,10 +1,125 @@
 import { FooterStyles } from "./FooterStyles";
-import { IoCallSharp, IoMail } from "react-icons/io5";
-import { RiMapPin2Fill } from "react-icons/ri";
+import {
+  MdOutlineLanguage,
+  MdOutlineEuro,
+  MdOutlineFacebook,
+} from "react-icons/md";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <FooterStyles>
+      <div className="footer_grids">
+        <div className="footer_grid">
+          <div>
+            <span className="footer_heading">Assistance</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Help Centre</span>
+          </div>
+          <div>
+            <span className="footer_subheading">AirCover</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Anti-discrimination</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Disability support</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Cancellation options</span>
+          </div>
+          <div>
+            <span className="footer_subheading">
+              Report neighbourhood concern
+            </span>
+          </div>
+        </div>
+
+        <div className="footer_grid">
+          <div>
+            <span className="footer_heading">Hosting</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Lodgeme your home</span>
+          </div>
+          <div>
+            <span className="footer_subheading">AirCover for Hosts</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Hosting resources</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Community forum</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Hosting responsibly</span>
+          </div>
+        </div>
+
+        <div className="footer_grid">
+          <div>
+            <span className="footer_heading">Lodgeme</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Newsroom</span>
+          </div>
+          <div>
+            <span className="footer_subheading">New features</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Careers</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Investors</span>
+          </div>
+          <div>
+            <span className="footer_subheading">
+              Lodgeme.org emergency stays
+            </span>
+          </div>
+          <div>
+            <span className="footer_subheading">
+              Report neighbourhood concern
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer_copyright">
+        <div className="footer_center">
+          <span className="footer_centertext">© 2023 Lodgeme</span>
+          <span className="footer_centertext">Privacy</span>
+          <span className="footer_centertext">Terms</span>
+          <span className="footer_centertext">Sitemap</span>
+          <span className="footer_centertext">Company Details</span>
+        </div>
+
+        <div className="footer_socialicons">
+          <div className="footer_socialiconbox">
+            <MdOutlineLanguage className="social_icon" />
+            <span>Francais</span>
+          </div>
+          <div className="footer_socialiconbox">
+            <MdOutlineEuro className="social_icon" />
+            <span>EUR</span>
+          </div>
+          <div className="footer_socialiconbox">
+            <MdOutlineFacebook className="social_icon" />
+            <RiTwitterXFill className="social_icon" />
+            <FaInstagramSquare className="social_icon" />
+          </div>
+        </div>
+      </div>
+    </FooterStyles>
+  );
+};
+
+export default Footer;
+
+/**
+  <FooterStyles>
       <div className="footer_contents">
         <div className="footer_grids">
           <div className="footer_grid1">
@@ -67,7 +182,4 @@ const Footer = () => {
         </div>
       </div>
     </FooterStyles>
-  );
-};
-
-export default Footer;
+ */
