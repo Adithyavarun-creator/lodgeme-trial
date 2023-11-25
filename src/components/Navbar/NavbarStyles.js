@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { devices } from "../../theme/breakpoints";
 
 export const NavbarStyles = styled.div`
-  /* .homepage_navcontent { */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px;
+  padding: 50px;
   align-items: center;
   z-index: 100;
+  background-color: ${({ theme }) => theme.colors.primaryColor};
 
   @media ${devices.bigLaptopsAndDesktops} {
     padding: 30px;
@@ -24,10 +24,11 @@ export const NavbarStyles = styled.div`
     display: none;
   }
 
-  .homepage_navlogo {
+  .navlogo {
     object-fit: contain;
     width: 281px;
     height: 50.56px;
+    margin-left: 40px;
 
     @media ${devices.bigLaptopsAndDesktops} {
     }
@@ -46,7 +47,7 @@ export const NavbarStyles = styled.div`
     }
   }
 
-  .homepage_navbuttons {
+  .navbuttons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -67,23 +68,23 @@ export const NavbarStyles = styled.div`
     }
   }
 
-  .homepage_navbutton {
+  .navbutton {
     padding: 12px;
     background-color: ${({ theme }) => theme.colors.whiteColor};
     color: ${({ theme }) => theme.colors.whiteColor};
-    font-size: ${({ theme }) => theme.bigScreens.navBtns};
+    font-size: ${({ theme }) => theme.bigScreens.navButtonFont};
     border: 2px solid ${({ theme }) => theme.colors.whiteColor};
     align-items: center;
     background-color: transparent;
     border-radius: 8px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: ${({ theme }) => theme.bigScreens.navBtns};
+      font-size: ${({ theme }) => theme.bigScreens.navButtonFont};
     }
 
     @media ${devices.tabletsAndIpads} {
       padding: 8px;
-      font-size: ${({ theme }) => theme.tabletAndIpadScreens.navBtns};
+      font-size: ${({ theme }) => theme.tabletAndIpadScreens.navButtonFont};
     }
 
     @media ${devices.smallTabs} {
@@ -135,7 +136,7 @@ export const NavbarStyles = styled.div`
 `;
 
 export const MobileNavStyle = styled.div`
-    display: none;
+  background-color: ${({ theme }) => theme.colors.primaryColor};
 
   @media ${devices.bigLaptopsAndDesktops} {
     display: none;
@@ -149,7 +150,7 @@ export const MobileNavStyle = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px;
+    padding: 30px;
     position: relative;
   }
 
@@ -162,11 +163,7 @@ export const MobileNavStyle = styled.div`
   }
 
   .mobile_navlogo {
-    /* height: 50px;
-    width: 100%;
-    object-fit: contain;
-    display: none; */
-
+    display: none;
 
     @media ${devices.bigLaptopsAndDesktops} {
       display: none;
@@ -177,12 +174,14 @@ export const MobileNavStyle = styled.div`
     }
 
     @media ${devices.smallTabs} {
-      height: 50px;
-      width: 100%;
+      display: block;
+      height: 55px;
+      width: 70%;
       object-fit: contain;
     }
 
     @media ${devices.smallMobiles} {
+      display: block;
       height: 30px;
       width: 100%;
       object-fit: contain;
@@ -190,6 +189,8 @@ export const MobileNavStyle = styled.div`
   }
 
   .mobile_menunav {
+    display: none;
+
     @media ${devices.bigLaptopsAndDesktops} {
       display: none;
     }
@@ -201,17 +202,21 @@ export const MobileNavStyle = styled.div`
     @media ${devices.smallTabs} {
       height: 40px;
       width: 40px;
-      color: ${({ theme }) => theme.colors.primaryColor};
+      color: ${({ theme }) => theme.colors.whiteColor};
+      display: block;
     }
 
     @media ${devices.smallMobiles} {
       height: 30px;
       width: 30px;
-      color: ${({ theme }) => theme.colors.primaryColor};
+      color: ${({ theme }) => theme.colors.whiteColor};
+      display: block;
     }
   }
 
   .mobile_navbox {
+    display: none;
+
     @media ${devices.bigLaptopsAndDesktops} {
       display: none;
     }

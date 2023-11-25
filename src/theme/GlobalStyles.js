@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { devices } from "./breakpoints";
 
 export const GlobalStyles = createGlobalStyle`
 * {
@@ -9,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  font-family: "Altone Trial", sans-serif;
+  /* font-family: "Altone Trial", sans-serif; */
   scroll-behavior:smooth;
 }
 
@@ -39,5 +40,100 @@ body {
   margin-top: 10px;
 }
 
+.linkStyle{
+  text-decoration: none;
+  color: #333333;
+}
 
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.register_btn {
+    width: 672px;
+    height: 60px;
+    text-align: center;
+    background-color: ${({ theme }) => theme.colors.primaryColor};
+    border-radius: 15px;
+    color: ${({ theme }) => theme.colors.whiteColor};
+    offset: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 26px;
+    border: none;
+
+
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      width: 600px;
+
+}
+
+@media ${devices.tabletsAndIpads} {
+  width: 500px;
+
+ 
+}
+@media ${devices.smallTabs} {
+  width: 350px;
+  font-size: 20px;
+  height: 40px;
+
+
+
+  
+}
+
+@media ${devices.smallMobiles} {
+  width: 180px;
+  font-size: 12px;
+  height: 40px;
+  
+}
+  }
+
+
+  .register_loginbtn {
+    width: 672px;
+    height: 60px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 15px;
+    color: ${({ theme }) => theme.colors.blackColor};
+    offset: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 26px;
+
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      width: 600px;
+      font-size: 24px;
+
+
+}
+
+@media ${devices.tabletsAndIpads} {
+  width: 500px;
+  font-size: 24px;
+
+
+ 
+}
+@media ${devices.smallTabs} {
+  width: 350px;
+  font-size: 20px;
+  height: 40px;
+
+  
+}
+
+@media ${devices.smallMobiles} {
+  width: 180px;
+  font-size: 12px;
+  height: 40px;
+  
+}
+}
 `;

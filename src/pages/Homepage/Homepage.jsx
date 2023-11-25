@@ -21,7 +21,6 @@ import { RiMapPin2Fill } from "react-icons/ri";
 import { FaCalendarMinus, FaSearchLocation } from "react-icons/fa";
 import { TbUsersGroup } from "react-icons/tb";
 import TopRated from "../../components/TopRated/TopRated";
-import Navbar from "../../components/Navbar/Navbar";
 
 const Homepage = () => {
   const settings = {
@@ -29,7 +28,7 @@ const Homepage = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    //autoplay: true,
     speed: 10000,
     cssEase: "linear",
     responsive: [],
@@ -46,6 +45,9 @@ const Homepage = () => {
 
   const [value, setValue] = useState("");
   const options = useMemo(() => countryList().getData(), []);
+
+  //for number
+  const [noPersons, setnoPersons] = useState(1);
 
   // get the target element to toggle
   const refOne = useRef(null);
@@ -71,6 +73,19 @@ const Homepage = () => {
     }
   };
 
+  const personOptions = [
+    { value: 1, label: 1 },
+    { value: 2, label: 2 },
+    { value: 3, label: 3 },
+    { value: 4, label: 4 },
+    { value: 5, label: 5 },
+    { value: 6, label: 6 },
+    { value: 7, label: 7 },
+    { value: 8, label: 8 },
+    { value: 9, label: 9 },
+    { value: 10, label: 10 },
+  ];
+
   const styles = {
     placeholder: (defaultStyles) => {
       return {
@@ -90,6 +105,7 @@ const Homepage = () => {
       padding: "10px",
       border: "none",
       boxShadow: "none",
+      color: "#ffffff",
 
       "@media only screen and (min-width: 1200px)": {
         ...styles["@media only screen and (min-width: 1200px)"],
@@ -134,10 +150,12 @@ const Homepage = () => {
     setValue(value);
   };
 
+  const changePersonHandler = (value) => {
+    setnoPersons(value);
+  };
+
   return (
     <HomepageStyles>
-      <Navbar />
-
       <div className="homepage_header_image">
         <Slider {...settings}>
           {carouselImages.map((image) => (
@@ -212,18 +230,16 @@ const Homepage = () => {
               <TbUsersGroup className="search_box_icon" />
             </span>
           </div>
-          <select className="search_selectpersons">
-            <option className="search_optionpersons">1</option>
-            <option className="search_optionpersons">2</option>
-            <option className="search_optionpersons">3</option>
-            <option className="search_optionpersons">4</option>
-            <option className="search_optionpersons">5</option>
-            <option className="search_optionpersons">6</option>
-            <option className="search_optionpersons">7</option>
-            <option className="search_optionpersons">8</option>
-            <option className="search_optionpersons">9</option>
-            <option className="search_optionpersons">10</option>
-          </select>
+
+          <Select
+            className="select"
+            placeholder="Select Persons"
+            options={personOptions}
+            value={noPersons}
+            onChange={changePersonHandler}
+            styles={styles}
+            name="person"
+          />
         </div>
         <div>
           <div className="search_labelbox">
@@ -241,7 +257,9 @@ const Homepage = () => {
 
       <div>
         <div>
-          <h1 className="house_cardtexttitle">Rechercher par type d'hébergement</h1>
+          <h1 className="house_cardtexttitle">
+            Rechercher par type d'hébergement
+          </h1>
         </div>
         <div className="house_cardbox">
           <div className="house_card">

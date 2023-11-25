@@ -1,5 +1,6 @@
-import React from "react";
-import { FooterStyles } from "./Footer";
+import { FooterStyles } from "./FooterStyles";
+import { IoCallSharp, IoMail } from "react-icons/io5";
+import { RiMapPin2Fill } from "react-icons/ri";
 
 const Footer = () => {
   return (
@@ -14,40 +15,40 @@ const Footer = () => {
             </article>
             <span>Links Social</span>
           </div>
-          <div className="footer_grid2">
+          <div className="footer_grid1">
             <span>Accueil de voyageurs</span>
             <li>Option d’annulation</li>
             <li>Resources</li>
             <li>Forum</li>
             <li>Aide</li>
           </div>
-          <div className="footer_grid3">
+          <div className="footer_grid1">
             <span>Accueil de voyageurs</span>
             <li>Career</li>
             <li>About Us</li>
             <li>Amenities</li>
             <li>Services</li>
           </div>
-          <div className="footer_grid4">
+          <div className="footer_grid1">
             <div>
               <span>Avez vous une question?</span>
             </div>
             <div className="footer-grid4-box">
               <div className="flex-gap10">
                 <span>
-                  <RiMapPin2Fill />
+                  <RiMapPin2Fill className="footer_icons" />
                 </span>
                 <span>263 santa marina, san Fransisco, California, USA</span>
               </div>
               <div className="flex-gap10">
                 <span>
-                  <IoCallSharp />
+                  <IoCallSharp className="footer_icons" />
                 </span>
                 <span>000785665323</span>
               </div>
               <div className="flex-gap10">
                 <span>
-                  <IoMail />
+                  <IoMail className="footer_icons" />
                 </span>
                 <span> infos@gmail.com</span>
               </div>

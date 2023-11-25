@@ -18,7 +18,6 @@ export const TopRatedStyles = styled.div`
   }
 
   @media ${devices.smallMobiles} {
-
   }
 
   .toprated_house_cardbox {
@@ -110,6 +109,14 @@ export const TopRatedStyles = styled.div`
     @media ${devices.tabletsAndIpads} {
       font-size: ${({ theme }) => theme.tabletAndIpadScreens.cardprice};
     }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: ${({ theme }) => theme.tabletAndIpadScreens.cardprice};
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: ${({ theme }) => theme.tabletAndIpadScreens.cardprice};
+    }
   }
 
   .toprated_locationbox {
@@ -198,6 +205,10 @@ export const TopRatedStyles = styled.div`
     @media ${devices.tabletsAndIpads} {
       font-size: ${({ theme }) => theme.tabletAndIpadScreens.btnFontsize};
       padding: 14px 16px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: ${({ theme }) => theme.mobileScreens.cardprice};
     }
   }
 `;

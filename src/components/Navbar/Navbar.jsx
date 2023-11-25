@@ -3,6 +3,7 @@ import Logo from "../../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MobileNavStyle, NavbarStyles } from "./NavbarStyles";
 import { MdClose } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,28 +11,26 @@ const Navbar = () => {
   return (
     <>
       <NavbarStyles>
-        <div>
-          <img className="homepage_navlogo" src={Logo} alt="brand-logo" />
-        </div>
-        <div className="homepage_navbuttons">
+        <Link to="/" className="linkStyle">
+          <img className="navlogo" src={Logo} alt="brand-logo" />
+        </Link>
+        <div className="navbuttons">
           <div>
-            <button className="homepage_navbutton">
-              AJOUTER VOTRE LOGEMENT
-            </button>
+            <button className="navbutton">AJOUTER VOTRE LOGEMENT</button>
           </div>
           <div>
-            <button className="homepage_navbutton">S’INSCRIRE</button>
+            <button className="navbutton">S’INSCRIRE</button>
           </div>
           <div>
-            <button className="homepage_navbutton">SE CONNECTER</button>
+            <button className="navbutton">SE CONNECTER</button>
           </div>
         </div>
       </NavbarStyles>
 
       <MobileNavStyle>
-        <div>
+        <Link to="/">
           <img className="mobile_navlogo" src={Logo} alt="logo" />
-        </div>
+        </Link>
         <div>
           <GiHamburgerMenu
             className="mobile_menunav"
@@ -49,7 +48,13 @@ const Navbar = () => {
             </div>
             <div>
               <ul className="mobile_navmenus">
-                <li>Menu 1</li>
+                <Link
+                  to="/register-user-in"
+                  className="linkStyle"
+                  onClick={() => setToggle(false)}
+                >
+                  <li>Register</li>
+                </Link>
                 <li>Menu 2</li>
                 <li>Menu 3</li>
                 <li>Menu 4</li>
