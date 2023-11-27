@@ -101,14 +101,10 @@ const Footer = () => {
             © 2023 LODGE ME SAS
           </Link>
           <Link className="linkStyle footer_centertext">
-            Conditions généralés &nbsp; - &nbsp;
+            Conditions généralés
           </Link>
-          <Link className="linkStyle footer_centertext">
-            Plan du site &nbsp; - &nbsp;
-          </Link>
-          <Link className="linkStyle footer_centertext">
-            Confidentialité &nbsp; - &nbsp;
-          </Link>
+          <Link className="linkStyle footer_centertext">Plan du site</Link>
+          <Link className="linkStyle footer_centertext">Confidentialité</Link>
           <Link className="linkStyle footer_centertext">
             Vos choix en matiére de Confidentialité
           </Link>
