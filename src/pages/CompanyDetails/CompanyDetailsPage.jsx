@@ -145,6 +145,7 @@ const CompanyDetailsPage = () => {
                 href="https://commission.europa.eu"
                 className="linkStyle companyboxtext"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://commission.europa.eu
               </a>
