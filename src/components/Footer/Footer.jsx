@@ -95,11 +95,7 @@ const Footer = () => {
           <span className="footer_centertext">Privacy</span>
           <span className="footer_centertext">Terms</span>
           <span className="footer_centertext">Sitemap</span>
-          <Link
-            target="_blank"
-            to="/company-details"
-            className="linkStyle footer_centertext"
-          >
+          <Link to="/company-details" className="linkStyle footer_centertext">
             Company Details
           </Link>
         </div>

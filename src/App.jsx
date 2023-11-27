@@ -5,11 +5,13 @@ import ResgisterPage from "./pages/RegisterPage/ResgisterPage";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import CompanyDetailsPage from "./pages/CompanyDetails/CompanyDetailsPage";
+import ScrollToTop from "./components/ScrollTop/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <GlobalStyles />
         <Navbar />
         <Routes>
