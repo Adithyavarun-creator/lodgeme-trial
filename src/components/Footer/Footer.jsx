@@ -91,14 +91,22 @@ const Footer = () => {
 
       <div className="footer_copyright">
         <div className="footer_center">
-          <span className="footer_centertext">© 2023 Lodgeme</span>
-          <span className="footer_centertext">Privacy</span>
-          <span className="footer_centertext">Terms</span>
-          <span className="footer_centertext">Sitemap</span>
-          <Link to="/company-details" className="linkStyle footer_centertext">
-            Company Details
+          <Link className="linkStyle footer_centertext">© 2023 LODGE ME</Link>
+          <Link className="linkStyle footer_centertext">SAS</Link>
+          <Link className="linkStyle footer_centertext">
+            Conditions généralés
           </Link>
+          <Link className="linkStyle footer_centertext">Plan du site</Link>
+          <Link className="linkStyle footer_centertext">Confidencialité</Link>
+          <Link className="linkStyle footer_centertext">
+            Vos choix en matiére de Confidencialité
+          </Link>
+
+          {/* <Link to="/company-details" className="linkStyle footer_centertext">
+            Company Details
+          </Link> */}
         </div>
+        <div></div>
 
         <div className="footer_socialicons">
           <div className="footer_socialiconbox">
@@ -110,19 +118,38 @@ const Footer = () => {
             <span>EUR</span>
           </div>
           <div className="footer_socialiconbox">
-            <a href="https://wa.me/message/YG2MBYFDQKHTN1?text=I%27d%20like%20to%20chat%20with%20you%20to%20know%20about%20Lodgeme%20facilities">
+            <a
+              rel="noreferrer"
+              href="https://wa.me/message/YG2MBYFDQKHTN1?text=I%27d%20like%20to%20chat%20with%20you%20to%20know%20about%20Lodgeme%20facilities"
+            >
               <IoLogoWhatsapp className="social_icon" />
             </a>
-            <a href="https://www.facebook.com/fr.lodgeme" target="_blank">
+            <a
+              rel="noreferrer"
+              href="https://www.facebook.com/fr.lodgeme"
+              target="_blank"
+            >
               <MdOutlineFacebook className="social_icon" />
             </a>
-            <a href="https:/www.x.com/lodgemefr" target="_blank">
+            <a
+              rel="noreferrer"
+              href="https:/www.x.com/lodgemefr"
+              target="_blank"
+            >
               <RiTwitterXFill className="social_icon" />
             </a>
-            <a href="https://www.instagram.com/lodgemefr" target="_blank">
+            <a
+              rel="noreferrer"
+              href="https://www.instagram.com/lodgemefr"
+              target="_blank"
+            >
               <FaInstagramSquare className="social_icon" />
             </a>
-            <a href="https://www.snapchat.com/lodgeme" target="_blank">
+            <a
+              rel="noreferrer"
+              href="https://www.snapchat.com/lodgeme"
+              target="_blank"
+            >
               <FaSnapchatGhost className="social_icon" />
             </a>
           </div>
