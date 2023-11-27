@@ -4,6 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
+import "./i18next/i18next";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

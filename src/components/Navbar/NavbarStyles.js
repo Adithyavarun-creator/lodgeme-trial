@@ -97,6 +97,67 @@ export const NavbarStyles = styled.div`
     }
   }
 
+  .navselect {
+    /* width: 80px; */
+    padding: 12px 16px;
+    box-sizing: content-box;
+    background-color: ${({ theme }) => theme.colors.whiteColor};
+    color: ${({ theme }) => theme.colors.whiteColor};
+    font-size: ${({ theme }) => theme.bigScreens.navButtonFont};
+    align-items: center;
+    background-color: transparent;
+    border-radius: 8px;
+    offset: none;
+    border: 2px solid #fff;
+    outline: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 22px;
+      height: 28px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      height: 12px;
+      font-size: 12px;
+    }
+
+    @media ${devices.smallTabs} {
+      display: none;
+    }
+    @media ${devices.smallMobiles} {
+      display: none;
+    }
+  }
+
+  .langOption {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: ${({ theme }) => theme.colors.primaryColor};
+    padding: 12px;
+    width: 80px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      padding: 8px;
+      font-size: 18px;
+    }
+
+    @media ${devices.smallTabs} {
+      display: none;
+    }
+    @media ${devices.smallMobiles} {
+      display: none;
+    }
+  }
+
   .mobile_nav {
     display: none;
     @media ${devices.bigLaptopsAndDesktops} {
@@ -332,5 +393,65 @@ export const MobileNavStyle = styled.div`
 
   li {
     color: ${({ theme }) => theme.colors.whiteColor};
+  }
+
+  .navselect {
+    /* width: 80px; */
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      display: none;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      display: none;
+    }
+
+    @media ${devices.smallTabs} {
+      /* box-sizing: content-box; */
+      /* background-color: ${({ theme }) => theme.colors.whiteColor}; */
+      color: ${({ theme }) => theme.colors.whiteColor};
+      font-size: ${({ theme }) => theme.bigScreens.navButtonFont};
+      align-items: center;
+      background-color: transparent;
+      border-radius: 8px;
+      offset: none;
+      border: 2px solid #fff;
+      outline: 0px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      padding: 8px;
+      font-size: 18px;
+    }
+    @media ${devices.smallMobiles} {
+      padding: 8px;
+      font-size: 18px;
+    }
+  }
+
+  .langOption {
+    /* display: none; */
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      display: none;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      display: none;
+    }
+
+    @media ${devices.smallTabs} {
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      background-color: ${({ theme }) => theme.colors.primaryColor};
+      padding: 12px;
+      width: 80px;
+    }
+    @media ${devices.smallMobiles} {
+      padding: 8px;
+      font-size: 14px;
+    }
   }
 `;

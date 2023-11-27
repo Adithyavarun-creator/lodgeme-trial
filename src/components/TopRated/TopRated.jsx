@@ -2,12 +2,15 @@ import { TopRatedStyles } from "./TopRatedStyles";
 import { RiMapPin2Fill } from "react-icons/ri";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const TopRated = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <TopRatedStyles>
       <div>
-        <h1>LES MIEUX NOTES</h1>
+        <h1>{t("toprated")}</h1>
       </div>
       <div className="toprated_house_cardbox">
         <div className="toprated_house_card">
@@ -230,7 +233,7 @@ const TopRated = () => {
         </div>
       </div>
       <div className="flex-center mt-10 mb-20">
-        <button className="toprated_button">VOIR TOUT</button>
+        <button className="toprated_button">{t("searchmore")}</button>
       </div>
     </TopRatedStyles>
   );

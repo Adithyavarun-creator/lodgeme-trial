@@ -49,12 +49,16 @@ export const FooterStyles = styled.footer`
       grid-template-columns: 100px 100px 100px;
       gap: 30px;
       padding: 10px;
+      justify-content: space-between;
     }
 
     @media ${devices.smallMobiles} {
-      grid-template-columns: 80px 80px 80px;
-      gap: 20px;
+      grid-template-columns: 100px 100px 100px;
+      gap: 10px;
+      column-gap: 0;
       padding: 10px;
+      /* justify-content: space-between; */
+      justify-content: space-between;
     }
   }
 
@@ -79,8 +83,8 @@ export const FooterStyles = styled.footer`
     }
 
     @media ${devices.smallMobiles} {
-      gap: 5px;
-      padding: 10px;
+      gap: 2px;
+      padding: 3px;
     }
   }
 
@@ -102,7 +106,6 @@ export const FooterStyles = styled.footer`
 
     @media ${devices.smallMobiles} {
       gap: 3px;
-
     }
   }
 
@@ -122,7 +125,7 @@ export const FooterStyles = styled.footer`
     }
 
     @media ${devices.smallMobiles} {
-      font-size: 10px;
+      font-size: 6px;
     }
   }
 
@@ -137,11 +140,11 @@ export const FooterStyles = styled.footer`
       font-size: 12px;
     }
     @media ${devices.smallTabs} {
-      font-size: 10px;
+      font-size: 8px;
     }
 
     @media ${devices.smallMobiles} {
-      font-size: 8px;
+      font-size: 6px;
     }
   }
 
@@ -270,6 +273,7 @@ export const FooterStyles = styled.footer`
   .social_icon {
     height: 30px;
     width: 30px;
+    color: ${({ theme }) => theme.colors.primaryColor};
 
     @media ${devices.bigLaptopsAndDesktops} {
       height: 22px;

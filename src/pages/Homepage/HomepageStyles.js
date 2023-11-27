@@ -85,7 +85,7 @@ export const HomepageStyles = styled.section`
     margin-top: 650px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      width: 95%;
+      width: 98%;
       margin-top: 620px;
     }
 
@@ -103,7 +103,7 @@ export const HomepageStyles = styled.section`
       gap: 3px;
       margin-top: 250px;
       padding: 10px;
-      width: 40%;
+      width: 60%;
     }
 
     @media ${devices.smallMobiles} {
@@ -175,7 +175,8 @@ export const HomepageStyles = styled.section`
     font-size: 12px;
 
     @media ${devices.tabletsAndIpads} {
-      font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont};
+      /* font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont}; */
+      font-size: 12px;
     }
 
     @media ${devices.smallTabs} {
@@ -248,7 +249,8 @@ export const HomepageStyles = styled.section`
 
     @media ${devices.bigLaptopsAndDesktops} {
       height: 50px;
-      font-size: ${({ theme }) => theme.bigScreens.btnFontsize};
+      /* font-size: ${({ theme }) => theme.bigScreens.btnFontsize}; */
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {

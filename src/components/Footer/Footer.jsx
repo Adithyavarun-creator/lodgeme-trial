@@ -6,55 +6,61 @@ import {
 } from "react-icons/md";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagramSquare } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import { FaSnapchatGhost } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <FooterStyles>
       <div className="footer_grids">
         <div className="footer_grid">
           <div>
-            <span className="footer_heading">Assistance</span>
+            <span className="footer_heading"> {t("assistance")}</span>
           </div>
           <div>
-            <span className="footer_subheading">Help Centre</span>
+            <span className="footer_subheading">{t("helpCentre")}</span>
           </div>
           <div>
-            <span className="footer_subheading">AirCover</span>
+            <span className="footer_subheading">{t("airCover")}</span>
           </div>
           <div>
             <span className="footer_subheading">Anti-discrimination</span>
           </div>
           <div>
-            <span className="footer_subheading">Disability support</span>
-          </div>
-          <div>
-            <span className="footer_subheading">Cancellation options</span>
+            <span className="footer_subheading">{t("disabilitysupport")}</span>
           </div>
           <div>
             <span className="footer_subheading">
-              Report neighbourhood concern
+              {t("cancellationoptions")}
             </span>
+          </div>
+          <div>
+            <span className="footer_subheading">{t("report")}</span>
           </div>
         </div>
 
         <div className="footer_grid">
           <div>
-            <span className="footer_heading">Hosting</span>
+            <span className="footer_heading">{t("hosting")}</span>
           </div>
           <div>
-            <span className="footer_subheading">Lodgeme your home</span>
+            <span className="footer_subheading">{t("lodgemeyourhome")}</span>
           </div>
           <div>
-            <span className="footer_subheading">AirCover for Hosts</span>
+            <span className="footer_subheading">{t("aircoverhosts")}</span>
           </div>
           <div>
-            <span className="footer_subheading">Hosting resources</span>
+            <span className="footer_subheading">{t("resources")}</span>
           </div>
           <div>
-            <span className="footer_subheading">Community forum</span>
+            <span className="footer_subheading">{t("forum")}</span>
           </div>
           <div>
-            <span className="footer_subheading">Hosting responsibly</span>
+            <span className="footer_subheading">{t("responsibly")}</span>
           </div>
         </div>
 
@@ -63,26 +69,22 @@ const Footer = () => {
             <span className="footer_heading">Lodgeme</span>
           </div>
           <div>
-            <span className="footer_subheading">Newsroom</span>
+            <span className="footer_subheading">{t("newsRoom")}</span>
           </div>
           <div>
-            <span className="footer_subheading">New features</span>
+            <span className="footer_subheading">{t("featues")}</span>
           </div>
           <div>
-            <span className="footer_subheading">Careers</span>
+            <span className="footer_subheading">{t("careers")}</span>
           </div>
           <div>
-            <span className="footer_subheading">Investors</span>
+            <span className="footer_subheading">{t("investors")}</span>
           </div>
           <div>
-            <span className="footer_subheading">
-              Lodgeme.org emergency stays
-            </span>
+            <span className="footer_subheading">{t("emergency")} </span>
           </div>
           <div>
-            <span className="footer_subheading">
-              Report neighbourhood concern
-            </span>
+            <span className="footer_subheading">{t("report")} </span>
           </div>
         </div>
       </div>
@@ -93,7 +95,13 @@ const Footer = () => {
           <span className="footer_centertext">Privacy</span>
           <span className="footer_centertext">Terms</span>
           <span className="footer_centertext">Sitemap</span>
-          <span className="footer_centertext">Company Details</span>
+          <Link
+            target="_blank"
+            to="/company-details"
+            className="linkStyle footer_centertext"
+          >
+            Company Details
+          </Link>
         </div>
 
         <div className="footer_socialicons">
@@ -106,9 +114,21 @@ const Footer = () => {
             <span>EUR</span>
           </div>
           <div className="footer_socialiconbox">
-            <MdOutlineFacebook className="social_icon" />
-            <RiTwitterXFill className="social_icon" />
-            <FaInstagramSquare className="social_icon" />
+            <a href="https://wa.me/message/YG2MBYFDQKHTN1?text=I%27d%20like%20to%20chat%20with%20you%20to%20know%20about%20Lodgeme%20facilities">
+              <IoLogoWhatsapp className="social_icon" />
+            </a>
+            <a href="https://www.facebook.com/fr.lodgeme" target="_blank">
+              <MdOutlineFacebook className="social_icon" />
+            </a>
+            <a href="https:/www.x.com/lodgemefr" target="_blank">
+              <RiTwitterXFill className="social_icon" />
+            </a>
+            <a href="https://www.instagram.com/lodgemefr" target="_blank">
+              <FaInstagramSquare className="social_icon" />
+            </a>
+            <a href="https://www.snapchat.com/lodgeme" target="_blank">
+              <FaSnapchatGhost className="social_icon" />
+            </a>
           </div>
         </div>
       </div>
@@ -117,6 +137,14 @@ const Footer = () => {
 };
 
 export default Footer;
+
+/**
+ Facebook : www.facebook.com/fr.lodgeme 
+X : www.x.com/lodgemefr
+LinkedIn : www.linkedin.com/lodgeme
+Snapchat : www.snapchat.com/lodgeme
+Instagram : www.instagram.com/lodgemefr 
+ */
 
 /**
   <FooterStyles>

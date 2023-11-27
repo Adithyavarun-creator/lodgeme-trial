@@ -4,9 +4,20 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MobileNavStyle, NavbarStyles } from "./NavbarStyles";
 import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [select, setSelect] = useState("");
+
+  const { t, i18n } = useTranslation();
+
+  const selectedOption = (e) => {
+    //console.log(e.target.value);
+    const selected = i18n.changeLanguage(e.target.value);
+    setSelect(selected);
+    setToggle(false);
+  };
 
   return (
     <>
@@ -17,18 +28,32 @@ const Navbar = () => {
         <div className="navbuttons">
           <div>
             <Link to="/add-user-houses" className="navbutton linkStyle">
-              AJOUTER VOTRE LOGEMENT
+              {t("addAccommodation")}
             </Link>
           </div>
           <div>
             <Link to="/register-user-in" className="navbutton linkStyle">
-              S’INSCRIRE
+              {t("register")}
             </Link>
           </div>
           <div>
             <Link to="/login-user-in" className="navbutton linkStyle">
-              SE CONNECTER
+              {t("login")}
             </Link>
+          </div>
+          <div>
+            <select
+              className="navselect"
+              value={select.name}
+              onChange={selectedOption}
+            >
+              <option className="langOption" id="English" value="en">
+                EN
+              </option>
+              <option className="langOption" id="French" value="fr">
+                FR
+              </option>
+            </select>
           </div>
         </div>
       </NavbarStyles>
@@ -59,12 +84,20 @@ const Navbar = () => {
                   className="linkStyle"
                   onClick={() => setToggle(false)}
                 >
-                  <li>Register</li>
+                  <li>{t("register")}</li>
                 </Link>
                 <li>Menu 2</li>
                 <li>Menu 3</li>
-                <li>Menu 4</li>
-                <li>Menu 5</li>
+                <li>
+                  <select value={select.name} onChange={selectedOption}>
+                    <option className="langOption" id="English" value="en">
+                      EN
+                    </option>
+                    <option className="langOption" id="French" value="fr">
+                      FR
+                    </option>
+                  </select>
+                </li>
               </ul>
             </div>
           </div>

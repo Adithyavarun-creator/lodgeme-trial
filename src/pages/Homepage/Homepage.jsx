@@ -21,8 +21,11 @@ import { RiMapPin2Fill } from "react-icons/ri";
 import { FaCalendarMinus, FaSearchLocation } from "react-icons/fa";
 import { TbUsersGroup } from "react-icons/tb";
 import TopRated from "../../components/TopRated/TopRated";
+import { useTranslation } from "react-i18next";
 
 const Homepage = () => {
+  const { t, i18n } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
@@ -109,7 +112,7 @@ const Homepage = () => {
 
       "@media only screen and (min-width: 1200px)": {
         ...styles["@media only screen and (min-width: 1200px)"],
-        fontSize: "22px",
+        fontSize: "20px",
         height: "53px",
         backgroundColor: "#015151",
         borderRadius: "10px",
@@ -173,7 +176,7 @@ const Homepage = () => {
       <div className="homepage_search_container">
         <div className="search_select_width">
           <div className="search_labelbox">
-            <span className="search_labeltitle">Location</span>
+            <span className="search_labeltitle"> {t("location")}</span>
             <span>
               <RiMapPin2Fill className="search_box_icon" />
             </span>
@@ -181,7 +184,7 @@ const Homepage = () => {
 
           <Select
             className="select"
-            placeholder="Select Location"
+            placeholder={`${t("bookingdate")}`}
             options={options}
             value={value}
             onChange={changeHandler}
@@ -192,7 +195,7 @@ const Homepage = () => {
 
         <div>
           <div className="search_labelbox">
-            <span className="search_labeltitle">Booking Date</span>
+            <span className="search_labeltitle"> {t("bookingdate")}</span>
             <span>
               <FaCalendarMinus className="search_box_icon" />
             </span>
@@ -225,7 +228,7 @@ const Homepage = () => {
 
         <div>
           <div className="search_labelbox">
-            <span className="search_labeltitle">Persons</span>
+            <span className="search_labeltitle"> {t("persons")}</span>
             <span>
               <TbUsersGroup className="search_box_icon" />
             </span>
@@ -233,7 +236,7 @@ const Homepage = () => {
 
           <Select
             className="select"
-            placeholder="Select Persons"
+            placeholder={`${t("selectPersons")}`}
             options={personOptions}
             value={noPersons}
             onChange={changePersonHandler}
@@ -243,14 +246,14 @@ const Homepage = () => {
         </div>
         <div>
           <div className="search_labelbox">
-            <span className="search_labeltitle">Soumettre</span>
+            <span className="search_labeltitle"> {t("submit")}</span>
             <span>
               <FaSearchLocation className="search_box_icon" />
             </span>
           </div>
           <button className="homepage_searchbtn">
             <IoSearchSharp className="" />
-            Recherche
+            {t("search")}
           </button>
         </div>
       </div>
@@ -258,7 +261,7 @@ const Homepage = () => {
       <div>
         <div>
           <h1 className="house_cardtexttitle">
-            Rechercher par type d'hébergement
+          {t("searchbytype")}
           </h1>
         </div>
         <div className="house_cardbox">
