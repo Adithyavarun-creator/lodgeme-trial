@@ -22,91 +22,101 @@ const Footer = () => {
             <span className="footer_heading"> {t("assistance")}</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("helpCentre")}</span>
+            <span className="footer_subheading">Centre d'aide</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("airCover")}</span>
-          </div>
-          <div>
-            <span className="footer_subheading">Anti-discrimination</span>
-          </div>
-          <div>
-            <span className="footer_subheading">{t("disabilitysupport")}</span>
+            <span className="footer_subheading">AirAssur</span>
           </div>
           <div>
             <span className="footer_subheading">
-              {t("cancellationoptions")}
+              Lutte contre la discrimination
             </span>
           </div>
           <div>
-            <span className="footer_subheading">{t("report")}</span>
+            <span className="footer_subheading">Assistance handicap</span>
+          </div>
+          <div>
+            <span className="footer_subheading">Options d'annulation</span>
+          </div>
+          <div>
+            <span className="footer_subheading">
+              J'ai un problème de voisinage
+            </span>
           </div>
         </div>
 
         <div className="footer_grid">
           <div>
-            <span className="footer_heading">{t("hosting")}</span>
+            <span className="footer_heading">Accueil de voyageurs</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("lodgemeyourhome")}</span>
+            <span className="footer_subheading">
+              Mettez votre logement sur LODGE ME
+            </span>
           </div>
           <div>
-            <span className="footer_subheading">{t("aircoverhosts")}</span>
+            <span className="footer_subheading">AirAssur pour les hôtes</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("resources")}</span>
+            <span className="footer_subheading">Ressources pour les hôtes</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("forum")}</span>
+            <span className="footer_subheading">Forum de la communauté</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("responsibly")}</span>
+            <span className="footer_subheading">Hébergement responsable</span>
           </div>
         </div>
 
         <div className="footer_grid">
           <div>
-            <span className="footer_heading">Lodgeme</span>
+            <span className="footer_heading">LODGE ME</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("newsRoom")}</span>
+            <span className="footer_subheading">Newsroom</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("featues")}</span>
+            <span className="footer_subheading">Nouvelles fonctionnalités</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("careers")}</span>
+            <span className="footer_subheading">Carrières</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("investors")}</span>
+            <span className="footer_subheading">Investisseurs</span>
           </div>
           <div>
-            <span className="footer_subheading">{t("emergency")} </span>
+            <span className="footer_subheading">Cartes cadeaux </span>
           </div>
           <div>
-            <span className="footer_subheading">{t("report")} </span>
+            <span className="footer_subheading">
+              Séjours d'urgence Lodgeme.org
+            </span>
           </div>
         </div>
       </div>
 
       <div className="footer_copyright">
         <div className="footer_center">
-          <Link className="linkStyle footer_centertext">© 2023 LODGE ME</Link>
-          <Link className="linkStyle footer_centertext">SAS</Link>
+          <Link className="linkStyle footer_centertext">© 2023 LODGE ME,</Link>
+          <Link className="linkStyle footer_centertext">SAS.</Link>
           <Link className="linkStyle footer_centertext">
-            Conditions généralés
+            Conditions généralés &nbsp; - &nbsp;
           </Link>
-          <Link className="linkStyle footer_centertext">Plan du site</Link>
-          <Link className="linkStyle footer_centertext">Confidencialité</Link>
           <Link className="linkStyle footer_centertext">
-            Vos choix en matiére de Confidencialité
+            Plan du site &nbsp; - &nbsp;
+          </Link>
+          <Link className="linkStyle footer_centertext">
+            Confidentialité &nbsp; - &nbsp;
+          </Link>
+          <Link className="linkStyle footer_centertext">
+            Vos choix en matiére de Confidentialité
           </Link>
 
           {/* <Link to="/company-details" className="linkStyle footer_centertext">
             Company Details
           </Link> */}
         </div>
-        <div></div>
+        {/* <div></div> */}
 
         <div className="footer_socialicons">
           <div className="footer_socialiconbox">

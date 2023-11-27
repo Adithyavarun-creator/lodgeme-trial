@@ -158,11 +158,11 @@ export const FooterStyles = styled.footer`
       font-size: 12px;
     }
     @media ${devices.smallTabs} {
-      font-size: 10px;
+      font-size: 8px;
     }
 
     @media ${devices.smallMobiles} {
-      font-size: 6px;
+      font-size: 5px;
     }
   }
 
