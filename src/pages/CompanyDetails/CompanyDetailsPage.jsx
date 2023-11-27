@@ -23,7 +23,7 @@ const CompanyDetailsPage = () => {
             <div>
               <span className="companyboxtext">
                 Les sites www.lodgeme.com et lodgeme.fr sont exploités par LODGE
-                ME
+                ME.
               </span>
             </div>
             <div>
@@ -123,8 +123,8 @@ const CompanyDetailsPage = () => {
               <span className="companyboxtext">
                 Pour toute question relative à la marque LODGE ME, veuillez vous
                 adresser à
-                <a className="linkStyle" href="mailto:hello@lodgeme.fr">
-                  hello@lodgeme.fr
+                <a className="linkStyle" href="mailto:support@lodgeme.fr">
+                  support@lodgeme.fr
                 </a>
               </span>
             </div>
