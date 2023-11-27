@@ -59,8 +59,8 @@ const CompanyDetailsPage = () => {
                 </span>
                 <li>
                   Service client : &nbsp;
-                  <a className="linkStyle" href="mailto:hello@lodgeme.fr">
-                    hello@lodgeme.fr
+                  <a className="linkStyle" href="mailto:customer@lodgeme.fr">
+                    customer@lodgeme.fr
                   </a>
                 </li>
                 <li>
@@ -122,7 +122,10 @@ const CompanyDetailsPage = () => {
             <div>
               <span className="companyboxtext">
                 Pour toute question relative à la marque LODGE ME, veuillez vous
-                adresser à hello@lodgeme.fr
+                adresser à
+                <a className="linkStyle" href="mailto:hello@lodgeme.fr">
+                  hello@lodgeme.fr
+                </a>
               </span>
             </div>
             <div>
@@ -131,7 +134,9 @@ const CompanyDetailsPage = () => {
                   Questions de sécurité ou juridiques
                 </span>
                 : &nbsp; Veuillez adresser toutes vos questions à
-                support@lodgeme.fr
+                <a className="linkStyle" href="mailto:support@lodgeme.fr">
+                  support@lodgeme.fr
+                </a>
               </span>
             </div>
 
@@ -148,9 +153,12 @@ const CompanyDetailsPage = () => {
               <span className="companyboxtext">
                 <span className="companysidetext">Contenu illégal </span>:
                 &nbsp; Si vous pensez qu’un contenu de notre site web enfreint
-                la loi, veuillez nous envoyer un e-mail à support@lodgeme.fr en
-                expliquant le plus en détail possible pourquoi vous considérez
-                que le contenu est illégal.
+                la loi, veuillez nous envoyer un e-mail à{" "}
+                <a className="linkStyle" href="mailto:support@lodgeme.fr">
+                  support@lodgeme.fr
+                </a>
+                en expliquant le plus en détail possible pourquoi vous
+                considérez que le contenu est illégal.
               </span>
             </div>
 
