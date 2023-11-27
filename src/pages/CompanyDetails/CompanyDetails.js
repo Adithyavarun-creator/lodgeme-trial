@@ -52,15 +52,15 @@ export const CompanyDetailsStyles = styled.div`
   }
 
   span {
-    font-size: 34px;
+    font-size: 25px;
     margin-bottom: 10px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 30px;
+      font-size: 22px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 24px;
+      font-size: 20px;
     }
     @media ${devices.smallTabs} {
       font-size: 18px;
@@ -72,15 +72,15 @@ export const CompanyDetailsStyles = styled.div`
   }
 
   li {
-    font-size: 34px;
+    font-size: 25px;
     margin-left: 50px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 30px;
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 24px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
       font-size: 12px;
@@ -93,37 +93,37 @@ export const CompanyDetailsStyles = styled.div`
 
   .companyboxheading {
     /* text-align: center; */
-    font-size: 34px;
+    font-size: 25px;
     color: ${({ theme }) => theme.colors.primaryColor};
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 30px;
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 24px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
-      font-size: 18px;
+      font-size: 12px;
     }
 
     @media ${devices.smallMobiles} {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 
   .companyboxtext {
-    font-size: 28px;
+    font-size: 24px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 28px;
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 20px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     @media ${devices.smallMobiles} {
@@ -132,20 +132,20 @@ export const CompanyDetailsStyles = styled.div`
   }
   .companysidetext {
     /* text-decoration: underline; */
-    font-size: 28px;
+    font-size: 24px;
     /* font-weight: bolder; */
     text-decoration: underline;
     font-weight: bold;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 28px;
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 20px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     @media ${devices.smallMobiles} {
@@ -156,20 +156,20 @@ export const CompanyDetailsStyles = styled.div`
   .companyboxlist {
     margin-top: 15px;
     list-style: none;
-    font-size: 28px;
+    font-size: 25px;
 
     @media ${devices.bigLaptopsAndDesktops} {
       margin-top: 15px;
-      font-size: 28px;
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
       margin-top: 10px;
-      font-size: 20px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
       margin-top: 10px;
-      font-size: 14px;
+      font-size: 12px;
     }
 
     @media ${devices.smallMobiles} {
@@ -179,18 +179,18 @@ export const CompanyDetailsStyles = styled.div`
   }
 
   .companylinks {
-    font-size: 28px;
+    font-size: 24px;
     color: ${({ theme }) => theme.colors.primaryColor};
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 28px;
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 22px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     @media ${devices.smallMobiles} {
@@ -213,17 +213,17 @@ export const CompanyDetailsStyles = styled.div`
   }
 
   .weblink {
-    font-size: 30px;
+    font-size: 25px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 30px;
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 20px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     @media ${devices.smallMobiles} {
