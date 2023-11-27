@@ -59,20 +59,20 @@ const CompanyDetailsPage = () => {
                 </span>
                 <li>
                   Service client : &nbsp;
-                  <a className="linkStyle" href="mailto:customer@lodgeme.fr">
-                    customer@lodgeme.fr
+                  <a className="linkStyle" href="mailto:customer@lodgeme.com">
+                    customer@lodgeme.com
                   </a>
                 </li>
                 <li>
                   Service facturation : &nbsp;
-                  <a className="linkStyle" href="mailto:billing@lodgeme.fr">
-                    billing@lodgeme.fr
+                  <a className="linkStyle" href="mailto:billing@lodgeme.com">
+                    billing@lodgeme.com
                   </a>
                 </li>
                 <li>
                   Service assistance : &nbsp;
-                  <a className="linkStyle" href="mailto:support@lodgeme.fr">
-                    support@lodgeme.fr
+                  <a className="linkStyle" href="mailto:support@lodgeme.com">
+                    support@lodgeme.com
                   </a>
                 </li>
               </ul>
@@ -124,7 +124,7 @@ const CompanyDetailsPage = () => {
                 Pour toute question relative à la marque LODGE ME, veuillez vous
                 adresser à
                 <a className="linkStyle" href="mailto:support@lodgeme.fr">
-                  support@lodgeme.fr
+                  support@lodgeme.com
                 </a>
               </span>
             </div>
@@ -134,8 +134,8 @@ const CompanyDetailsPage = () => {
                   Questions de sécurité ou juridiques
                 </span>
                 : &nbsp; Veuillez adresser toutes vos questions à
-                <a className="linkStyle" href="mailto:support@lodgeme.fr">
-                  support@lodgeme.fr
+                <a className="linkStyle" href="mailto:support@lodgeme.com">
+                  support@lodgeme.com
                 </a>
               </span>
             </div>
@@ -155,8 +155,8 @@ const CompanyDetailsPage = () => {
                 <span className="companysidetext">Contenu illégal </span>:
                 &nbsp; Si vous pensez qu’un contenu de notre site web enfreint
                 la loi, veuillez nous envoyer un e-mail à{" "}
-                <a className="linkStyle" href="mailto:support@lodgeme.fr">
-                  support@lodgeme.fr
+                <a className="linkStyle" href="mailto:support@lodgeme.com">
+                  support@lodgeme.com
                 </a>
                 en expliquant le plus en détail possible pourquoi vous
                 considérez que le contenu est illégal.
@@ -194,13 +194,13 @@ export default CompanyDetailsPage;
 /**
  * 
  Legal Notice
-The sites www.lodgeme.com and lodgeme.fr are operated by LODGE ME.
+The sites www.lodgeme.com and lodgeme.com are operated by LODGE ME.
 Entity: LODGE ME SAS Head office address: 6 rue d’Armaillé 75017 Paris Registration number: 903 952 364 00052
 Telephone number: NIL VAT number: FR71903952364
 Customer service contacts:
-• Customer service: hello@lodgeme.fr
-• Billing department: billing@lodgeme.fr
-• Support service: support@lodgeme.fr
+• Customer service: hello@lodgeme.com
+• Billing department: billing@lodgeme.com
+• Support service: support@lodgeme.com
 Server hosting: OVH Groupe SA
 Head office address: 2 rue Kellermann, 59100 Roubaix
 Registration number: 537 407 926
