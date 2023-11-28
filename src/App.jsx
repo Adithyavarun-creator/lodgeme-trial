@@ -49,10 +49,6 @@ function App() {
               path="/conditions-general"
               element={<LazyConditionsPageComponent />}
             />
-             <Route
-              path="/spinner"
-              element={<Spinner />}
-            />
             <Route
               path="/homes&rooms/:id"
               element={<LazySingleHousePageComponent />}

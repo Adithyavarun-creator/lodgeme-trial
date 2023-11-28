@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import { IoHeartDislikeOutline, IoEarth } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
+// import { motion } from 'framer-motion/dist/framer-motion'
 
 const HouseCard = ({ houseCards, title }) => {
   const { t } = useTranslation();
@@ -27,7 +28,11 @@ const HouseCard = ({ houseCards, title }) => {
       <div>
         <h1>{title}</h1>
       </div>
-      <div className="toprated_house_cardbox">
+      <div
+        animate={{ x: 100 }}
+        transition={{ delay: 1 }}
+        className="toprated_house_cardbox"
+      >
         {houseCards?.length ? (
           houseCards?.map((card) => (
             <Link
