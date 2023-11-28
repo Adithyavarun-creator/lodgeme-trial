@@ -5,7 +5,9 @@ import { useTranslation } from "react-i18next";
 import { FaHeart } from "react-icons/fa";
 import Slider from "react-slick";
 // import { dummyImages, houseCards } from "../../datas/houseCards";
-import { IoHeartDislikeOutline } from "react-icons/io5";
+import { IoHeartDislikeOutline, IoEarth } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import Spinner from "../Spinner/Spinner";
 
 const HouseCard = ({ houseCards, title }) => {
   const { t } = useTranslation();
@@ -15,7 +17,6 @@ const HouseCard = ({ houseCards, title }) => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
     speed: 3000,
     autoplaySpeed: 2000,
     cssEase: "linear",
@@ -27,19 +28,30 @@ const HouseCard = ({ houseCards, title }) => {
         <h1>{title}</h1>
       </div>
       <div className="toprated_house_cardbox">
-        {houseCards?.length &&
+        {houseCards?.length < 1 ? (
+          <Spinner />
+        ) : (
           houseCards?.map((card) => (
-            <div className="toprated_house_card" key={card.id}>
+            <Link
+              target="_blank"
+              to={`/homes&rooms/${card.id}`}
+              className="toprated_house_card linkStyle"
+              key={card.id}
+            >
               <Slider {...settings}>
-                {card.images.map((image) => (
-                  <div key={image.id}>
-                    <img
-                      src={image.imgSrc}
-                      alt=""
-                      className="toprated_house_cardimg"
-                    />
-                  </div>
-                ))}
+                {card.images ? (
+                  card.images.map((image) => (
+                    <div className="" key={image.id}>
+                      <img
+                        src={image.imgSrc}
+                        alt=""
+                        className="toprated_house_cardimg"
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <Spinner />
+                )}
               </Slider>
 
               <div className="toprated_favorite">
@@ -91,11 +103,6 @@ const HouseCard = ({ houseCards, title }) => {
                   </div>
                 )}
 
-                {card.subCaption && (
-                  <div className="toprated_locationbox">
-                    <span>{card.subCaption} </span>
-                  </div>
-                )}
                 {card.subLocation && (
                   <div className="toprated_locationbox">
                     <span>{card.subLocation} </span>
@@ -103,6 +110,12 @@ const HouseCard = ({ houseCards, title }) => {
                 )}
                 {card.country && (
                   <div className="toprated_locationbox">
+                    <span>
+                      <IoEarth
+                        style={{ color: "#34A56F" }}
+                        className="toprated_locationicon"
+                      />
+                    </span>
                     <span>{card.country} </span>
                   </div>
                 )}
@@ -115,8 +128,9 @@ const HouseCard = ({ houseCards, title }) => {
                 )}
                 <div className="toprated_reviewbox"></div>
               </div>
-            </div>
-          ))}
+            </Link>
+          ))
+        )}
       </div>
       <div className="flex-center mt-10 mb-20">
         <button className="toprated_button">{t("searchmore")}</button>

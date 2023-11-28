@@ -83,7 +83,7 @@ export const HouseCardStyles = styled.div`
   }
 
   .slick-dots li.slick-active button:before {
-    color: #015151 !important;
+    color: #fff !important;
   }
 
   .toprated_house_card:hover {

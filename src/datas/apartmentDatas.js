@@ -31,9 +31,8 @@ import chartreux6 from "../assets/chartreux/img6.JPG";
 export const apartmentDatas = [
   {
     id: 1,
-    location: "2201 Menaul Blvd NE - STE A",
-    subLocation: "87107 Albuquerque – New Mexico, ",
-    country: "United States",
+    caption: "Paris 17th",
+    country: "France",
     images: [
       {
         id: 1,
@@ -51,9 +50,9 @@ export const apartmentDatas = [
   },
   {
     id: 2,
-    location: "2201 Menaul Blvd NE - STE A",
-    subLocation: "87107 Albuquerque – New Mexico, ",
-    country: "United States",
+    location: "Rue Saint Dominique 75007",
+    subLocation: "Paris",
+    country: "France",
     images: [
       {
         id: 1,
@@ -119,9 +118,8 @@ export const apartmentDatas = [
   },
   {
     id: 3,
-    location: "2201 Menaul Blvd NE - STE A",
-    subLocation: "87107 Albuquerque – New Mexico, ",
-    country: "United States",
+    caption: "Chartreux",
+    location: "Marseille",
     images: [
       {
         id: 1,
