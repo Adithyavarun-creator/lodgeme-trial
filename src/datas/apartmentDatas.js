@@ -50,8 +50,7 @@ export const apartmentDatas = [
   },
   {
     id: 2,
-    location: "Rue Saint Dominique 75007",
-    subLocation: "Paris",
+    location: "Rue Saint Dominique 75007,Paris",
     country: "France",
     images: [
       {
