@@ -28,9 +28,7 @@ const HouseCard = ({ houseCards, title }) => {
         <h1>{title}</h1>
       </div>
       <div className="toprated_house_cardbox">
-        {houseCards?.length < 1 ? (
-          <Spinner />
-        ) : (
+        {houseCards?.length ? (
           houseCards?.map((card) => (
             <Link
               target="_blank"
@@ -130,6 +128,8 @@ const HouseCard = ({ houseCards, title }) => {
               </div>
             </Link>
           ))
+        ) : (
+          <Spinner />
         )}
       </div>
       <div className="flex-center mt-10 mb-20">

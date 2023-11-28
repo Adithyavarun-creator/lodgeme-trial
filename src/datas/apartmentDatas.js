@@ -50,6 +50,7 @@ export const apartmentDatas = [
   },
   {
     id: 2,
+    caption: "Saint Dominique",
     location: "Rue Saint Dominique 75007,Paris",
     country: "France",
     images: [
@@ -119,6 +120,7 @@ export const apartmentDatas = [
     id: 3,
     caption: "Chartreux",
     location: "Marseille",
+    country: "France",
     images: [
       {
         id: 1,

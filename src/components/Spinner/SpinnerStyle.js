@@ -1,89 +1,102 @@
 import styled from "styled-components";
+import { devices } from "../../theme/breakpoints";
 
 export const SpinnerStyles = styled.div`
-  .lds-default {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 220px;
+
+  @media ${devices.bigLaptopsAndDesktops} {
+    gap: 5px;
+    margin-top: 200px;
   }
-  .lds-default div {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: red;
-    border-radius: 50%;
-    animation: lds-default 1.2s linear infinite;
+
+  @media ${devices.tabletsAndIpads} {
+    margin-top: 120px;
   }
-  .lds-default div:nth-child(1) {
-    animation-delay: 0s;
-    top: 37px;
-    left: 66px;
+  @media ${devices.smallTabs} {
+    margin-top: 80px;
   }
-  .lds-default div:nth-child(2) {
-    animation-delay: -0.1s;
-    top: 22px;
-    left: 62px;
+
+  @media ${devices.smallMobiles} {
+    margin-top: 60px;
   }
-  .lds-default div:nth-child(3) {
-    animation-delay: -0.2s;
-    top: 11px;
-    left: 52px;
+
+  .spinnerlogobox {
+    display: flex;
+    justify-content: center;
   }
-  .lds-default div:nth-child(4) {
-    animation-delay: -0.3s;
-    top: 7px;
-    left: 37px;
-  }
-  .lds-default div:nth-child(5) {
-    animation-delay: -0.4s;
-    top: 11px;
-    left: 22px;
-  }
-  .lds-default div:nth-child(6) {
-    animation-delay: -0.5s;
-    top: 22px;
-    left: 11px;
-  }
-  .lds-default div:nth-child(7) {
-    animation-delay: -0.6s;
-    top: 37px;
-    left: 7px;
-  }
-  .lds-default div:nth-child(8) {
-    animation-delay: -0.7s;
-    top: 52px;
-    left: 11px;
-  }
-  .lds-default div:nth-child(9) {
-    animation-delay: -0.8s;
-    top: 62px;
-    left: 22px;
-  }
-  .lds-default div:nth-child(10) {
-    animation-delay: -0.9s;
-    top: 66px;
-    left: 37px;
-  }
-  .lds-default div:nth-child(11) {
-    animation-delay: -1s;
-    top: 62px;
-    left: 52px;
-  }
-  .lds-default div:nth-child(12) {
-    animation-delay: -1.1s;
-    top: 52px;
-    left: 62px;
-  }
-  @keyframes lds-default {
-    0%,
-    20%,
-    80%,
-    100% {
-      transform: scale(1);
+
+  .spinnerlogo {
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #015151;
+    border-radius: 30px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      padding: 10px;
+      height: 100px;
     }
-    50% {
-      transform: scale(1.5);
+
+    @media ${devices.tabletsAndIpads} {
+      padding: 10px;
+      height: 80px;
+    }
+    @media ${devices.smallTabs} {
+      padding: 10px;
+      height: 60px;
+    }
+
+    @media ${devices.smallMobiles} {
+      padding: 5px;
+      height: 40px;
+    }
+  }
+
+  .loader,
+  .loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+  }
+  .loader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(1, 81, 81, 0.2);
+    border-right: 1.1em solid rgba(1, 81, 81, 0.2);
+    border-bottom: 1.1em solid rgba(1, 81, 81, 0.2);
+    border-left: 1.1em solid #015151;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+  }
+  @-webkit-keyframes load8 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load8 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
 `;
