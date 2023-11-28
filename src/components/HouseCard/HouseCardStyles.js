@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { devices } from "../../theme/breakpoints";
 
 export const HouseCardStyles = styled.div`
+  /* margin-top: 250px; */
   display: flex;
   flex-direction: column;
   align-items: center;

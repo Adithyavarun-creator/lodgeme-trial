@@ -23,9 +23,10 @@ import { TbUsersGroup } from "react-icons/tb";
 import HouseCard from "../../components/HouseCard/HouseCard";
 import { useTranslation } from "react-i18next";
 import { houseCards } from "../../datas/houseCards";
+import { apartmentDatas } from "../../datas/apartmentDatas";
 
 const Homepage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const settings = {
     dots: true,
@@ -359,17 +360,15 @@ const Homepage = () => {
         </div>
       </div> */}
 
+      <div className="mt-100"></div>
+
       <div>
-        <HouseCard title="Top Rated Apartments" />
+        <HouseCard title="Top Rated Apartments" houseCards={apartmentDatas} />
       </div>
 
       <div>
         <HouseCard title="Top Rated Houses" houseCards={houseCards} />
       </div>
-
-      {/* <div>
-        <TopRated />
-      </div> */}
     </HomepageStyles>
   );
 };

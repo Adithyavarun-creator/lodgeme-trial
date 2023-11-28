@@ -1,9 +1,8 @@
 import { HouseCardStyles } from "./HouseCardStyles";
 import { RiMapPin2Fill } from "react-icons/ri";
 import { FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import Slider from "react-slick";
 // import { dummyImages, houseCards } from "../../datas/houseCards";
 import { IoHeartDislikeOutline } from "react-icons/io5";
@@ -54,44 +53,66 @@ const HouseCard = ({ houseCards, title }) => {
                 </span>
               </div>
 
-              <div className="toprated_favoriteuser">
-                <span className="">
-                  <img src={card.userImg} alt="" className="toprated_user" />
-                </span>
-              </div>
+              {card.userImg && (
+                <div className="toprated_favoriteuser">
+                  <span className="">
+                    <img src={card.userImg} alt="" className="toprated_user" />
+                  </span>
+                </div>
+              )}
 
               <div className="toprated_house_cardsubs">
                 <div className="housetitlebox">
-                  <div>
-                    <h3 className="toprated_house_cardmaintext">
-                      {card.caption}
-                    </h3>
-                  </div>
-                  <div>
-                    <div className="flex">
-                      <FaStar className="toprated_staricon" />
-                      &nbsp;{" "}
-                      <span className="toprated_ratingcount">
-                        {card.ratingCount}
-                      </span>
+                  {card.caption && (
+                    <div>
+                      <h3 className="toprated_house_cardmaintext">
+                        {card.caption}
+                      </h3>
                     </div>
+                  )}
+                  <div>
+                    {card.ratingCount && (
+                      <div className="flex">
+                        <FaStar className="toprated_staricon" />
+                        &nbsp;{" "}
+                        <span className="toprated_ratingcount">
+                          {card.ratingCount}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
-                <div className="toprated_locationbox">
-                  <span>
-                    <RiMapPin2Fill className="toprated_locationicon" />
-                  </span>
-                  <span> {card.location}</span>
-                </div>
+                {card.location && (
+                  <div className="toprated_locationbox">
+                    <span>
+                      <RiMapPin2Fill className="toprated_locationicon" />
+                    </span>
+                    <span> {card.location}</span>
+                  </div>
+                )}
 
-                <div className="toprated_locationbox">
-                  <span>{card.subCaption} </span>
-                </div>
-                <div className="flex">
-                  <strong className="toprated_pricebox">
-                    ${card.priceperNight}/night
-                  </strong>
-                </div>
+                {card.subCaption && (
+                  <div className="toprated_locationbox">
+                    <span>{card.subCaption} </span>
+                  </div>
+                )}
+                {card.subLocation && (
+                  <div className="toprated_locationbox">
+                    <span>{card.subLocation} </span>
+                  </div>
+                )}
+                {card.country && (
+                  <div className="toprated_locationbox">
+                    <span>{card.country} </span>
+                  </div>
+                )}
+                {card.priceperNight && (
+                  <div className="flex">
+                    <strong className="toprated_pricebox">
+                      ${card.priceperNight}/night
+                    </strong>
+                  </div>
+                )}
                 <div className="toprated_reviewbox"></div>
               </div>
             </div>

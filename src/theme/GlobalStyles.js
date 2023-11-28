@@ -39,6 +39,21 @@ body {
   margin-top: 10px;
 }
 
+.mt-100{
+  margin-top: 100px;
+  @media ${devices.tabletsAndIpads}{
+    margin-top: 50px;
+  }
+
+  @media ${devices.smallTabs}{
+    margin-top: 20px;
+  }
+
+  @media ${devices.smallMobiles}{
+    margin-top: 20px;
+  }
+}
+
 .linkStyle{
   text-decoration: none;
   color: #333333;
