@@ -20,7 +20,7 @@ import { useRef } from "react";
 import { RiMapPin2Fill } from "react-icons/ri";
 import { FaCalendarMinus, FaSearchLocation } from "react-icons/fa";
 import { TbUsersGroup } from "react-icons/tb";
-import TopRated from "../../components/TopRated/TopRated";
+import HouseCard from "../../components/HouseCard/HouseCard";
 import { useTranslation } from "react-i18next";
 import { houseCards } from "../../datas/houseCards";
 
@@ -174,88 +174,97 @@ const Homepage = () => {
         </Slider>
       </div>
 
-      <div className="homepage_search_container">
-        <div className="search_select_width">
-          <div className="search_labelbox">
-            <span className="search_labeltitle"> {t("location")}</span>
-            <span>
-              <RiMapPin2Fill className="search_box_icon" />
-            </span>
-          </div>
-
-          <Select
-            className="select"
-            placeholder={`${t("bookingdate")}`}
-            options={options}
-            value={value}
-            onChange={changeHandler}
-            styles={styles}
-            name="location"
-          />
+      {/* <div>
+        <h1>Un toit ou vous retrouver tous ensemble</h1>
+      </div> */}
+      <div>
+        <div className="homepage_header_text">
+          <h1>Un toit ou vous retrouver tous ensemble</h1>
         </div>
 
-        <div>
-          <div className="search_labelbox">
-            <span className="search_labeltitle"> {t("bookingdate")}</span>
-            <span>
-              <FaCalendarMinus className="search_box_icon" />
-            </span>
-          </div>
-          <input
-            value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(
-              range[0].endDate,
-              "MM/dd/yyyy"
-            )}`}
-            readOnly
-            className="date_inputfield"
-            onClick={() => setOpen((open) => !open)}
-          />
-        </div>
+        <div className="homepage_search_container">
+          <div className="search_select_width">
+            <div className="search_labelbox">
+              <span className="search_labeltitle"> {t("location")}</span>
+              <span>
+                <RiMapPin2Fill className="search_box_icon" />
+              </span>
+            </div>
 
-        <div className="datebox_range" ref={refOne}>
-          {open && (
-            <DateRangePicker
-              className="date_range"
-              onChange={(item) => setRange([item.selection])}
-              editableDateInputs={true}
-              moveRangeOnFirstSelection={false}
-              ranges={range}
-              months={2}
-              direction="horizontal"
-              rangeColors={["#015151", "#6495ED", "#fed14c"]}
+            <Select
+              className="select"
+              placeholder={`${t("bookingdate")}`}
+              options={options}
+              value={value}
+              onChange={changeHandler}
+              styles={styles}
+              name="location"
             />
-          )}
-        </div>
-
-        <div>
-          <div className="search_labelbox">
-            <span className="search_labeltitle"> {t("persons")}</span>
-            <span>
-              <TbUsersGroup className="search_box_icon" />
-            </span>
           </div>
 
-          <Select
-            className="select"
-            placeholder={`${t("selectPersons")}`}
-            options={personOptions}
-            value={noPersons}
-            onChange={changePersonHandler}
-            styles={styles}
-            name="person"
-          />
-        </div>
-        <div>
-          <div className="search_labelbox">
-            <span className="search_labeltitle"> {t("submit")}</span>
-            <span>
-              <FaSearchLocation className="search_box_icon" />
-            </span>
+          <div>
+            <div className="search_labelbox">
+              <span className="search_labeltitle"> {t("bookingdate")}</span>
+              <span>
+                <FaCalendarMinus className="search_box_icon" />
+              </span>
+            </div>
+            <input
+              value={`${format(range[0].startDate, "MM/dd/yyyy")} to ${format(
+                range[0].endDate,
+                "MM/dd/yyyy"
+              )}`}
+              readOnly
+              className="date_inputfield"
+              onClick={() => setOpen((open) => !open)}
+            />
           </div>
-          <button className="homepage_searchbtn">
-            <IoSearchSharp className="" />
-            {t("search")}
-          </button>
+
+          <div className="datebox_range" ref={refOne}>
+            {open && (
+              <DateRangePicker
+                className="date_range"
+                onChange={(item) => setRange([item.selection])}
+                editableDateInputs={true}
+                moveRangeOnFirstSelection={false}
+                ranges={range}
+                months={2}
+                direction="horizontal"
+                rangeColors={["#015151", "#6495ED", "#fed14c"]}
+              />
+            )}
+          </div>
+
+          <div>
+            <div className="search_labelbox">
+              <span className="search_labeltitle"> {t("persons")}</span>
+              <span>
+                <TbUsersGroup className="search_box_icon" />
+              </span>
+            </div>
+
+            <Select
+              className="select"
+              placeholder={`${t("selectPersons")}`}
+              options={personOptions}
+              value={noPersons}
+              onChange={changePersonHandler}
+              styles={styles}
+              name="person"
+            />
+          </div>
+          <div>
+            <div className="search_labelbox">
+              <span className="search_labeltitle"> {t("submit")}</span>
+              <span>
+                <FaSearchLocation className="search_box_icon" />
+              </span>
+            </div>
+            <button className="homepage_searchbtn">
+              <IoSearchSharp className="" />
+              {t("search")}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -351,7 +360,11 @@ const Homepage = () => {
       </div> */}
 
       <div>
-        <TopRated houseCards={houseCards} />
+        <HouseCard title="Top Rated Apartments" />
+      </div>
+
+      <div>
+        <HouseCard title="Top Rated Houses" houseCards={houseCards} />
       </div>
 
       {/* <div>

@@ -64,14 +64,49 @@ export const HomepageStyles = styled.section`
     }
   }
 
+  .homepage_header_text {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 200px;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      margin-top: 180px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      margin-top: 100px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    @media ${devices.smallTabs} {
+      margin-top: 0px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    @media ${devices.smallMobiles} {
+      margin-top: 0px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
   .homepage_search_container {
     display: flex;
+    flex-direction: row;
     border: 2px solid ${({ theme }) => theme.colors.primaryColor};
     height: 125px;
     background-color: white;
-    flex-direction: row;
     z-index: 20;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 15px;
     align-items: center;
@@ -82,18 +117,19 @@ export const HomepageStyles = styled.section`
     box-shadow: 0px 5px 5px 0px rgba(82, 78, 78, 0.75);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(82, 78, 78, 0.75);
     -moz-box-shadow: 0px 5px 5px 0px rgba(82, 78, 78, 0.75);
-    margin-top: 650px;
+    margin-top: 0;
 
     @media ${devices.bigLaptopsAndDesktops} {
       width: 98%;
-      margin-top: 620px;
+      /* margin-top: 620px; */
     }
 
     @media ${devices.tabletsAndIpads} {
-      width: 95%;
-      margin-top: 420px;
+      width: 98%;
+      /* margin-top: 420px; */
       padding: 5px;
       gap: 10px;
+      justify-content: space-evenly;
     }
 
     @media ${devices.smallTabs} {
@@ -101,17 +137,16 @@ export const HomepageStyles = styled.section`
       display: flex;
       flex-direction: column;
       gap: 3px;
-      margin-top: 250px;
       padding: 10px;
-      width: 60%;
+      width: 80%;
     }
 
     @media ${devices.smallMobiles} {
-      height: 350px;
+      height: 300px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 130px;
+      gap: 5px;
+      /* margin-top: 130px; */
       padding: 0;
       width: 90%;
     }
@@ -137,9 +172,8 @@ export const HomepageStyles = styled.section`
     padding: 5px;
     height: 53px;
     border-radius: 5px;
-    /* font-size: ${({ theme }) => theme.bigScreens.inputFont}; */
     font-size: 20px;
-    width: 255px;
+    width: 285px;
     background: ${({ theme }) => theme.colors.primaryColor};
     color: ${({ theme }) => theme.colors.whiteColor};
     border: none;
@@ -151,7 +185,7 @@ export const HomepageStyles = styled.section`
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont};
+      font-size: 14px;
       text-align: center;
       height: 55px;
     }
@@ -176,7 +210,7 @@ export const HomepageStyles = styled.section`
 
     @media ${devices.tabletsAndIpads} {
       /* font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont}; */
-      font-size: 12px;
+      font-size: 10px;
     }
 
     @media ${devices.smallTabs} {
@@ -203,6 +237,7 @@ export const HomepageStyles = styled.section`
       left: 0;
       right: 0;
       z-index: 100;
+      overflow-y: hidden;
     }
 
     @media ${devices.smallTabs} {
@@ -231,13 +266,12 @@ export const HomepageStyles = styled.section`
     padding: 12px 16px;
     height: 53px;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
     background-color: ${({ theme }) => theme.colors.primaryColor};
     color: ${({ theme }) => theme.colors.whiteColor};
-    font-size: ${({ theme }) => theme.bigScreens.btnFontsize};
     align-items: center;
     border: none;
     offset: none;

@@ -1,4 +1,4 @@
-import { TopRatedStyles } from "./TopRatedStyles";
+import { HouseCardStyles } from "./HouseCardStyles";
 import { RiMapPin2Fill } from "react-icons/ri";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -8,7 +8,7 @@ import Slider from "react-slick";
 // import { dummyImages, houseCards } from "../../datas/houseCards";
 import { IoHeartDislikeOutline } from "react-icons/io5";
 
-const TopRated = ({ houseCards }) => {
+const HouseCard = ({ houseCards, title }) => {
   const { t } = useTranslation();
 
   const settings = {
@@ -23,9 +23,9 @@ const TopRated = ({ houseCards }) => {
   };
 
   return (
-    <TopRatedStyles>
+    <HouseCardStyles>
       <div>
-        <h1>{t("toprated")}</h1>
+        <h1>{title}</h1>
       </div>
       <div className="toprated_house_cardbox">
         {houseCards?.length &&
@@ -100,8 +100,8 @@ const TopRated = ({ houseCards }) => {
       <div className="flex-center mt-10 mb-20">
         <button className="toprated_button">{t("searchmore")}</button>
       </div>
-    </TopRatedStyles>
+    </HouseCardStyles>
   );
 };
 
-export default TopRated;
+export default HouseCard;

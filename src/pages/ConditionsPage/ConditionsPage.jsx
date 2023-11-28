@@ -20,10 +20,11 @@ const ConditionsPage = () => {
       <div>
         <span>
           Le présent document a pour objet de définir les modalités et
-          conditions dans lesquelles d’une part, <span>LODGE ME</span> SAS, en
-          tant qu’éditeur, met à la disposition de ses utilisateurs le site, et
-          les services disponibles sur le site et d’autre part, la manière par
-          laquelle l’utilisateur accède au site et utilise ses services.
+          conditions dans lesquelles d’une part, <strong>&nbsp;LODGE ME</strong>{" "}
+          SAS, en tant qu’éditeur, met à la disposition de ses utilisateurs le
+          site, et les services disponibles sur le site et d’autre part, la
+          manière par laquelle l’utilisateur accède au site et utilise ses
+          services.
         </span>
       </div>
       <div>
@@ -32,25 +33,25 @@ const ConditionsPage = () => {
           www.lodgeme.com
         </span>
         <span>
-          <span>LODGE ME</span> SAS est un prestataire de services de locations
-          de biens immobiliers en ligne. Il représente présente les produits et
-          les services sous son nom, suite aux mandats de gestions signés avec
-          les propriétaires des biens. De ce fait, <span>LODGE ME</span> SAS
-          dispose de tous les droits pour louer les logements présents sur le
-          site.
+          <strong>&nbsp;LODGE ME</strong> SAS est un prestataire de services de
+          locations de biens immobiliers en ligne. Il représente présente les
+          produits et les services sous son nom, suite aux mandats de gestions
+          signés avec les propriétaires des biens. De ce fait,
+          <strong>&nbsp;LODGE ME</strong> SAS dispose de tous les droits pour
+          louer les logements présents sur le site.
         </span>
       </div>
       <div>
         <span>
           Les produits proposés à la location sont exclusivement gérés par LODGE
           ME SAS. De même Les locataires auront pour seul vis-à-vis, la société
-          <span>LODGE ME</span> SAS.
+          <strong>&nbsp;LODGE ME</strong> SAS.
         </span>
       </div>
       <div>
         <span>
-          <span>LODGE ME</span> SAS assure la location, le nettoyage, les
-          opérations d’entrée et de sortie des logements, l’encaissement des
+          <strong>&nbsp;LODGE ME</strong> SAS assure la location, le nettoyage,
+          les opérations d’entrée et de sortie des logements, l’encaissement des
           paiements ainsi que la caution déposée par les locataires durant le
           séjour.
         </span>
@@ -65,27 +66,29 @@ const ConditionsPage = () => {
       </div>
       <div>
         <span>
-          En utilisant la plate-forme <strong>LODGE ME</strong>, vous acceptez
-          de vous conformer et d’être lié par les présentes conditions générales
-          d’utilisation.
+          En utilisant la plate-forme <strong>&nbsp;LODGE ME</strong>, vous
+          acceptez de vous conformer et d’être lié par les présentes conditions
+          générales d’utilisation.
         </span>
       </div>
       <div>
         <span>
           Les présentes Conditions Générales d’Utilisation (« Conditions »)
           constituent un accord juridiquement contraignant (« Accord ») entre
-          l’utilisateur et <span>LODGE ME</span> (comme défini ci-après)
-          régissant son accès au site Web de <span>LODGE ME</span> et à son
-          utilisation, y compris tous ses sous-domaines, et tout autre site Web
-          par le biais duquel <span>LODGE ME</span> met à disposition ses
-          services (collectivement « Site »), les applications pour appareils
-          mobiles, tablettes et autres appareils intelligents, et les interfaces
-          de programme d’application (collectivement « Application ») et tous
-          les services associés (collectivement « Services de{" "}
-          <span>LODGE ME</span> »). Les services de site et les applications de
-          <span>LODGE ME</span> sont ci-après collectivement dénommés la
-          «plate-forme de
-          <span>LODGE ME</span> ».
+          l’utilisateur et <strong>&nbsp;LODGE ME</strong> (comme défini
+          ci-après) régissant son accès au site Web de{" "}
+          <strong>&nbsp;LODGE ME</strong> et à son utilisation, y compris tous
+          ses sous-domaines, et tout autre site Web par le biais duquel{" "}
+          <strong>&nbsp;LODGE ME</strong> met à disposition ses services
+          (collectivement « Site »), les applications pour appareils mobiles,
+          tablettes et autres appareils intelligents, et les interfaces de
+          programme d’application (collectivement « Application ») et tous les
+          services associés (collectivement « Services de{" "}
+          <strong>&nbsp;LODGE ME</strong> »). Les services de site et les
+          applications de
+          <strong>&nbsp;LODGE ME</strong> sont ci-après collectivement dénommés
+          la «plate-forme de
+          <strong>&nbsp;LODGE ME</strong> ».
         </span>
       </div>
 
@@ -389,246 +392,6 @@ const ConditionsPage = () => {
           </ul>
         </div>
       </div>
-      {/* <div>
-        <ul>
-          <li>
-            1.2.3 La plate-forme <span>LODGE ME</span> peut contenir des liens
-            vers des sites Web («Services de tiers»). Ces services tiers peuvent
-            être soumis à des conditions générales et à des pratiques de
-            confidentialité différentes. <span>LODGE ME</span> n’est pas
-            responsable des informations contenues dans ces sites. Les liens
-            vers ces services ne constituent pas une approbation par{" "}
-            <span>LODGE ME</span> des dits services.
-          </li>
-          <li>
-            1.2.4 En raison de la nature de l’Internet, <span>LODGE ME</span> ne
-            peut pas garantir la disponibilité et l’accessibilité continues et
-            ininterrompues de la plate-forme <span>LODGE ME</span>.
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="condition-listheading">
-          2 Éligibilité, utilisation de la plateforme <span>LODGE ME</span>,
-          vérification des membres
-        </span>
-        <ul>
-          <li>
-            Pour accéder à la plate-forme <span>LODGE ME</span> et l’utiliser,
-            ou pour créer un compte <span>LODGE ME</span>, l’utilisateur doit
-            être âgé d’au moins 18 ans pour pouvoir souscrire des contrats
-            juridiquement contraignants. En accédant à la plateforme{" "}
-            <span>LODGE ME</span> ou en l’utilisant, l’utilisateur déclare et
-            garantit qu’il est âgé de 18 ans ou plus et qu’il a la capacité
-            juridique et le pouvoir de conclure un contrat.
-          </li>
-          <li>
-            <span>LODGE ME</span> peut subordonner l’accès à la plate-forme{" "}
-            <span>LODGE ME</span>, à certaines conditions ou exigences, telles
-            que la réalisation d’un processus de vérification, le respect de
-            critères de qualité ou d’éligibilité spécifiques, le respect des
-            seuils de notations ou de révisions, ou l’historique de réservation
-            et d’annulation d’un membre.
-          </li>
-          <li>
-            <li>
-              2.3 La vérification de l’identité de l’utilisateur sur Internet
-              est difficile et <span>LODGE ME</span> n’assume aucune
-              responsabilité quant à la confirmation de l’identité d’un membre.
-            </li>
-          </li>
-          <li>
-            2.3 La vérification de l’identité de l’utilisateur sur Internet est
-            difficile et <span>LODGE ME</span> n’assume aucune responsabilité
-            quant à la confirmation de l’identité d’un membre.
-          </li>
-          <li>
-            2.4 L’accès ou l’utilisation de certaines fonctionnalités de la
-            plate-forme <span>LODGE ME</span> peut être soumis à des politiques,
-            normes ou directives distinctes, ou peut nécessiter que
-            l’utilisateur accepte des termes et conditions supplémentaires. En
-            cas de conflit entre les présentes conditions générales applicables
-            à une caractéristique spécifique de la plate-forme{" "}
-            <span>LODGE ME</span>, ces dernières conditions prévalent sur
-            l’accès ou l’utilisation de cette fonctionnalité, sauf indication
-            contraire.
-          </li>
-          <li>
-            2.5 Si l’utilisateur accède à l’application via AppStore ou la
-            télécharge à partir de l’AppStore, il déclare qu’il accepte les
-            termes du contrat de licence d’utilisateur. Certaines
-            caractéristiques de la plate-forme <span>LODGE ME</span>{" "}
-            implémentent des services de cartographie Google Maps / Earth,
-            notamment les API Google Maps. L’utilisation de Google Maps / Earth
-            est soumise aux Conditions d’utilisation supplémentaires de Google
-            Maps / Google Earth.
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="condition-listheading">
-          3. Modification de ces conditions
-        </span>
-        <ul>
-          <li>
-            <span>LODGE ME</span>
-            se réserve le droit de modifier les présentes Conditions à tout
-            moment conformément à cette disposition. Si <span>LODGE ME</span>
-            apporte des modifications à ces conditions, elle doit publier les
-            conditions révisées sur la plate-forme <span>LODGE ME</span> et
-            mettra à jour la date de «dernière mise à jour» en haut de ces
-            conditions. <span>LODGE ME</span>
-            informera également des modifications par courrier électronique au
-            moins trente (30) jours avant la date de leur entrée en vigueur. Si
-            l’utilisateur n’est pas d’accord avec les conditions révisées, il
-            peut résilier le présent contrat avec effet immédiat.{" "}
-            <span>LODGE ME</span>
-            l’informera de son droit de résilier le contrat dans le courrier
-            électronique de notification. Si l’utilisateur ne résilie pas son
-            contrat avant la date d’entrée en vigueur des conditions révisées,
-            le fait de continuer à accéder à ou à utiliser la plate-forme{" "}
-            <span>LODGE ME</span> constituera une acceptation de ces conditions.
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="condition-listheading">
-          4. Enregistrement du compte
-        </span>
-        <ul>
-          <li>
-            4.1 L’utilisateur doit créer un compte (« Compte{" "}
-            <span>LODGE ME</span> ») pour accéder à certaines fonctionnalités de
-            la Plateforme <span>LODGE ME</span> tel que la réservation. Si
-            l’utilisateur enregistre un compte <span>LODGE ME</span> pour une
-            société ou une autre entité juridique, il déclare et garantit qu’il
-            a le droit de lier juridiquement cette entité et The Landlord
-            accordera toutes les autorisations et licences fournies dans les
-            présentes conditions.
-          </li>
-          <li>
-            4.2 L’utilisateur peut enregistrer un compte <span>LODGE ME</span>{" "}
-            en utilisant une adresse email et un mot de passe, ou via votre
-            compte avec certains services de réseaux sociaux tiers, tels que
-            Facebook ou Google (« Compte SNS »). L’utilisateur a la possibilité
-            de désactiver la connexion entre son compte <span>LODGE ME</span> et
-            son compte SNS à tout moment en accédant à la section « Paramètres »
-            de la plate-forme <span>LODGE ME</span>.{" "}
-          </li>
-          <li>
-            4.3 L’utilisateur doit fournir des informations exactes, à jour et
-            complètes au cours du processus d’inscription et conserver à tout
-            moment les informations relatives à son compte <span>LODGE ME</span>{" "}
-            et à la page de compte public <span>LODGE ME</span>.{" "}
-          </li>
-          <li>
-            4.4 L’utilisateur ne peut pas enregistrer plus d’un (1) compte The
-            Landlord à moins que <span>LODGE ME</span> ne l’autorise à le faire.
-            L’utilisateur ne peut pas affecter ou transférer son compte{" "}
-            <span>LODGE ME</span> à une autre partie.
-          </li>
-          <li>
-            4.5 L’utilisateur est responsable du maintien de la confidentialité
-            et de la sécurité des informations d’identification de son compte
-            LODGE ME et il ne doit en aucun cas les divulguer à des tiers. Il
-            doit immédiatement informer <span>LODGE ME</span> s’il constate que
-            ses informations d’identification ont été perdues, volées, piratées,
-            ou autrement compromises ou en cas d’utilisation non autorisée,
-            effective ou présumée, de son compte <span>LODGE ME</span>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="condition-listheading">5. Contenu</span>
-        <ul>
-          <li>
-            5.1 Sous réserve du respect de ces Conditions, <span>LODGE ME</span>{" "}
-            octroie à l’utilisateur une licence limitée. Elle est non exclusive,
-            non sous-licenciable, révocable et non transférable lui permettant
-            de télécharger et utiliser l’Application sur son (ses) appareil(s)
-            personnel(s). Accéder à et visualiser tout Contenu collectif mis à
-            disposition sur ou à travers la Plateforme <span>LODGE ME</span> et
-            accessible à lui, uniquement pour son usage personnel et non
-            commercial.
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="condition-listheading">
-          6. Modifications, annulations et remboursements de réservation{" "}
-          <span>
-            La politique d’annulation des logements sur <span>LODGE ME</span>{" "}
-            est comme suit :
-          </span>
-          1. Remboursement intégral pour les annulations effectuées dans les 4
-          heures suivant la réservation, si la date d’arrivée intervient dans 30
-          jours ou plus.
-        </span>
-        <ul>
-          <li>
-            2. Remboursement à hauteur de 10 % pour les annulations effectuées
-            au moins 20 jours avant la date d’arrivée.
-          </li>
-          <li>
-            3. Aucun remboursement pour les annulations effectuées dans les 20
-            jours précédant la date d’arrivée.
-          </li>
-          <li>
-            6.2 Les clients peuvent annuler une réservation confirmée à tout
-            moment, conformément à la politique d’annulation de{" "}
-            <span>LODGE ME</span> (article 8.1). <span>LODGE ME</span>{" "}
-            remboursera le montant total des frais dus au client conformément à
-            cette politique d’annulation. À moins de circonstances atténuantes,
-            toute partie des frais totaux dus à l’hôte en vertu de la politique
-            d’annulation sera applicable.
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="condition-listheading">7. Notes et avis</span>
-        <ul>
-          <li>
-            Dans un certain délai après la fin de la réservation, les invités
-            peuvent laisser un avis public («avis») et soumettre un classement
-            par étoiles («avis»). Les notes ou les avis reflètent les opinions
-            de chaque membre et non ceux de <span>LODGE ME</span>. Les
-            évaluations et les critiques ne sont pas vérifiées par{" "}
-            <span>LODGE ME</span> pour en vérifier l’exactitude et peuvent être
-            incorrectes ou trompeuses.
-          </li>
-          <li>
-            Les notations et les révisions font partie du profil public du
-            membre. Ainsi elles peuvent également être affichées ailleurs sur la
-            plate-forme <span>LODGE ME</span> (comme la page du logement, avec
-            d’autres informations pertinentes telles que le nombre de
-            réservations, le nombre d’annulations, le temps de réponse moyen et
-            d’autres informations.
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <span className="condition-listheading">
-          8. Dommages causés aux locaux, conflits entre les membres
-        </span>
-        <ul>
-          <li>
-            En tant qu’invité, l’utilisateur est responsable de laisser
-            l’hébergement (y compris tout bien personnel ou autre situé à
-            l’hébergement) dans l’état dans lequel il l’a trouvé à son arrivée.
-            Il est responsable de ses propres actes et omissions et des actes et
-            omissions de toute personne qui l’invite ou donne autre accès à
-            l’hébergement, à l’exclusion de l’hôte (et des personnes que l’hôte
-            invite à l’hébergement, si en vigueur).
-          </li>
-        </ul>
-      </div> */}
     </ConditionPageStyles>
   );
 };

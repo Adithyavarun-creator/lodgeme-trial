@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../theme/breakpoints";
 
-export const TopRatedStyles = styled.div`
+export const HouseCardStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

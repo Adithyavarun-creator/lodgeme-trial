@@ -190,35 +190,3 @@ const CompanyDetailsPage = () => {
 };
 
 export default CompanyDetailsPage;
-
-/**
- * 
- Legal Notice
-The sites www.lodgeme.com and lodgeme.com are operated by LODGE ME.
-Entity: LODGE ME SAS Head office address: 6 rue d’Armaillé 75017 Paris Registration number: 903 952 364 00052
-Telephone number: NIL VAT number: FR71903952364
-Customer service contacts:
-• Customer service: hello@lodgeme.com
-• Billing department: billing@lodgeme.com
-• Support service: support@lodgeme.com
-Server hosting: OVH Groupe SA
-Head office address: 2 rue Kellermann, 59100 Roubaix
-Registration number: 537 407 926
-Telephone number: 08 203 203 63
-Website: www.ovh.com
-
-*******************************************
- Mentions légales
-Les sites www.lodgeme.com et lodgeme.fr sont exploités par LODGE ME.
-Entité : LODGE ME SAS Adresse du siège social : 6 rue d’Armaillé 75017 Paris Numéro d’immatriculation : 903 952 364 00052
-Numéro de téléphone : NEANT Numéro de TVA : FR71903952364
-Contacts pour le service clientèle :
-• Service client : hello@lodgeme.fr
-• Service facturation : billing@lodgeme.fr
-• Service assistance : support@lodgeme.fr
-Hébergement du serveur : OVH Groupe SA
-Adresse du siège social : 2 rue Kellermann, 59100 Roubaix
-Numéro d’immatriculation : 537 407 926
-Numéro de téléphone : 08 203 203 63
-Site Internet : www.ovh.com
- */

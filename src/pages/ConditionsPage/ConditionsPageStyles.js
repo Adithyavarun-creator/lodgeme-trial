@@ -51,82 +51,81 @@ export const ConditionPageStyles = styled.div`
 
   .conditionheading {
     text-align: center;
-    font-size: 34px;
+    font-size: 28px;
     text-decoration: underline;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 24px;
+      font-size: 20px;
     }
     @media ${devices.smallTabs} {
-      font-size: 18px;
+      font-size: 14px;
     }
     @media ${devices.smallMobiles} {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 
   span {
-    font-size: 30px;
+    font-size: 18px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 28px;
-    }
-
-    @media ${devices.tabletsAndIpads} {
-      font-size: 24px;
-    }
-    @media ${devices.smallTabs} {
       font-size: 18px;
     }
 
+    @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 12px;
+    }
     @media ${devices.smallMobiles} {
-      font-size: 10px;
+      font-size: 9px;
     }
   }
 
   li {
-    font-size: 30px;
+    font-size: 18px;
     list-style: disc;
     margin-left: 50px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 28px;
+      font-size: 18px;
       margin-left: 50px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 24px;
+      font-size: 14px;
       margin-left: 50px;
     }
     @media ${devices.smallTabs} {
-      font-size: 18px;
+      font-size: 12px;
       margin-left: 40px;
     }
     @media ${devices.smallMobiles} {
-      font-size: 10px;
+      font-size: 9px;
       margin-left: 25px;
     }
   }
 
   .condition-listheading {
-    font-size: 31px;
+    font-size: 18px;
     font-weight: bolder;
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 29px;
+      font-size: 18px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 24px;
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
-      font-size: 18px;
+      font-size: 12px;
     }
     @media ${devices.smallMobiles} {
-      font-size: 10px;
+      font-size: 9px;
     }
   }
 `;
