@@ -100,7 +100,10 @@ const Footer = () => {
           <Link className="linkStyle footer_centertext">
             © 2023 LODGE ME SAS
           </Link>
-          <Link className="linkStyle footer_centertext">
+          <Link
+            to="/conditions-general"
+            className="linkStyle footer_centertext"
+          >
             Conditions généralés
           </Link>
           <Link className="linkStyle footer_centertext">Plan du site</Link>
@@ -108,12 +111,7 @@ const Footer = () => {
           <Link className="linkStyle footer_centertext">
             Vos choix en matiére de Confidentialité
           </Link>
-
-          {/* <Link to="/company-details" className="linkStyle footer_centertext">
-            Company Details
-          </Link> */}
         </div>
-        {/* <div></div> */}
 
         <div className="footer_socialicons">
           <div className="footer_socialiconbox">

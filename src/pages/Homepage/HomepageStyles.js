@@ -90,7 +90,7 @@ export const HomepageStyles = styled.section`
     }
 
     @media ${devices.tabletsAndIpads} {
-      width: 90%;
+      width: 95%;
       margin-top: 420px;
       padding: 5px;
       gap: 10px;
@@ -113,7 +113,7 @@ export const HomepageStyles = styled.section`
       gap: 10px;
       margin-top: 130px;
       padding: 0;
-      width: 70%;
+      width: 90%;
     }
   }
 
@@ -265,8 +265,8 @@ export const HomepageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
-      height: 50px;
-      font-size: 14px;
+      height: 35px;
+      font-size: 12px;
     }
   }
 
@@ -393,7 +393,7 @@ export const HomepageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
-      grid-template-columns: 300px;
+      grid-template-columns: 250px;
       column-gap: 20px;
       row-gap: 40px;
     }
@@ -422,7 +422,8 @@ export const HomepageStyles = styled.section`
       font-size: ${({ theme }) => theme.smallTabScreens.titleFont};
     }
     @media ${devices.smallMobiles} {
-      font-size: ${({ theme }) => theme.mobileScreens.titleFont};
+      /* font-size: ${({ theme }) => theme.mobileScreens.titleFont}; */
+      font-size: 16px;
     }
   }
 

@@ -22,6 +22,7 @@ import { FaCalendarMinus, FaSearchLocation } from "react-icons/fa";
 import { TbUsersGroup } from "react-icons/tb";
 import TopRated from "../../components/TopRated/TopRated";
 import { useTranslation } from "react-i18next";
+import { houseCards } from "../../datas/houseCards";
 
 const Homepage = () => {
   const { t, i18n } = useTranslation();
@@ -258,11 +259,9 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <div>
-          <h1 className="house_cardtexttitle">
-          {t("searchbytype")}
-          </h1>
+          <h1 className="house_cardtexttitle">{t("searchbytype")}</h1>
         </div>
         <div className="house_cardbox">
           <div className="house_card">
@@ -349,11 +348,15 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div>
-        <TopRated />
+        <TopRated houseCards={houseCards} />
       </div>
+
+      {/* <div>
+        <TopRated />
+      </div> */}
     </HomepageStyles>
   );
 };

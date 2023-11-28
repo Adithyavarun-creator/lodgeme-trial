@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import CompanyDetailsPage from "./pages/CompanyDetails/CompanyDetailsPage";
 import ScrollToTop from "./components/ScrollTop/ScrollToTop";
+import ConditionsPage from "./pages/ConditionsPage/ConditionsPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/register-user-in" element={<ResgisterPage />} />
           <Route path="/company-details" element={<CompanyDetailsPage />} />
+          <Route path="/conditions-general" element={<ConditionsPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

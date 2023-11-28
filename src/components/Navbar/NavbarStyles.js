@@ -245,7 +245,7 @@ export const MobileNavStyle = styled.div`
     @media ${devices.smallMobiles} {
       display: block;
       height: 30px;
-      width: 100%;
+      width: 70%;
       object-fit: contain;
     }
   }

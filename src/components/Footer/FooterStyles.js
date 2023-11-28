@@ -53,7 +53,7 @@ export const FooterStyles = styled.footer`
     }
 
     @media ${devices.smallMobiles} {
-      grid-template-columns: 100px 100px 100px;
+      grid-template-columns: 80px 80px 80px;
       gap: 10px;
       column-gap: 0;
       padding: 10px;
@@ -86,6 +86,10 @@ export const FooterStyles = styled.footer`
       gap: 2px;
       padding: 3px;
     }
+  }
+
+  .footer_grid:hover {
+    color: ${({ theme }) => theme.colors.primaryColor};
   }
 
   .footer_list {
