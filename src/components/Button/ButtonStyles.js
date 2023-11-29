@@ -9,12 +9,12 @@ export const ButtonStyles = styled.button`
   offset: none;
   color: #fff;
   background: ${({ theme }) => theme.colors.primaryColor};
-  font-size: 22px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: bolder;
 
   @media ${devices.bigLaptopsAndDesktops} {
-    padding: 0 14p2;
+    padding: 14px 12px;
     font-size: 18px;
   }
 
@@ -23,8 +23,12 @@ export const ButtonStyles = styled.button`
     font-size: 16px;
   }
   @media ${devices.smallTabs} {
+    padding: 9px 10px;
+    font-size: 12px;
   }
 
   @media ${devices.smallMobiles} {
+    padding: 8px 10px;
+    font-size: 8px;
   }
 `;
