@@ -36,7 +36,6 @@ const HouseCard = ({ houseCards, title }) => {
         {houseCards?.length ? (
           houseCards?.map((card) => (
             <Link
-              target="_blank"
               to={`/homes&rooms/${card.id}`}
               className="toprated_house_card linkStyle"
               key={card.id}

@@ -2,15 +2,37 @@ import React from "react";
 import { SingleHousePageStyles } from "./SingleHousePageStyles";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaUsers,
+  FaUsersSlash,
+  FaBath,
+} from "react-icons/fa";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Spinner from "../../components/Spinner/Spinner";
+import carouselImages from "../../datas/carouselImages";
+import Button from "../../components/Button/Button";
+import { PiShareFatFill } from "react-icons/pi";
+import { MdFavoriteBorder, MdApartment } from "react-icons/md";
+import { TiLocation } from "react-icons/ti";
+import { GiModernCity } from "react-icons/gi";
+import { IoLocateSharp, IoBedSharp } from "react-icons/io5";
+import { BsFillHouseFill } from "react-icons/bs";
+import { PiArmchairFill } from "react-icons/pi";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <FaArrowRight style={{ ...style, color: "#015151", fontSize: "30px" }} />
+      <FaArrowRight
+        style={{
+          ...style,
+          color: "#015151",
+          fontSize: "30px",
+          cursor: "pointer",
+        }}
+      />
     </div>
   );
 }
@@ -24,6 +46,7 @@ function SamplePrevArrow(props) {
           ...style,
           color: "#015151",
           fontSize: "30px",
+          cursor: "pointer",
         }}
       />
     </div>
@@ -32,10 +55,9 @@ function SamplePrevArrow(props) {
 
 const SingleHousePage = () => {
   const { id } = useParams();
-  //console.log(id);
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -56,56 +78,141 @@ const SingleHousePage = () => {
           <title> Paris-Montparnasse: superb 34 m2 studio</title>
         </Helmet>
         <SingleHousePageStyles>
-          <div>
-            <h2 style={{ textAlign: "center" }}>
-              Paris-Montparnasse: superb 34 m2 studio
-            </h2>
+          <div className="singlepagetitlebox">
+            <div>
+              <h2>Paris-Montparnasse: superb 34 m2 studio</h2>
+            </div>
+            <div className="singlepagebookbox">
+              <div>
+                <Button title="Book Now" />
+              </div>
+              <div className="flex">
+                <span>
+                  <MdFavoriteBorder className="share-icon" />
+                </span>
+                <span className="sharetext">Save</span>
+              </div>
+              <div className="flex">
+                <span>
+                  <PiShareFatFill className="share-icon" />
+                </span>
+                <span className="sharetext">Share</span>
+              </div>
+            </div>
           </div>
-          <Slider {...settings} className="singlehouseimagecalendarbox">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="main-image"
-              />
-            </div>
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=3750&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="main-image"
-              />
-            </div>
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="main-image"
-              />
-            </div>
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="main-image"
-              />
-            </div>
-          </Slider>
 
-          <div>Calendar</div>
-          <div>
+          <div className="singlepageposition">
             <div>
-              <span>Country</span>
+              <Slider {...settings} className="singlehouseimagecalendarbox">
+                {carouselImages.map((image) => (
+                  <div key={image.id}>
+                    <img src={image.imageSrc} alt="" className="main-image" />
+                  </div>
+                ))}
+              </Slider>
             </div>
-            <div>
-              <h4>Located at center of city</h4>
-            </div>
-            <div>
-              <h4>Address of the house</h4>
+            <div className="fullviewbutton">
+              <Button title="Click on full view" />
             </div>
           </div>
-          <div>
-            <span>Published by Person</span>
+
+          <div className="singlepagelocations">
+            <div className="singlepagelocation">
+              <div className="singlepagelocationbox">
+                <TiLocation className="singlepagelocationicons" />
+                <span className="singlepagelocationtype">Country</span>
+              </div>
+              <div>
+                <span className="singlepagelocationtext">USA</span>
+              </div>
+            </div>
+
+            <div className="singlepagelocation">
+              <div className="singlepagelocationbox">
+                <IoLocateSharp className="singlepagelocationicons" />
+                <span className="singlepagelocationtype">Location</span>
+              </div>
+              <div>
+                <span className="singlepagelocationtext">
+                  Centre of city at Paris
+                </span>
+              </div>
+            </div>
+
+            <div className="singlepagelocation">
+              <div className="singlepagelocationbox">
+                <MdApartment className="singlepagelocationicons" />
+                <span className="singlepagelocationtype">Type</span>
+              </div>
+              <div>
+                <span className="singlepagelocationtext">Apartment</span>
+              </div>
+            </div>
+
+            <div className="singlepagelocation">
+              <div className="singlepagelocationbox">
+                <BsFillHouseFill className="singlepagelocationicons" />
+                <span className="singlepagelocationtype">Type</span>
+              </div>
+              <div>
+                <span className="singlepagelocationtext">House</span>
+              </div>
+            </div>
+
+            <div className="singlepagelocation">
+              <div className="singlepagelocationbox">
+                <GiModernCity className="singlepagelocationicons" />
+                <span className="singlepagelocationtype">Address</span>
+              </div>
+              <div>
+                <span className="singlepagelocationtext">20, View Street</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="singlepagehouserooms">
+            <div className="singlepagehouseroomdetail">
+              <PiArmchairFill />
+              <span>1 Living room</span>
+            </div>
+            <div className="singlepagehouseroomdetail">
+              <IoBedSharp />
+              <span>2 Beds</span>
+            </div>
+            <div className="singlepagehouseroomdetail">
+              <FaBath />
+
+              <span>2 Baths</span>
+            </div>
+            <div className="singlepagehouseroomdetail">
+              <FaUsers />
+
+              <span> 2 Visitors Allowed</span>
+            </div>
+            <div className="singlepagehouseroomdetail">
+              <FaUsersSlash />
+              <span>Visitors Not allowed</span>
+            </div>
+          </div>
+
+          <div className="">
+            <div className="singlepagehousepublishbox">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnN8ZW58MHx8MHx8fDA%3D"
+                  alt=""
+                  className="userimage"
+                />
+              </div>
+              <div>
+                <span className="singlepagehousepublishname">Jack</span>
+              </div>
+              <div>
+                <span className="singlepagehousepublishsubname">
+                  is responsible service provider for this house
+                </span>
+              </div>
+            </div>
           </div>
           <div>
             <article>
@@ -120,18 +227,7 @@ const SingleHousePage = () => {
               pariatur ex delectus!
             </article>
           </div>
-
-          <div>
-            <div>
-              <span>Number of living room</span>
-            </div>
-            <div>
-              <span>Number of beds</span>
-            </div>
-            <div>
-              <span>Number of baths</span>
-            </div>
-          </div>
+          <div>Calendar</div>
         </SingleHousePageStyles>
       </HelmetProvider>
     </>

@@ -33,6 +33,7 @@ body {
   flex-direction: row;
   gap: 2px;
   align-items: center;
+  cursor: pointer;
 }
 
 .mt-10 {
