@@ -171,7 +171,9 @@ const Homepage = () => {
   };
 
   return (
-    <HomepageStyles>
+    <HomepageStyles  initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.3 }}>
       <div className="homepage_header_image">
         <Slider {...settings}>
           {carouselImages.map((image) => (
@@ -280,9 +282,9 @@ const Homepage = () => {
 
       <div className="mt-100"></div>
 
-      <div>
+      {/* <div>
         <HouseCard title="Top Rated Apartments" houseCards={apartmentDatas} />
-      </div>
+      </div> */}
 
       <div>
         <HouseCard title="Top Rated Houses" houseCards={houseCards} />

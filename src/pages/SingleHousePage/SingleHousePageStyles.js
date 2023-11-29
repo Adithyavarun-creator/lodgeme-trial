@@ -9,7 +9,7 @@ export const SingleHousePageStyles = styled.section`
   padding-left: 120px;
   padding-right: 120px;
   padding-top: 50px;
-  padding-bottom: 0; /* align-items: center; */
+  padding-bottom: 0;
   .singlepagetitlebox {
     display: flex;
     align-items: center;
@@ -17,7 +17,47 @@ export const SingleHousePageStyles = styled.section`
   }
 
   .singlepageposition {
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .item-1 {
+  }
+
+  .imgsubgrid {
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+  }
+
+  .imgsubgrid:hover {
+    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+  }
+
+  .imgsubgrid2 {
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+  }
+
+  .imgsubgrid2:hover {
+    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+  }
+
+  .flex-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 10px;
   }
 
   .singlehouseimagecalendarbox {
@@ -171,5 +211,10 @@ export const SingleHousePageStyles = styled.section`
   .singlepagehousepublishsubname {
     font-size: 20px;
     color: darkgray;
+  }
+
+
+  .amenities-box{
+    
   }
 `;

@@ -25,9 +25,9 @@ const HouseCard = ({ houseCards, title }) => {
 
   return (
     <HouseCardStyles>
-      <div>
+      {/* <div>
         <h1>{title}</h1>
-      </div>
+      </div> */}
       <div
         animate={{ x: 100 }}
         transition={{ delay: 1 }}
@@ -110,7 +110,7 @@ const HouseCard = ({ houseCards, title }) => {
                     <span>{card.subLocation} </span>
                   </div>
                 )}
-                {card.country && (
+                {/* {card.country && (
                   <div className="toprated_locationbox">
                     <span>
                       <IoEarth
@@ -120,7 +120,7 @@ const HouseCard = ({ houseCards, title }) => {
                     </span>
                     <span>{card.country} </span>
                   </div>
-                )}
+                )} */}
                 {card.priceperNight && (
                   <div className="flex">
                     <strong className="toprated_pricebox">

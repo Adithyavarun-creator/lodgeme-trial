@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import { devices } from "../../theme/breakpoints";
+import { motion } from "framer-motion";
 
-export const HomepageStyles = styled.section`
+export const HomepageStyles = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   position: relative;
 
   @media ${devices.bigLaptopsAndDesktops} {
-    gap: 30px;
+    gap: 20px;
   }
 
   @media ${devices.tabletsAndIpads} {
-    gap: 20px;
+    gap: 40px;
   }
 
   @media ${devices.smallTabs} {
@@ -310,18 +311,18 @@ export const HomepageStyles = styled.section`
     @media ${devices.bigLaptopsAndDesktops} {
       height: 40px;
       /* font-size: ${({ theme }) => theme.bigScreens.btnFontsize}; */
-      font-size: 18px;
+      font-size: 14px;
     }
 
     @media ${devices.tabletsAndIpads} {
       height: 40px;
       /* font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont}; */
-      font-size: 14px;
+      font-size: 12px;
     }
 
     @media ${devices.smallTabs} {
       height: 30px;
-      font-size: 12px;
+      font-size: 9px;
     }
 
     @media ${devices.smallMobiles} {

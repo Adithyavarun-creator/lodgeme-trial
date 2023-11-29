@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { devices } from "../../theme/breakpoints";
+import { motion } from "framer-motion";
 
-export const NavbarStyles = styled.div`
+export const NavbarStyles = styled(motion.div)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

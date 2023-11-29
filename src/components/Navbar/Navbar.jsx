@@ -5,6 +5,7 @@ import { MobileNavStyle, NavbarStyles } from "./NavbarStyles";
 import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -19,9 +20,21 @@ const Navbar = () => {
     setToggle(false);
   };
 
+  //   <motion.div
+  //   initial={{ opacity: 0 }}
+  //   animate={{ opacity: 1 }}
+  //   transition={{ duration: 0.8, delay: 0.1 }}
+  // >
+  //   I have some content here
+  // </motion.div>
+
   return (
     <>
-      <NavbarStyles>
+      <NavbarStyles
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
         <Link to="/" className="linkStyle">
           <img className="navlogo" src={LogoBlack} alt="brand-logo" />
         </Link>

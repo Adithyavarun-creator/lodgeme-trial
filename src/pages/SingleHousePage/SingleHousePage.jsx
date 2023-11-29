@@ -1,17 +1,9 @@
 import React from "react";
 import { SingleHousePageStyles } from "./SingleHousePageStyles";
-import { useParams } from "react-router-dom";
-import Slider from "react-slick";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaUsers,
-  FaUsersSlash,
-  FaBath,
-} from "react-icons/fa";
+import { Link, useParams } from "react-router-dom";
+import { FaUsers, FaUsersSlash, FaBath } from "react-icons/fa";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Spinner from "../../components/Spinner/Spinner";
-import carouselImages from "../../datas/carouselImages";
 import Button from "../../components/Button/Button";
 import { PiShareFatFill } from "react-icons/pi";
 import { MdFavoriteBorder, MdApartment } from "react-icons/md";
@@ -21,50 +13,8 @@ import { IoLocateSharp, IoBedSharp } from "react-icons/io5";
 import { BsFillHouseFill } from "react-icons/bs";
 import { PiArmchairFill } from "react-icons/pi";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <FaArrowRight
-        style={{
-          ...style,
-          color: "#015151",
-          fontSize: "30px",
-          cursor: "pointer",
-        }}
-      />
-    </div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <FaArrowLeft
-        style={{
-          ...style,
-          color: "#015151",
-          fontSize: "30px",
-          cursor: "pointer",
-        }}
-      />
-    </div>
-  );
-}
-
 const SingleHousePage = () => {
   const { id } = useParams();
-
-  const settings = {
-    // dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
 
   if (!id) {
     return <Spinner />;
@@ -78,6 +28,9 @@ const SingleHousePage = () => {
           <title> Paris-Montparnasse: superb 34 m2 studio</title>
         </Helmet>
         <SingleHousePageStyles>
+          <div>
+            <Button title="&#171; Back to Home" />
+          </div>
           <div className="singlepagetitlebox">
             <div>
               <h2>Paris-Montparnasse: superb 34 m2 studio</h2>
@@ -100,19 +53,47 @@ const SingleHousePage = () => {
               </div>
             </div>
           </div>
+          {/* singlehouseimagecalendarbox */}
+          <div>
+            <div className="singlepageposition">
+              <div className="item-1">
+                <img
+                  src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  className="imgsubgrid"
+                />
+              </div>
 
-          <div className="singlepageposition">
-            <div>
-              <Slider {...settings} className="singlehouseimagecalendarbox">
-                {carouselImages.map((image) => (
-                  <div key={image.id}>
-                    <img src={image.imageSrc} alt="" className="main-image" />
-                  </div>
-                ))}
-              </Slider>
-            </div>
-            <div className="fullviewbutton">
-              <Button title="Click on full view" />
+              <div className="flex-grid">
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1584738766473-61c083514bf4?q=80&w=3781&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                    className="imgsubgrid2"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1430285561322-7808604715df?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                    className="imgsubgrid2"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1663133484931-5964e69b9a75?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                    className="imgsubgrid2"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                    className="imgsubgrid2"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -227,6 +208,8 @@ const SingleHousePage = () => {
               pariatur ex delectus!
             </article>
           </div>
+
+          <div className="amenities-box"></div>
           <div>Calendar</div>
         </SingleHousePageStyles>
       </HelmetProvider>
