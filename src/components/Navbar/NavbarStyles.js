@@ -8,7 +8,6 @@ export const NavbarStyles = styled.div`
   padding: 50px;
   align-items: center;
   z-index: 200;
-  /* background-color: ${({ theme }) => theme.colors.primaryColor}; */
 
   @media ${devices.bigLaptopsAndDesktops} {
     padding: 30px;
@@ -74,19 +73,20 @@ export const NavbarStyles = styled.div`
     padding: 12px;
     background-color: ${({ theme }) => theme.colors.whiteColor};
     color: #333;
-    font-size: ${({ theme }) => theme.bigScreens.navButtonFont};
     border: 2px solid ${({ theme }) => theme.colors.primaryColor};
     align-items: center;
     background-color: transparent;
     border-radius: 8px;
 
+    font-size: 24px;
+
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: ${({ theme }) => theme.bigScreens.navButtonFont};
+      font-size: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
       padding: 8px;
-      font-size: ${({ theme }) => theme.tabletAndIpadScreens.navButtonFont};
+      font-size: 18px;
     }
 
     @media ${devices.smallTabs} {
@@ -221,7 +221,7 @@ export const MobileNavStyle = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 25px;
+    padding: 15px;
     position: relative;
   }
 
@@ -238,14 +238,14 @@ export const MobileNavStyle = styled.div`
 
     @media ${devices.smallTabs} {
       display: block;
-      height: 55px;
+      height: 35px;
       width: 70%;
       object-fit: contain;
     }
 
     @media ${devices.smallMobiles} {
       display: block;
-      height: 30px;
+      height: 25px;
       width: 70%;
       object-fit: contain;
     }
@@ -263,8 +263,8 @@ export const MobileNavStyle = styled.div`
     }
 
     @media ${devices.smallTabs} {
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
       color: ${({ theme }) => theme.colors.whiteColor};
       display: block;
     }

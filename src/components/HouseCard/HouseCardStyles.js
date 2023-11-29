@@ -76,9 +76,13 @@ export const HouseCardStyles = styled.div`
       top: 155px;
     }
     @media ${devices.smallTabs} {
+      top: 155px;
+
     }
 
     @media ${devices.smallMobiles} {
+      top: 145px;
+
     }
   }
 

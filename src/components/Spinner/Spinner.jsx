@@ -1,6 +1,6 @@
 import React from "react";
 import { SpinnerStyles } from "./SpinnerStyle";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/lodgmeblacklogo.png";
 
 const Spinner = () => {
   return (

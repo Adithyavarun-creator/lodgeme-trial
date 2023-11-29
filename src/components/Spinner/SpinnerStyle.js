@@ -35,7 +35,6 @@ export const SpinnerStyles = styled.div`
     height: 150px;
     width: 100%;
     object-fit: contain;
-    background-color: #015151;
     border-radius: 30px;
 
     @media ${devices.bigLaptopsAndDesktops} {

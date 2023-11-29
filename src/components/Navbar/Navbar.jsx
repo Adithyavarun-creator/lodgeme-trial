@@ -41,7 +41,7 @@ const Navbar = () => {
               {t("login")}
             </Link>
           </div>
-          <div>
+          {/* <div>
             <select
               className="navselect"
               value={select.name}
@@ -54,7 +54,7 @@ const Navbar = () => {
                 FR
               </option>
             </select>
-          </div>
+          </div> */}
         </div>
       </NavbarStyles>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
                 </Link>
                 <li>Menu 2</li>
                 <li>Menu 3</li>
-                <li>
+                {/* <li>
                   <select value={select.name} onChange={selectedOption}>
                     <option className="langOption" id="English" value="en">
                       EN
@@ -97,7 +97,7 @@ const Navbar = () => {
                       FR
                     </option>
                   </select>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

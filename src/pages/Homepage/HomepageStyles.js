@@ -22,6 +22,25 @@ export const HomepageStyles = styled.section`
     gap: 40px;
   }
 
+  h1 {
+    font-size: 24px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 24px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 18px;
+    }
+
+    @media ${devices.smallTabs} {
+      font-size: 14px;
+    }
+    @media ${devices.smallMobiles} {
+      font-size: 10px;
+    }
+  }
+
   .homepage_header_image {
     position: absolute;
     top: 0;
@@ -107,7 +126,7 @@ export const HomepageStyles = styled.section`
     height: 125px;
     background-color: white;
     z-index: 20;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     border-radius: 15px;
     align-items: center;
@@ -123,7 +142,6 @@ export const HomepageStyles = styled.section`
     @media ${devices.bigLaptopsAndDesktops} {
       width: 90%;
       gap: 20px;
-
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -377,7 +395,6 @@ export const HomepageStyles = styled.section`
 
     @media ${devices.smallMobiles} {
       font-size: 12px;
-
     }
   }
 

@@ -1,15 +1,11 @@
 import React, { Suspense } from "react";
 import { GlobalStyles } from "./theme/GlobalStyles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage/Homepage";
-import ResgisterPage from "./pages/RegisterPage/ResgisterPage";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
-import CompanyDetailsPage from "./pages/CompanyDetails/CompanyDetailsPage";
 import ScrollToTop from "./components/ScrollTop/ScrollToTop";
-import ConditionsPage from "./pages/ConditionsPage/ConditionsPage";
-import SingleHousePage from "./pages/SingleHousePage/SingleHousePage";
 import Spinner from "./components/Spinner/Spinner";
+import Animate from "./Animate";
 
 const LazyHomepageComponent = React.lazy(() =>
   import("./pages/Homepage/Homepage")
@@ -49,6 +45,7 @@ function App() {
               path="/conditions-general"
               element={<LazyConditionsPageComponent />}
             />
+            <Route path="/animate" element={<Animate />} />
             <Route
               path="/homes&rooms/:id"
               element={<LazySingleHousePageComponent />}

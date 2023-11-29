@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import { RegisterPageStyles } from "./RegisterPageStyles";
 import { useTranslation } from "react-i18next";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import RegiserForm1 from "../../components/Register/RegiserForm1";
