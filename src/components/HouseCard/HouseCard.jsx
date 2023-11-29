@@ -33,7 +33,7 @@ const HouseCard = ({ houseCards, title }) => {
         transition={{ delay: 1 }}
         className="toprated_house_cardbox"
       >
-        {houseCards?.length ? (
+        {houseCards && houseCards.length ? (
           houseCards?.map((card) => (
             <Link
               to={`/homes&rooms/${card.id}`}

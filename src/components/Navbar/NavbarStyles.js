@@ -7,8 +7,8 @@ export const NavbarStyles = styled.div`
   justify-content: space-between;
   padding: 50px;
   align-items: center;
-  z-index: 100;
-  background-color: ${({ theme }) => theme.colors.primaryColor};
+  z-index: 200;
+  /* background-color: ${({ theme }) => theme.colors.primaryColor}; */
 
   @media ${devices.bigLaptopsAndDesktops} {
     padding: 30px;
@@ -28,7 +28,8 @@ export const NavbarStyles = styled.div`
     object-fit: contain;
     width: 281px;
     height: 50.56px;
-    margin-left: 40px;
+    /* border: 2px solid red; */
+    /* margin-left: 20px; */
 
     @media ${devices.bigLaptopsAndDesktops} {
     }
@@ -72,9 +73,9 @@ export const NavbarStyles = styled.div`
   .navbutton {
     padding: 12px;
     background-color: ${({ theme }) => theme.colors.whiteColor};
-    color: ${({ theme }) => theme.colors.whiteColor};
+    color: #333;
     font-size: ${({ theme }) => theme.bigScreens.navButtonFont};
-    border: 2px solid ${({ theme }) => theme.colors.whiteColor};
+    border: 2px solid ${({ theme }) => theme.colors.primaryColor};
     align-items: center;
     background-color: transparent;
     border-radius: 8px;

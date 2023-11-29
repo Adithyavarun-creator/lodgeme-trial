@@ -71,6 +71,7 @@ export const HomepageStyles = styled.section`
     color: #fff;
     padding: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
 
@@ -106,13 +107,13 @@ export const HomepageStyles = styled.section`
     height: 125px;
     background-color: white;
     z-index: 20;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
     position: relative;
-    gap: 40px;
+    gap: 20px;
     cursor: pointer;
     box-shadow: 0px 5px 5px 0px rgba(82, 78, 78, 0.75);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(82, 78, 78, 0.75);
@@ -120,8 +121,9 @@ export const HomepageStyles = styled.section`
     margin-top: 0;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      width: 98%;
-      /* margin-top: 620px; */
+      width: 90%;
+      gap: 20px;
+
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -129,16 +131,16 @@ export const HomepageStyles = styled.section`
       /* margin-top: 420px; */
       padding: 5px;
       gap: 10px;
-      justify-content: space-evenly;
+      /* justify-content: space-evenly; */
     }
 
     @media ${devices.smallTabs} {
-      height: 350px;
+      height: 330px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
-      padding: 10px;
-      width: 80%;
+      gap: 7px;
+      padding: 3px;
+      width: 60%;
     }
 
     @media ${devices.smallMobiles} {
@@ -148,13 +150,13 @@ export const HomepageStyles = styled.section`
       gap: 5px;
       /* margin-top: 130px; */
       padding: 0;
-      width: 90%;
+      width: 75%;
     }
   }
 
   .search_box_icon {
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     color: ${({ theme }) => theme.colors.primaryColor};
 
     @media ${devices.tabletsAndIpads} {
@@ -170,47 +172,53 @@ export const HomepageStyles = styled.section`
 
   .date_inputfield {
     padding: 5px;
-    height: 53px;
-    border-radius: 5px;
-    font-size: 20px;
-    width: 285px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* width: 240px; */
     background: ${({ theme }) => theme.colors.primaryColor};
     color: ${({ theme }) => theme.colors.whiteColor};
     border: none;
     offset: none;
     text-align: center;
+    padding: 10px;
+    width: 240px;
 
     @media ${devices.bigLaptopsAndDesktops} {
       text-align: center;
+      font-size: 18px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 14px;
       text-align: center;
-      height: 55px;
+      font-size: 14px;
+      height: 40px;
+      padding: 8px;
+      width: 200px;
     }
 
     @media ${devices.smallTabs} {
-      font-size: ${({ theme }) => theme.smallTabScreens.inputFont};
       text-align: center;
-      height: 45px;
+      height: 30px;
+      font-size: 12px;
+      width: 180px;
     }
     @media ${devices.smallMobiles} {
       text-align: center;
       height: 35px;
-      font-size: 14px;
-      width: 220px;
+      font-size: 12px;
+      width: 180px;
     }
   }
 
   .date_inputbox {
     color: ${({ theme }) => theme.colors.whiteColor};
     cursor: pointer;
-    font-size: 12px;
+    font-size: 18px;
 
     @media ${devices.tabletsAndIpads} {
       /* font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont}; */
-      font-size: 10px;
+      font-size: 18px;
     }
 
     @media ${devices.smallTabs} {
@@ -264,9 +272,9 @@ export const HomepageStyles = styled.section`
 
   .homepage_searchbtn {
     padding: 12px 16px;
-    height: 53px;
+    height: 40px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
@@ -282,43 +290,48 @@ export const HomepageStyles = styled.section`
     cursor: pointer;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      height: 50px;
+      height: 40px;
       /* font-size: ${({ theme }) => theme.bigScreens.btnFontsize}; */
-      font-size: 20px;
+      font-size: 18px;
     }
 
     @media ${devices.tabletsAndIpads} {
       height: 40px;
       /* font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont}; */
-      font-size: 18px;
+      font-size: 14px;
     }
 
     @media ${devices.smallTabs} {
-      height: 40px;
-      font-size: 18px;
+      height: 30px;
+      font-size: 12px;
     }
 
     @media ${devices.smallMobiles} {
-      height: 35px;
+      height: 30px;
       font-size: 12px;
     }
   }
+
+  /* .search_select_width {
+    height: 40px;
+  } */
 
   .search_selectpersons {
     background: ${({ theme }) => theme.colors.primaryColor};
     color: ${({ theme }) => theme.colors.whiteColor};
     width: 100%;
-    height: 53px;
+    height: 40px;
     border-radius: 5px;
     border: none;
     offset: none;
-    font-size: ${({ theme }) => theme.bigScreens.inputFont};
+    font-size: 18px;
     padding: 3px;
     text-align: center;
 
     @media ${devices.tabletsAndIpads} {
       height: 40px;
-      font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont};
+      font-size: 18px;
+      text-align: center;
     }
 
     @media ${devices.smallTabs} {
@@ -352,12 +365,19 @@ export const HomepageStyles = styled.section`
   }
 
   .select {
-    font-size: ${({ theme }) => theme.bigScreens.locationtext};
+    font-size: 18px;
 
     @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+
+    @media ${devices.smallTabs} {
+      font-size: 14px;
     }
 
     @media ${devices.smallMobiles} {
+      font-size: 12px;
+
     }
   }
 

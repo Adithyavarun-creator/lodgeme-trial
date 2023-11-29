@@ -107,26 +107,34 @@ const Homepage = () => {
     control: (defaultStyles) => ({
       ...defaultStyles,
       backgroundColor: "#015151",
-      padding: "10px",
+      // padding: "10px",
       border: "none",
       boxShadow: "none",
       color: "#ffffff",
+      fontSize: "18px",
+      height: "40px",
+      textAlign: "center",
 
       "@media only screen and (min-width: 1200px)": {
         ...styles["@media only screen and (min-width: 1200px)"],
-        fontSize: "20px",
-        height: "53px",
+        fontSize: "18px",
+        height: "40px",
         backgroundColor: "#015151",
         borderRadius: "10px",
+        textAlign: "center",
+        padding: "0px",
+
         // width: "300px",
       },
       "@media (min-width: 768px) and (max-width: 1024px) ": {
         ...styles["@media (min-width: 768px) and (max-width: 1024px) "],
-        fontSize: "12px",
+        fontSize: "14px",
+        height: "30px",
         backgroundColor: "#015151",
         borderRadius: "10px",
         textAlign: "center",
-        width: "150px",
+        // width: "150px",
+        padding: "0px",
         //width: "300px",
       },
       "@media (min-width: 481px) and (max-width: 767px) ": {
@@ -134,18 +142,21 @@ const Homepage = () => {
         fontSize: "12px",
         backgroundColor: "#015151",
         borderRadius: "10px",
+        height: "30px",
         textAlign: "center",
-        width: "150px",
+        padding: "0px",
+        // width: "150px",
         //width: "300px",
       },
       "@media (min-width: 280px) and (max-width: 480px) ": {
         ...styles["@media (min-width: 280px) and (max-width: 480px) "],
-        fontSize: "14px",
+        fontSize: "12px",
         backgroundColor: "#015151",
+        height: "25px",
         borderRadius: "10px",
         textAlign: "center",
         width: "180px",
-        padding: 0,
+        padding: "0px",
       },
     }),
     singleValue: (defaultStyles) => ({ ...defaultStyles, color: "#fff" }),
@@ -175,11 +186,9 @@ const Homepage = () => {
         </Slider>
       </div>
 
-      {/* <div>
-        <h1>Un toit ou vous retrouver tous ensemble</h1>
-      </div> */}
       <div>
         <div className="homepage_header_text">
+          <h1>WEBSITE UNDER PROGRESS, COMING SOON !!!</h1>
           <h1>Un toit ou vous retrouver tous ensemble</h1>
         </div>
 
@@ -194,7 +203,7 @@ const Homepage = () => {
 
             <Select
               className="select"
-              placeholder={`${t("bookingdate")}`}
+              placeholder="Select Location"
               options={options}
               value={value}
               onChange={changeHandler}
@@ -268,97 +277,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-
-      {/* <div>
-        <div>
-          <h1 className="house_cardtexttitle">{t("searchbytype")}</h1>
-        </div>
-        <div className="house_cardbox">
-          <div className="house_card">
-            <div>
-              <img
-                src="https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="house_cardimg"
-              />
-            </div>
-            <div className="house_cardsubs">
-              <h3 className="house_cardmaintext">Look</h3>
-              <span className="house_cardsubtext">For rent</span>
-            </div>
-          </div>
-          <div className="house_card">
-            <div>
-              <img
-                src="https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="house_cardimg"
-              />
-            </div>
-
-            <div className="house_cardsubs">
-              <h3 className="house_cardmaintext">Look</h3>
-              <span className="house_cardsubtext">For rent</span>
-            </div>
-          </div>
-
-          <div className="house_card">
-            <div>
-              <img
-                src="https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="house_cardimg"
-              />
-            </div>
-
-            <div className="house_cardsubs">
-              <h3 className="house_cardmaintext">Look</h3>
-              <span className="house_cardsubtext">For rent</span>
-            </div>
-          </div>
-
-          <div className="house_card">
-            <div>
-              <img
-                src="https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="house_cardimg"
-              />
-            </div>
-
-            <div className="house_cardsubs">
-              <h3 className="house_cardmaintext">Look</h3>
-              <span className="house_cardsubtext">For rent</span>
-            </div>
-          </div>
-          <div className="house_card">
-            <div>
-              <img
-                src="https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="house_cardimg"
-              />
-            </div>
-            <div className="house_cardsubs">
-              <h3 className="house_cardmaintext">Look</h3>
-              <span className="house_cardsubtext">For rent</span>
-            </div>
-          </div>
-          <div className="house_card">
-            <div>
-              <img
-                src="https://plus.unsplash.com/premium_photo-1700315990373-ecefbbe3e6bf?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="house_cardimg"
-              />
-            </div>
-            <div className="house_cardsubs">
-              <h3 className="house_cardmaintext">Look</h3>
-              <span className="house_cardsubtext">For rent</span>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <div className="mt-100"></div>
 

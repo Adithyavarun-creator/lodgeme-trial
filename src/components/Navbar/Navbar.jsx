@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.png";
+import LogoBlack from "../../assets/lodgmeblacklogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MobileNavStyle, NavbarStyles } from "./NavbarStyles";
 import { MdClose } from "react-icons/md";
@@ -23,7 +23,7 @@ const Navbar = () => {
     <>
       <NavbarStyles>
         <Link to="/" className="linkStyle">
-          <img className="navlogo" src={Logo} alt="brand-logo" />
+          <img className="navlogo" src={LogoBlack} alt="brand-logo" />
         </Link>
         <div className="navbuttons">
           <div>
@@ -60,7 +60,7 @@ const Navbar = () => {
 
       <MobileNavStyle>
         <Link to="/">
-          <img className="mobile_navlogo" src={Logo} alt="logo" />
+          <img className="mobile_navlogo" src={LogoBlack} alt="logo" />
         </Link>
         <div>
           <GiHamburgerMenu

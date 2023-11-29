@@ -32,6 +32,7 @@ export const apartmentDatas = [
   {
     id: 1,
     caption: "Paris 17th",
+    location: "Paris 17th",
     country: "France",
     images: [
       {
