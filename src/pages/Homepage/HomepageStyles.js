@@ -4,22 +4,22 @@ import { devices } from "../../theme/breakpoints";
 export const HomepageStyles = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 30px;
   position: relative;
 
   @media ${devices.bigLaptopsAndDesktops} {
-    gap: 100px;
+    gap: 30px;
   }
 
   @media ${devices.tabletsAndIpads} {
-    gap: 60px;
+    gap: 20px;
   }
 
   @media ${devices.smallTabs} {
-    gap: 40px;
+    gap: 10px;
   }
   @media ${devices.smallMobiles} {
-    gap: 40px;
+    gap: 8px;
   }
 
   h1 {
@@ -62,7 +62,7 @@ export const HomepageStyles = styled.section`
   }
 
   .homepage_header_img {
-    height: 700px;
+    height: 400px;
     object-fit: cover;
     opacity: 0.8;
     width: 100%;
