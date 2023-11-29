@@ -293,9 +293,9 @@ const SingleHousePage = () => {
             </div>
           </div>
 
-          <div className="" style={{ width: "100%" }}>
+          {/* <div className="" style={{ width: "100%" }}>
             <Mapbox />
-          </div>
+          </div> */}
         </SingleHousePageStyles>
       </HelmetProvider>
     </>
