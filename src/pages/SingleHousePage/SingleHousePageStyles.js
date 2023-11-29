@@ -213,8 +213,28 @@ export const SingleHousePageStyles = styled.section`
     color: darkgray;
   }
 
+  .singlepagecalendarcontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  .amenities-box{
-    
+  .amenities-box {
+    border: 1px solid darkgrey;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .amenities-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    color: darkgrey;
   }
 `;

@@ -1,17 +1,20 @@
 import React from "react";
 import { SingleHousePageStyles } from "./SingleHousePageStyles";
 import { Link, useParams } from "react-router-dom";
-import { FaUsers, FaUsersSlash, FaBath } from "react-icons/fa";
+import { FaUsers, FaUsersSlash, FaBath, FaWifi } from "react-icons/fa";
+import { FaKitchenSet, FaTreeCity } from "react-icons/fa6";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Spinner from "../../components/Spinner/Spinner";
 import Button from "../../components/Button/Button";
-import { PiShareFatFill } from "react-icons/pi";
+import { PiElevatorLight, PiShareFatFill } from "react-icons/pi";
 import { MdFavoriteBorder, MdApartment } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
-import { GiModernCity } from "react-icons/gi";
+import { GiModernCity, GiWashingMachine } from "react-icons/gi";
 import { IoLocateSharp, IoBedSharp } from "react-icons/io5";
 import { BsFillHouseFill } from "react-icons/bs";
 import { PiArmchairFill } from "react-icons/pi";
+import { RiTempHotFill } from "react-icons/ri";
+import { TbHanger } from "react-icons/tb";
 
 const SingleHousePage = () => {
   const { id } = useParams();
@@ -195,22 +198,63 @@ const SingleHousePage = () => {
               </div>
             </div>
           </div>
-          <div>
-            <article>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Dignissimos culpa fuga rerum quas? Harum ut, ab in dolorum
-              delectus modi neque quaerat veniam velit non tempora, eum quos?
-              Aliquam laboriosam dolores magnam earum atque, laudantium
-              similique natus? Eligendi consectetur fugiat voluptatibus soluta
-              voluptatem doloribus earum ducimus commodi, praesentium velit
-              dolores quis in facere? Dolore aspernatur provident quis incidunt
-              doloribus eveniet quas sunt, reiciendis at eius nemo ipsum
-              pariatur ex delectus!
-            </article>
+          <div className="singlepagecalendarcontent">
+            <div>
+              <article>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dignissimos culpa fuga rerum quas? Harum ut, ab in dolorum
+                delectus modi neque quaerat veniam velit non tempora, eum quos?
+                Aliquam laboriosam dolores magnam earum atque, laudantium
+                similique natus? Eligendi consectetur fugiat voluptatibus soluta
+                voluptatem doloribus earum ducimus commodi, praesentium velit
+                dolores quis in facere? Dolore aspernatur provident quis
+                incidunt doloribus eveniet quas sunt, reiciendis at eius nemo
+                ipsum pariatur ex delectus!
+              </article>
+            </div>
+            <div>Calendar</div>
           </div>
 
-          <div className="amenities-box"></div>
-          <div>Calendar</div>
+          <div className="amenities-box">
+            <div>
+              <h3>Amenities Included</h3>
+            </div>
+            <div className="amenities-list">
+              <div className="flex">
+                <FaTreeCity />
+                <span>City View</span>
+              </div>
+
+              <div className="flex">
+                <FaWifi />
+                <span>Wifi</span>
+              </div>
+
+              <div className="flex">
+                <FaKitchenSet />
+                <span>Kitchen</span>
+              </div>
+
+              <div className="flex">
+                <GiWashingMachine />
+                <span>Washing Machine</span>
+              </div>
+
+              <div className="flex">
+                <PiElevatorLight />
+                <span>Elevator</span>
+              </div>
+
+              <div className="flex">
+                <RiTempHotFill />
+                <span>Heating</span>
+              </div>
+              <div className="flex">
+                <TbHanger />
+                <span>Hanger</span>
+              </div>
+            </div>
+          </div>
         </SingleHousePageStyles>
       </HelmetProvider>
     </>

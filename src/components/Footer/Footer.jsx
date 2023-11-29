@@ -97,7 +97,7 @@ const Footer = () => {
 
       <div className="footer_copyright">
         <div className="footer_center">
-          <Link className="linkStyle footer_centertext">
+          <Link to="/company-details" className="linkStyle footer_centertext">
             © 2023 LODGE ME SAS
           </Link>
           <Link
