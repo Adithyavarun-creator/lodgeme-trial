@@ -222,19 +222,41 @@ export const SingleHousePageStyles = styled.section`
   .amenities-box {
     border: 1px solid darkgrey;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 30px;
   }
 
+  .amenitiesheading {
+    text-decoration: underline;
+    font-size: 20px;
+  }
+
+  .amenities-singlebox {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .amenities-icon {
+    height: 20px;
+    width: 20px;
+    color: ${({ theme }) => theme.colors.primaryColor};
+  }
   .amenities-list {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 40px;
     flex-wrap: wrap;
     align-items: center;
     color: darkgrey;
+    justify-content: center;
+  }
+
+  .amenitieslist {
+    font-size: 18px;
   }
 `;

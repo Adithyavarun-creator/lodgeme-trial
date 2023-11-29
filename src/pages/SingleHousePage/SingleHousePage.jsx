@@ -2,7 +2,7 @@ import React from "react";
 import { SingleHousePageStyles } from "./SingleHousePageStyles";
 import { Link, useParams } from "react-router-dom";
 import { FaUsers, FaUsersSlash, FaBath, FaWifi } from "react-icons/fa";
-import { FaKitchenSet, FaTreeCity } from "react-icons/fa6";
+import { FaKitchenSet, FaTreeCity, FaElevator } from "react-icons/fa6";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Spinner from "../../components/Spinner/Spinner";
 import Button from "../../components/Button/Button";
@@ -15,6 +15,7 @@ import { BsFillHouseFill } from "react-icons/bs";
 import { PiArmchairFill } from "react-icons/pi";
 import { RiTempHotFill } from "react-icons/ri";
 import { TbHanger } from "react-icons/tb";
+import Mapbox from "../../components/MapBox/MapBox";
 
 const SingleHousePage = () => {
   const { id } = useParams();
@@ -43,13 +44,13 @@ const SingleHousePage = () => {
                 <Button title="Book Now" />
               </div>
               <div className="flex">
-                <span>
+                <span className="amenitieslist">
                   <MdFavoriteBorder className="share-icon" />
                 </span>
                 <span className="sharetext">Save</span>
               </div>
               <div className="flex">
-                <span>
+                <span className="amenitieslist">
                   <PiShareFatFill className="share-icon" />
                 </span>
                 <span className="sharetext">Share</span>
@@ -157,7 +158,7 @@ const SingleHousePage = () => {
           <div className="singlepagehouserooms">
             <div className="singlepagehouseroomdetail">
               <PiArmchairFill />
-              <span>1 Living room</span>
+              <span className="amenitieslist">1 Living room</span>
             </div>
             <div className="singlepagehouseroomdetail">
               <IoBedSharp />
@@ -217,44 +218,84 @@ const SingleHousePage = () => {
 
           <div className="amenities-box">
             <div>
-              <h3>Amenities Included</h3>
+              <h3 className="amenitiesheading">Amenities Included</h3>
             </div>
             <div className="amenities-list">
-              <div className="flex">
-                <FaTreeCity />
-                <span>City View</span>
+              <div className="amenities-singlebox">
+                <FaTreeCity className="amenities-icon" />
+                <span className="amenitieslist">City View</span>
               </div>
 
-              <div className="flex">
-                <FaWifi />
-                <span>Wifi</span>
+              <div className="amenities-singlebox">
+                <FaWifi className="amenities-icon" />
+                <span className="amenitieslist">Wifi</span>
               </div>
 
-              <div className="flex">
-                <FaKitchenSet />
-                <span>Kitchen</span>
+              <div className="amenities-singlebox">
+                <FaKitchenSet className="amenities-icon" />
+                <span className="amenitieslist">Kitchen</span>
               </div>
 
-              <div className="flex">
-                <GiWashingMachine />
-                <span>Washing Machine</span>
+              <div className="amenities-singlebox">
+                <GiWashingMachine className="amenities-icon" />
+                <span className="amenitieslist">Washing Machine</span>
               </div>
 
-              <div className="flex">
-                <PiElevatorLight />
-                <span>Elevator</span>
+              <div className="amenities-singlebox">
+                <FaElevator className="amenities-icon" />
+                <span className="amenitieslist">Elevator</span>
               </div>
 
-              <div className="flex">
-                <RiTempHotFill />
-                <span>Heating</span>
+              <div className="amenities-singlebox">
+                <RiTempHotFill className="amenities-icon" />
+                <span className="amenitieslist">Heating</span>
               </div>
-              <div className="flex">
-                <TbHanger />
-                <span>Hanger</span>
+
+              <div className="amenities-singlebox">
+                <TbHanger className="amenities-icon" />
+                <span className="amenitieslist">Hanger</span>
+              </div>
+
+              <div className="amenities-singlebox">
+                <FaTreeCity className="amenities-icon" />
+                <span className="amenitieslist">City View</span>
+              </div>
+
+              <div className="amenities-singlebox">
+                <FaWifi className="amenities-icon" />
+                <span className="amenitieslist">Wifi</span>
+              </div>
+
+              <div className="amenities-singlebox">
+                <FaKitchenSet className="amenities-icon" />
+                <span className="amenitieslist">Kitchen</span>
+              </div>
+
+              <div className="amenities-singlebox">
+                <GiWashingMachine className="amenities-icon" />
+                <span className="amenitieslist">Washing Machine</span>
+              </div>
+
+              <div className="amenities-singlebox">
+                <FaElevator className="amenities-icon" />
+                <span className="amenitieslist">Elevator</span>
+              </div>
+
+              <div className="amenities-singlebox">
+                <RiTempHotFill className="amenities-icon" />
+                <span className="amenitieslist">Heating</span>
+              </div>
+
+              <div className="amenities-singlebox">
+                <TbHanger className="amenities-icon" />
+                <span className="amenitieslist">Hanger</span>
               </div>
             </div>
           </div>
+
+          {/* <div>
+            <Mapbox />
+          </div> */}
         </SingleHousePageStyles>
       </HelmetProvider>
     </>

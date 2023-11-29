@@ -78,16 +78,15 @@ export const NavbarStyles = styled(motion.div)`
     align-items: center;
     background-color: transparent;
     border-radius: 8px;
-
-    font-size: 24px;
+    font-size: 18px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 20px;
+      font-size: 14px;
     }
 
     @media ${devices.tabletsAndIpads} {
       padding: 8px;
-      font-size: 18px;
+      font-size: 10px;
     }
 
     @media ${devices.smallTabs} {
