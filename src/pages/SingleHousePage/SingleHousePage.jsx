@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { SingleHousePageStyles } from "./SingleHousePageStyles";
 import { Link, useParams } from "react-router-dom";
 import { FaUsers, FaUsersSlash, FaBath, FaWifi } from "react-icons/fa";
@@ -16,9 +16,28 @@ import { PiArmchairFill } from "react-icons/pi";
 import { RiTempHotFill } from "react-icons/ri";
 import { TbHanger } from "react-icons/tb";
 import Mapbox from "../../components/MapBox/MapBox";
+import { DateRangePicker } from "react-date-range";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import { addDays } from "date-fns";
+import format from "date-fns/format";
 
 const SingleHousePage = () => {
   const { id } = useParams();
+
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  const dateRef = useRef();
+
+  const onClick = () => {
+    dateRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   if (!id) {
     return <Spinner />;
@@ -29,7 +48,7 @@ const SingleHousePage = () => {
       <HelmetProvider>
         <Helmet>
           <meta />
-          <title> Paris-Montparnasse: superb 34 m2 studio</title>
+          <title>Paris-Montparnasse: superb 34 m2 studio</title>
         </Helmet>
         <SingleHousePageStyles>
           <div>
@@ -41,7 +60,7 @@ const SingleHousePage = () => {
             </div>
             <div className="singlepagebookbox">
               <div>
-                <Button title="Book Now" />
+                <Button title="Book Now" onClick={onClick} />
               </div>
               <div className="flex">
                 <span className="amenitieslist">
@@ -201,7 +220,7 @@ const SingleHousePage = () => {
           </div>
           <div className="singlepagecalendarcontent">
             <div>
-              <article>
+              <article className="singlepagearticlecontent">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Dignissimos culpa fuga rerum quas? Harum ut, ab in dolorum
                 delectus modi neque quaerat veniam velit non tempora, eum quos?
@@ -213,7 +232,6 @@ const SingleHousePage = () => {
                 ipsum pariatur ex delectus!
               </article>
             </div>
-            <div>Calendar</div>
           </div>
 
           <div className="amenities-box">
@@ -293,9 +311,25 @@ const SingleHousePage = () => {
             </div>
           </div>
 
+          {/* calendar */}
+          <div className="calendarcenter" ref={dateRef}>
+            <DateRangePicker
+              // className="date_range"
+              onChange={(item) => setRange([item.selection])}
+              editableDateInputs={true}
+              moveRangeOnFirstSelection={false}
+              ranges={range}
+              months={2}
+              direction="horizontal"
+              rangeColors={["#015151", "#015151", "#fed14c"]}
+              minDate={new Date()}
+            />
+          </div>
+
           {/* <div className="" style={{ width: "100%" }}>
             <Mapbox />
           </div> */}
+          {/* review box */}
           <div></div>
         </SingleHousePageStyles>
       </HelmetProvider>

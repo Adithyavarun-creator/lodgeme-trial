@@ -5,15 +5,44 @@ export const SingleHousePageStyles = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   padding-left: 120px;
   padding-right: 120px;
   padding-top: 50px;
   padding-bottom: 0;
+
+  @media ${devices.bigLaptopsAndDesktops} {
+}
+
+@media ${devices.tabletsAndIpads} {
+ 
+}
+@media ${devices.smallTabs} {
+  
+}
+
+@media ${devices.smallMobiles} {
+  
+}
+
   .singlepagetitlebox {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+}
+
+@media ${devices.tabletsAndIpads} {
+ 
+}
+@media ${devices.smallTabs} {
+  
+}
+
+@media ${devices.smallMobiles} {
+  
+}
   }
 
   .singlepageposition {
@@ -23,6 +52,21 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     padding: 5px;
     cursor: pointer;
+
+
+    @media ${devices.bigLaptopsAndDesktops} {
+}
+
+@media ${devices.tabletsAndIpads} {
+ 
+}
+@media ${devices.smallTabs} {
+  
+}
+
+@media ${devices.smallMobiles} {
+  
+}
   }
 
   .item-1 {
@@ -33,6 +77,20 @@ export const SingleHousePageStyles = styled.section`
     object-fit: fill;
     border-radius: 10px;
     transition: all 0.5s ease-in;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+}
+
+@media ${devices.tabletsAndIpads} {
+ 
+}
+@media ${devices.smallTabs} {
+  
+}
+
+@media ${devices.smallMobiles} {
+  
+}
   }
 
   .imgsubgrid:hover {
@@ -46,6 +104,20 @@ export const SingleHousePageStyles = styled.section`
     object-fit: fill;
     border-radius: 10px;
     transition: all 0.5s ease-in;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+}
+
+@media ${devices.tabletsAndIpads} {
+ 
+}
+@media ${devices.smallTabs} {
+  
+}
+
+@media ${devices.smallMobiles} {
+  
+}
   }
 
   .imgsubgrid2:hover {
@@ -58,6 +130,21 @@ export const SingleHousePageStyles = styled.section`
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     gap: 10px;
+
+
+    @media ${devices.bigLaptopsAndDesktops} {
+}
+
+@media ${devices.tabletsAndIpads} {
+ 
+}
+@media ${devices.smallTabs} {
+  
+}
+
+@media ${devices.smallMobiles} {
+  
+}
   }
 
   .singlehouseimagecalendarbox {
@@ -76,7 +163,22 @@ export const SingleHousePageStyles = styled.section`
   }
 
   .sharetext {
-    font-size: 22px;
+    font-size: 18px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 16px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 16px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 12px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 10px;
+    }
   }
 
   .main-image {
@@ -91,35 +193,91 @@ export const SingleHousePageStyles = styled.section`
     @media ${devices.tabletsAndIpads} {
       height: 350px;
     }
+
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
-  .fullviewbutton {
+  /* .fullviewbutton {
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 150;
-  }
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
 
-  .fullviewbtn {
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  } */
+
+  /* .fullviewbtn {
     padding: 16px 20px;
     background-color: red;
     color: white;
-  }
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  } */
 
   .singlepagelocations {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagelocation {
     display: flex;
     flex-direction: column;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagelocationicons {
     height: 30px;
     width: 30px;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagelocationbox {
@@ -127,6 +285,16 @@ export const SingleHousePageStyles = styled.section`
     flex-direction: row;
     gap: 4px;
     align-items: center;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagelocation {
@@ -139,6 +307,16 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     cursor: pointer;
     transition: all 0.4s ease-in;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagelocation:hover {
@@ -147,24 +325,59 @@ export const SingleHousePageStyles = styled.section`
     box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
     background-color: ${({ theme }) => theme.colors.primaryColor};
     color: #fff !important;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagelocationtype {
     text-decoration: underline;
     text-underline-position: under;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bolder;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
+    }
+    @media ${devices.tabletsAndIpads} {
+      font-size: 16px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 12px;
+    }
+    @media ${devices.smallMobiles} {
+      font-size: 9px;
+    }
   }
 
   .singlepagelocationtext {
-    font-size: 18px;
+    font-size: 16px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 16px;
+    }
+    @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+    @media ${devices.smallMobiles} {
+      font-size: 7px;
+    }
   }
 
   .singlepagehouserooms {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    /* padding: 10px; */
     align-items: center;
   }
 
@@ -180,12 +393,33 @@ export const SingleHousePageStyles = styled.section`
     cursor: pointer;
     background-color: ${({ theme }) => theme.colors.primaryColor};
     color: #fff;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .userimage {
     object-fit: fill;
     height: 40px;
     border-radius: 50%;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagehousepublish {
@@ -193,6 +427,17 @@ export const SingleHousePageStyles = styled.section`
     border: 1px solid red;
     display: flex;
     align-items: center;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagehousepublishbox {
@@ -201,22 +446,89 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     gap: 10px;
     cursor: pointer;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagehousepublishname {
     font-size: 22px;
     font-weight: bolder;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .singlepagehousepublishsubname {
     font-size: 20px;
     color: darkgray;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+
+  .singlepagearticlecontent {
+    font-size: 18px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 16px;
+    }
+    @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+    @media ${devices.smallMobiles} {
+      font-size: 7px;
+    }
   }
 
   .singlepagecalendarcontent {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+  }
+
+  .calendarcenter {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .amenities-box {
@@ -227,11 +539,31 @@ export const SingleHousePageStyles = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .amenitiesheading {
     text-decoration: underline;
     font-size: 20px;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .amenities-singlebox {
@@ -239,12 +571,32 @@ export const SingleHousePageStyles = styled.section`
     flex-direction: row;
     gap: 5px;
     align-items: center;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .amenities-icon {
     height: 20px;
     width: 20px;
     color: ${({ theme }) => theme.colors.primaryColor};
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
   .amenities-list {
     display: flex;
@@ -254,9 +606,30 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     color: darkgrey;
     justify-content: center;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .amenitieslist {
     font-size: 18px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 `;

@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import { IoHeartDislikeOutline, IoEarth } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
+import Button from "../Button/Button";
 // import { motion } from 'framer-motion/dist/framer-motion'
 
 const HouseCard = ({ houseCards, title }) => {
@@ -137,7 +138,7 @@ const HouseCard = ({ houseCards, title }) => {
         )}
       </div>
       <div className="flex-center mt-10 mb-20">
-        <button className="toprated_button">{t("searchmore")}</button>
+        <Button title="Search More" />
       </div>
     </HouseCardStyles>
   );
