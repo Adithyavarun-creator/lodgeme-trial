@@ -26,18 +26,22 @@ export const NavbarStyles = styled(motion.div)`
 
   .navlogo {
     object-fit: contain;
-    width: 281px;
+    /* width: 281px; */
     height: 50.56px;
-    /* border: 2px solid red; */
-    /* margin-left: 20px; */
+    width: 100%;
+    margin-left: 50px;
+
 
     @media ${devices.bigLaptopsAndDesktops} {
+      margin-left: 50px;
+
     }
 
     @media ${devices.tabletsAndIpads} {
       /* width: 201px; */
-      height: 70px;
-      margin-left: 20px;
+      height: 40px;
+      /* margin-left: 10px; */
+      margin-left: 40px;
     }
 
     @media ${devices.smallTabs} {

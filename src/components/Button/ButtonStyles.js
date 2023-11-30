@@ -10,25 +10,25 @@ export const ButtonStyles = styled.button`
   color: #fff;
   background: ${({ theme }) => theme.colors.primaryColor};
   font-size: 18px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: bolder;
 
   @media ${devices.bigLaptopsAndDesktops} {
-    padding: 14px 12px;
-    font-size: 18px;
+    padding: 12px 10px;
+    font-size: 16px;
   }
 
   @media ${devices.tabletsAndIpads} {
-    padding: 10px 12px;
-    font-size: 16px;
+    padding: 8px 8px;
+    font-size: 12px;
   }
   @media ${devices.smallTabs} {
-    padding: 9px 10px;
-    font-size: 12px;
+    padding: 6px 8px;
+    font-size: 10px;
   }
 
   @media ${devices.smallMobiles} {
-    padding: 8px 10px;
-    font-size: 8px;
+    padding: 4px 6px;
+    font-size: 6px;
   }
 `;

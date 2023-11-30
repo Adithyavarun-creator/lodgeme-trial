@@ -5,25 +5,32 @@ export const SingleHousePageStyles = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   padding-left: 120px;
   padding-right: 120px;
   padding-top: 50px;
   padding-bottom: 0;
 
   @media ${devices.bigLaptopsAndDesktops} {
-}
+    gap: 20px;
+  }
 
-@media ${devices.tabletsAndIpads} {
- 
-}
-@media ${devices.smallTabs} {
-  
-}
+  @media ${devices.tabletsAndIpads} {
+    padding-left: 80px;
+    padding-right: 80px;
+    gap: 20px;
+  }
+  @media ${devices.smallTabs} {
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 15px;
+  }
 
-@media ${devices.smallMobiles} {
-  
-}
+  @media ${devices.smallMobiles} {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 10px;
+  }
 
   .singlepagetitlebox {
     display: flex;
@@ -31,18 +38,78 @@ export const SingleHousePageStyles = styled.section`
     justify-content: space-between;
 
     @media ${devices.bigLaptopsAndDesktops} {
-}
+    }
 
-@media ${devices.tabletsAndIpads} {
- 
-}
-@media ${devices.smallTabs} {
-  
-}
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
 
-@media ${devices.smallMobiles} {
-  
-}
+    @media ${devices.smallMobiles} {
+    }
+  }
+
+  .singlepagetitlecontent {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+      gap: 3px;
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+  .rating {
+    color: ${({ theme }) => theme.colors.ratingColor};
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      height: 20px;
+      width: 20px;
+    }
+    @media ${devices.smallTabs} {
+      height: 12px;
+      width: 12px;
+    }
+
+    @media ${devices.smallMobiles} {
+      height: 8px;
+      width: 8px;
+    }
+  }
+  .ratingnumber {
+    font-size: 18px;
+    color: darkgrey;
+    font-weight: bold;
+    cursor: pointer;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 16px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 6px;
+    }
   }
 
   .singlepageposition {
@@ -53,23 +120,20 @@ export const SingleHousePageStyles = styled.section`
     padding: 5px;
     cursor: pointer;
 
-
     @media ${devices.bigLaptopsAndDesktops} {
-}
+      grid-template-columns: 1fr 1fr;
+    }
 
-@media ${devices.tabletsAndIpads} {
- 
-}
-@media ${devices.smallTabs} {
-  
-}
+    @media ${devices.tabletsAndIpads} {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media ${devices.smallTabs} {
+      grid-template-columns: 1fr 1fr;
+    }
 
-@media ${devices.smallMobiles} {
-  
-}
-  }
-
-  .item-1 {
+    @media ${devices.smallMobiles} {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .imgsubgrid {
@@ -79,18 +143,15 @@ export const SingleHousePageStyles = styled.section`
     transition: all 0.5s ease-in;
 
     @media ${devices.bigLaptopsAndDesktops} {
-}
+    }
 
-@media ${devices.tabletsAndIpads} {
- 
-}
-@media ${devices.smallTabs} {
-  
-}
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
 
-@media ${devices.smallMobiles} {
-  
-}
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .imgsubgrid:hover {
@@ -106,18 +167,15 @@ export const SingleHousePageStyles = styled.section`
     transition: all 0.5s ease-in;
 
     @media ${devices.bigLaptopsAndDesktops} {
-}
+    }
 
-@media ${devices.tabletsAndIpads} {
- 
-}
-@media ${devices.smallTabs} {
-  
-}
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
 
-@media ${devices.smallMobiles} {
-  
-}
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .imgsubgrid2:hover {
@@ -131,20 +189,20 @@ export const SingleHousePageStyles = styled.section`
     grid-template-columns: 0.5fr 0.5fr;
     gap: 10px;
 
-
     @media ${devices.bigLaptopsAndDesktops} {
-}
+      grid-template-columns: 0.5fr 0.5fr;
+    }
 
-@media ${devices.tabletsAndIpads} {
- 
-}
-@media ${devices.smallTabs} {
-  
-}
+    @media ${devices.tabletsAndIpads} {
+      grid-template-columns: 0.5fr 0.5fr;
+    }
+    @media ${devices.smallTabs} {
+      grid-template-columns: 0.5fr 0.5fr;
+    }
 
-@media ${devices.smallMobiles} {
-  
-}
+    @media ${devices.smallMobiles} {
+      grid-template-columns: 0.5fr 0.5fr;
+    }
   }
 
   .singlehouseimagecalendarbox {
@@ -155,11 +213,63 @@ export const SingleHousePageStyles = styled.section`
     display: flex;
     gap: 30px;
     align-items: center;
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 20px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+      gap: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 5px;
+    }
   }
   .share-icon {
     height: 35px;
     width: 35px;
     color: ${({ theme }) => theme.colors.primaryColor};
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      height: 30px;
+      width: 30px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      height: 20px;
+      width: 20px;
+    }
+    @media ${devices.smallTabs} {
+      height: 15px;
+      width: 15px;
+    }
+
+    @media ${devices.smallMobiles} {
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  .singlepagetitletext {
+    font-size: 18px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 18px;
+    }
+    @media ${devices.smallTabs} {
+      /* font-size: 12px; */
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 8px;
+    }
   }
 
   .sharetext {
@@ -170,14 +280,14 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 16px;
+      font-size: 12px;
     }
     @media ${devices.smallTabs} {
-      font-size: 12px;
+      font-size: 10px;
     }
 
     @media ${devices.smallMobiles} {
-      font-size: 10px;
+      font-size: 8px;
     }
   }
 
@@ -195,6 +305,7 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallTabs} {
+      height: 250px;
     }
 
     @media ${devices.smallMobiles} {
@@ -269,14 +380,22 @@ export const SingleHousePageStyles = styled.section`
     height: 30px;
     width: 30px;
     @media ${devices.bigLaptopsAndDesktops} {
+      height: 30px;
+      width: 30px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      height: 20px;
+      width: 20px;
     }
     @media ${devices.smallTabs} {
+      height: 20px;
+      width: 20px;
     }
 
     @media ${devices.smallMobiles} {
+      height: 15px;
+      width: 15px;
     }
   }
 
@@ -286,14 +405,18 @@ export const SingleHousePageStyles = styled.section`
     gap: 4px;
     align-items: center;
     @media ${devices.bigLaptopsAndDesktops} {
+      gap: 4px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      gap: 3px;
     }
     @media ${devices.smallTabs} {
+      gap: 3px;
     }
 
     @media ${devices.smallMobiles} {
+      gap: 3px;
     }
   }
 
@@ -308,11 +431,15 @@ export const SingleHousePageStyles = styled.section`
     cursor: pointer;
     transition: all 0.4s ease-in;
     @media ${devices.bigLaptopsAndDesktops} {
+      gap: 5px;
+      padding: 10px 12px;
     }
 
     @media ${devices.tabletsAndIpads} {
     }
     @media ${devices.smallTabs} {
+      gap: 5px;
+      padding: 6px 8px;
     }
 
     @media ${devices.smallMobiles} {
@@ -379,15 +506,27 @@ export const SingleHousePageStyles = styled.section`
     flex-direction: row;
     gap: 20px;
     align-items: center;
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 15px;
+    }
+    @media ${devices.tabletsAndIpads} {
+      gap: 10px;
+    }
+    @media ${devices.smallTabs} {
+      gap: 7px;
+    }
+    @media ${devices.smallMobiles} {
+      gap: 4px;
+    }
   }
 
   .singlepagehouseroomdetail {
     display: flex;
     align-items: center;
-    gap: 10px;
     border: none;
     offset: none;
     padding: 10px 14px;
+    gap: 10px;
     align-items: center;
     border-radius: 30px;
     cursor: pointer;
@@ -395,40 +534,61 @@ export const SingleHousePageStyles = styled.section`
     color: #fff;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      padding: 12px 10px;
+      gap: 6px;
+      font-size: 12px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      padding: 10px 8px;
+      gap: 6px;
+      font-size: 10px;
     }
     @media ${devices.smallTabs} {
+      padding: 6px 8px;
+      gap: 3px;
+      font-size: 8px;
     }
 
     @media ${devices.smallMobiles} {
+      padding: 4px 6px;
+      gap: 3px;
+      font-size: 5px;
     }
   }
 
   .userimage {
-    object-fit: fill;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     @media ${devices.bigLaptopsAndDesktops} {
+      width: 35px;
+      height: 35px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      width: 35px;
+      height: 35px;
     }
     @media ${devices.smallTabs} {
+      width: 25px;
+      height: 25px;
     }
 
     @media ${devices.smallMobiles} {
+      width: 10px;
+      height: 10px;
     }
   }
 
   .singlepagehousepublish {
     padding: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      padding: 8px;
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -437,6 +597,7 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
+      padding: 4px;
     }
   }
 
@@ -446,16 +607,21 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    /* border: 1px solid red; */
 
     @media ${devices.bigLaptopsAndDesktops} {
+      gap: 7px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      gap: 5px;
     }
     @media ${devices.smallTabs} {
+      gap: 3px;
     }
 
     @media ${devices.smallMobiles} {
+      gap: 3px;
     }
   }
 
@@ -464,14 +630,18 @@ export const SingleHousePageStyles = styled.section`
     font-weight: bolder;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
     }
     @media ${devices.smallTabs} {
+      font-size: 10px;
     }
 
     @media ${devices.smallMobiles} {
+      font-size: 8px;
     }
   }
 
@@ -480,14 +650,18 @@ export const SingleHousePageStyles = styled.section`
     color: darkgray;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
+      font-size: 10px;
     }
 
     @media ${devices.smallMobiles} {
+      font-size: 8px;
     }
   }
 
@@ -498,7 +672,7 @@ export const SingleHousePageStyles = styled.section`
       font-size: 16px;
     }
     @media ${devices.tabletsAndIpads} {
-      font-size: 14px;
+      font-size: 12px;
     }
     @media ${devices.smallTabs} {
       font-size: 10px;
@@ -510,15 +684,7 @@ export const SingleHousePageStyles = styled.section`
 
   .singlepagecalendarcontent {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-  }
-
-  .calendarcenter {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    justify-content: center;
     @media ${devices.bigLaptopsAndDesktops} {
     }
 
@@ -528,6 +694,30 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
+    }
+  }
+
+  .calendarcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      /* width: 70%; */
+      overflow-y: scroll;
+      width: 100%;
+    }
+    @media ${devices.smallTabs} {
+      overflow-y: scroll;
+      width: 100%;
+    }
+
+    @media ${devices.smallMobiles} {
+      overflow-y: scroll;
+      width: 100%;
     }
   }
 
@@ -540,14 +730,19 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     gap: 30px;
     @media ${devices.bigLaptopsAndDesktops} {
+      gap: 25px;
     }
 
     @media ${devices.tabletsAndIpads} {
     }
     @media ${devices.smallTabs} {
+      padding: 10px;
+      gap: 15px;
     }
 
     @media ${devices.smallMobiles} {
+      padding: 10px;
+      gap: 8px;
     }
   }
 
@@ -555,14 +750,18 @@ export const SingleHousePageStyles = styled.section`
     text-decoration: underline;
     font-size: 20px;
     @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
     }
     @media ${devices.smallTabs} {
+      font-size: 10px;
     }
 
     @media ${devices.smallMobiles} {
+      font-size: 8px;
     }
   }
 
@@ -572,6 +771,7 @@ export const SingleHousePageStyles = styled.section`
     gap: 5px;
     align-items: center;
     @media ${devices.bigLaptopsAndDesktops} {
+      gap: 5px;
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -580,6 +780,7 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
+      gap: 5px;
     }
   }
 
@@ -588,14 +789,20 @@ export const SingleHousePageStyles = styled.section`
     width: 20px;
     color: ${({ theme }) => theme.colors.primaryColor};
     @media ${devices.bigLaptopsAndDesktops} {
+      height: 20px;
+      width: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
     }
     @media ${devices.smallTabs} {
+      height: 15px;
+      width: 15px;
     }
 
     @media ${devices.smallMobiles} {
+      height: 10px;
+      width: 10px;
     }
   }
   .amenities-list {
@@ -607,6 +814,162 @@ export const SingleHousePageStyles = styled.section`
     color: darkgrey;
     justify-content: center;
     @media ${devices.bigLaptopsAndDesktops} {
+      gap: 30px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+      gap: 15px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 8px;
+    }
+  }
+
+  .amenitieslist {
+    font-size: 20px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 13px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 8px;
+    }
+  }
+
+  .singlepagereviewbox {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    gap: 10px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      padding: 8px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      padding: 6px;
+    }
+    @media ${devices.smallTabs} {
+      padding: 5px;
+    }
+
+    @media ${devices.smallMobiles} {
+      padding: 3px;
+    }
+  }
+
+  .singlepagereviewheading {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 10px;
+    }
+  }
+
+  .reviewuserbox {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 5px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 5px;
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+  .reviewwww {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviewpersonsbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 20px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 12px;
+    }
+    @media ${devices.smallTabs} {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+
+  .reviewpersondetailbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 8px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 3px;
+    }
+    @media ${devices.smallTabs} {
+      gap: 3px;
+    }
+
+    @media ${devices.smallMobiles} {
+      padding: 5px;
+      gap: 3px;
+    }
+  }
+
+  .reviewuserdetailbox {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    @media ${devices.bigLaptopsAndDesktops} {
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -618,18 +981,237 @@ export const SingleHousePageStyles = styled.section`
     }
   }
 
-  .amenitieslist {
-    font-size: 18px;
+  .reviewpersonimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      width: 30px;
+      height: 30px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      width: 30px;
+      height: 30px;
+    }
+    @media ${devices.smallTabs} {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media ${devices.smallMobiles} {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .reviewusername {
+    font-size: 16px;
+    font-weight: bolder;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 16px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 6px;
+    }
+  }
+
+  .reviewusercountry {
+    font-size: 14px;
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 8px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 7px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 6px;
+    }
+  }
+
+  .reviewuserstar {
+    height: 20px;
+    width: 20px;
+    color: ${({ theme }) => theme.colors.ratingColor};
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      height: 20px;
+      width: 20px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      height: 10px;
+      width: 10px;
+    }
+    @media ${devices.smallTabs} {
+      height: 10px;
+      width: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      height: 7px;
+      width: 7px;
+    }
+  }
+
+  .reviewuserating {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+    font-weight: bold;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 3px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 3px;
     }
     @media ${devices.smallTabs} {
     }
 
     @media ${devices.smallMobiles} {
     }
+  }
+  .reviewuserpostdate {
+    font-size: 14px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 12px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 6px;
+    }
+  }
+
+  .reviewuserpostdated {
+    font-size: 14px;
+    color: grey;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 12px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 6px;
+    }
+  }
+
+  .reviewusercomments {
+    font-size: 16px;
+    text-align: justify;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 6px;
+    }
+  }
+
+  .reviewownerdetail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
+    padding: 20px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .reviewownerdetailgrid-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .reviewownerbio {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .reviewownerdetailuserbox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .hostimage {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+
+  .hostdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hostdetailname {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .hostdetailsubname {
+    font-size: 14px;
+    font-weight: bold;
+    color: darkgray;
+  }
+
+  .reviewownerdetailgrid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .reviewowneradds {
+    font-size: 16px;
   }
 `;
