@@ -3,16 +3,16 @@ import { devices } from "../../theme/breakpoints";
 
 export const FooterStyles = styled.footer`
   margin-top: 50px;
-  padding: 100px;
+  padding: 80px;
 
   @media ${devices.bigLaptopsAndDesktops} {
     margin-top: 50px;
-    padding: 70px;
+    padding: 80px;
   }
 
   @media ${devices.tabletsAndIpads} {
     margin-top: 50px;
-    padding: 35px;
+    padding: 50px;
   }
   @media ${devices.smallTabs} {
     margin-top: 40px;

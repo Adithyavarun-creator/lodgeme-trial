@@ -31,10 +31,8 @@ export const NavbarStyles = styled(motion.div)`
     width: 100%;
     margin-left: 50px;
 
-
     @media ${devices.bigLaptopsAndDesktops} {
       margin-left: 50px;
-
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -74,15 +72,23 @@ export const NavbarStyles = styled(motion.div)`
     }
   }
 
+  .navbutton:hover {
+    background-color: ${({ theme }) => theme.colors.primaryColor};
+    color: #fff;
+  }
+
   .navbutton {
     padding: 12px;
     background-color: ${({ theme }) => theme.colors.whiteColor};
     color: #333;
     border: 2px solid ${({ theme }) => theme.colors.primaryColor};
     align-items: center;
-    background-color: transparent;
+    /* background-color: transparent; */
     border-radius: 8px;
     font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all.5s ease-in;
 
     @media ${devices.bigLaptopsAndDesktops} {
       font-size: 14px;

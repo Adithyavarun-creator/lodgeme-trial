@@ -1151,12 +1151,34 @@ export const SingleHousePageStyles = styled.section`
   .reviewownerdetail {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
     border-top: 1px solid darkgrey;
     border-bottom: 1px solid darkgrey;
     padding: 20px;
     justify-content: center;
     gap: 20px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      padding: 20px;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      padding: 10px;
+      gap: 10px;
+      grid-template-columns: 1fr;
+    }
+    @media ${devices.smallTabs} {
+      grid-template-columns: 1fr;
+      padding: 15px;
+      gap: 5px;
+    }
+
+    @media ${devices.smallMobiles} {
+      grid-template-columns: 1fr;
+      padding: 10px;
+      gap: 5px;
+    }
   }
 
   .reviewownerdetailgrid-1 {
@@ -1165,53 +1187,375 @@ export const SingleHousePageStyles = styled.section`
     gap: 10px;
     padding: 10px;
     border-radius: 20px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 6px;
+      padding: 6px;
+    }
+    @media ${devices.smallTabs} {
+      gap: 8px;
+      padding: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 5px;
+      padding: 5px;
+    }
+  }
+
+  .reviewdetailcontent {
+    font-size: 16px;
+    text-align: justify;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 12px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 8px;
+    }
   }
 
   .reviewownerbio {
     font-size: 16px;
     text-align: justify;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 8px;
+    }
   }
 
   .reviewownerdetailuserbox {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+
     align-items: center;
     padding: 5px;
+    gap: 15px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+      gap: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .hostimage {
     border-radius: 50%;
     width: 60px;
     height: 60px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      width: 25px;
+      height: 25px;
+    }
+    @media ${devices.smallTabs} {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media ${devices.smallMobiles} {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   .hostdetails {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 7px;
+    }
+    @media ${devices.smallTabs} {
+      gap: 5px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 5px;
+    }
   }
 
   .hostdetailname {
     font-size: 18px;
     font-weight: bold;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 18px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 12px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 9px;
+    }
+  }
+
+  .verifiedbox {
+    border: none;
+    offset: none;
+    color: white;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+
+  .verifybox {
+    display: flex;
+    align-items: center;
+    padding: 6px 14px;
+    gap: 5px;
+    border-radius: 20px;
+    background-color: ${({ theme }) => theme.colors.primaryColor};
+    color: #fff;
+    font-size: 14px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      padding: 6px 8px;
+      font-size: 8px;
+    }
+    @media ${devices.smallTabs} {
+      padding: 4px 6px;
+
+      font-size: 8px;
+    }
+
+    @media ${devices.smallMobiles} {
+    }
   }
 
   .hostdetailsubname {
     font-size: 14px;
     font-weight: bold;
     color: darkgray;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 9px;
+    }
   }
 
   .reviewownerdetailgrid-2 {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     padding: 20px;
     border-radius: 20px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 20px;
+      padding: 20px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 25px;
+      padding: 10px;
+    }
+    @media ${devices.smallTabs} {
+      gap: 25px;
+      padding: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 20px;
+      padding: 10px;
+    }
   }
 
   .reviewowneradds {
     font-size: 16px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 10px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 9px;
+    }
+  }
+
+  .reservation-card {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 20px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    cursor: pointer;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 10px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      gap: 7px;
+    }
+    @media ${devices.smallTabs} {
+      gap: 5px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 3px;
+    }
+  }
+
+  .reservation-card-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 8px;
+    }
+  }
+
+  .date-calendar-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .h-line {
+    border: 1px solid ${({ theme }) => theme.colors.primaryColor};
+    /* width: 50%; */
+    width: 100%;
+  }
+
+  .reservation-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 20px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      padding: 20px;
+      gap: 10px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      padding: 30px;
+      gap: 12px;
+    }
+    @media ${devices.smallTabs} {
+      padding: 15px;
+      gap: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      padding: 30px;
+      gap: 20px;
+    }
+  }
+
+  .reservation-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: darkgray;
+    font-weight: bold;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 12px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 8px;
+    }
   }
 `;
