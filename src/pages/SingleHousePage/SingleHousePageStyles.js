@@ -10,6 +10,7 @@ export const SingleHousePageStyles = styled.section`
   padding-right: 120px;
   padding-top: 50px;
   padding-bottom: 0;
+  /* position: relative; */
 
   @media ${devices.bigLaptopsAndDesktops} {
     gap: 40px;
@@ -119,6 +120,7 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     padding: 5px;
     cursor: pointer;
+    position: relative;
 
     @media ${devices.bigLaptopsAndDesktops} {
       grid-template-columns: 1fr 1fr;
@@ -133,6 +135,50 @@ export const SingleHousePageStyles = styled.section`
 
     @media ${devices.smallMobiles} {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .singlepageshowallimages {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+
+  .singlepagecarouselbox {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    z-index: 200;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 30px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
     }
   }
 

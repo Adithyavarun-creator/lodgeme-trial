@@ -33,7 +33,7 @@ const Homepage = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    //autoplay: true,
+    autoplay: true,
     speed: 10000,
     cssEase: "linear",
     responsive: [],

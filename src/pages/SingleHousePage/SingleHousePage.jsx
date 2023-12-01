@@ -30,6 +30,7 @@ import {
   MdCleaningServices,
   MdBalcony,
   MdLocationPin,
+  MdClose,
 } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
 import { GiModernCity, GiWashingMachine } from "react-icons/gi";
@@ -48,6 +49,7 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 import Select from "react-select";
 import { MdOutlineSmokeFree } from "react-icons/md";
 import { BiSolidBlanket } from "react-icons/bi";
+import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 
 const SingleHousePage = () => {
   const { id } = useParams();
@@ -56,6 +58,7 @@ const SingleHousePage = () => {
   const [loading, setLoading] = useState(false);
   const [noPersons, setnoPersons] = useState(1);
   const [value, setValue] = useState("");
+  const [showImages, setShowImages] = useState(true);
 
   const [diffInDays, setDiffInDays] = useState(0);
 
@@ -240,7 +243,7 @@ const SingleHousePage = () => {
               </div>
             </div>
           </div>
-          {/* singlehouseimagecalendarbox */}
+          {/* singlehouseimages */}
           <div>
             <div className="singlepageposition">
               <div className="item-1">
@@ -281,62 +284,24 @@ const SingleHousePage = () => {
                   />
                 </div>
               </div>
+              {/* show more button */}
+              <div className="singlepageshowallimages">
+                <Button
+                  title="View All Photos"
+                  onClick={() => setShowImages(!showImages)}
+                />
+              </div>
             </div>
           </div>
 
-          {/* <div className="singlepagelocations">
-            <div className="singlepagelocation">
-              <div className="singlepagelocationbox">
-                <TiLocation className="singlepagelocationicons" />
-                <span className="singlepagelocationtype">Country</span>
-              </div>
-              <div>
-                <span className="singlepagelocationtext">USA</span>
-              </div>
+          {showImages && (
+            <div className="singlepagecarouselbox">
+              <ImageCarousel
+                setShowImages={setShowImages}
+                showImages={showImages}
+              />
             </div>
-
-            <div className="singlepagelocation">
-              <div className="singlepagelocationbox">
-                <IoLocateSharp className="singlepagelocationicons" />
-                <span className="singlepagelocationtype">Location</span>
-              </div>
-              <div>
-                <span className="singlepagelocationtext">
-                  Centre of city at Paris
-                </span>
-              </div>
-            </div>
-
-            <div className="singlepagelocation">
-              <div className="singlepagelocationbox">
-                <MdApartment className="singlepagelocationicons" />
-                <span className="singlepagelocationtype">Type</span>
-              </div>
-              <div>
-                <span className="singlepagelocationtext">Apartment</span>
-              </div>
-            </div>
-
-            <div className="singlepagelocation">
-              <div className="singlepagelocationbox">
-                <BsFillHouseFill className="singlepagelocationicons" />
-                <span className="singlepagelocationtype">Type</span>
-              </div>
-              <div>
-                <span className="singlepagelocationtext">House</span>
-              </div>
-            </div>
-
-            <div className="singlepagelocation">
-              <div className="singlepagelocationbox">
-                <GiModernCity className="singlepagelocationicons" />
-                <span className="singlepagelocationtype">Address</span>
-              </div>
-              <div>
-                <span className="singlepagelocationtext">20, View Street</span>
-              </div>
-            </div>
-          </div> */}
+          )}
 
           <div className="singlepagehouserooms">
             <div className="singlepagehouseroomdetail">
@@ -361,24 +326,6 @@ const SingleHousePage = () => {
               <span>Visitors Not allowed</span>
             </div>
           </div>
-
-          {/* <div className="">
-            <div className="singlepagehousepublishbox">
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnN8ZW58MHx8MHx8fDA%3D"
-                  alt=""
-                  className="userimage"
-                />
-              </div>
-              <div>
-                <span className="singlepagehousepublishsubname">
-                  <strong>Jack</strong> is responsible service provider for this
-                  house
-                </span>
-              </div>
-            </div>
-          </div> */}
 
           <div className="">
             <div className="singlepagehousepublishbox">
