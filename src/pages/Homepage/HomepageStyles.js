@@ -383,7 +383,7 @@ export const HomepageStyles = styled(motion.div)`
     }
   }
 
-  .select {
+  /* .select {
     font-size: 18px;
 
     @media ${devices.tabletsAndIpads} {
@@ -397,7 +397,7 @@ export const HomepageStyles = styled(motion.div)`
     @media ${devices.smallMobiles} {
       font-size: 12px;
     }
-  }
+  } */
 
   .select::placeholder {
     color: var(--white-color);

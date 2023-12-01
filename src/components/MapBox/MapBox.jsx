@@ -10,6 +10,8 @@ import LogoMarker from "../../assets/lodgmeblacklogo.png";
 const containerStyle = {
   width: "100%",
   height: "400px",
+  borderRadius: "20px",
+  border: "2px solid #015151",
 };
 
 const center = {

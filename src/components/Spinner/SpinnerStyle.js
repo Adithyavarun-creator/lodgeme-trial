@@ -7,27 +7,36 @@ export const SpinnerStyles = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 2px;
-  margin-top: 220px;
+  margin-top: 180px;
 
   @media ${devices.bigLaptopsAndDesktops} {
     gap: 5px;
-    margin-top: 200px;
+    margin-top: 100px;
+    gap: 2px;
+
   }
 
   @media ${devices.tabletsAndIpads} {
-    margin-top: 120px;
+    margin-top: 70px;
+    gap: 2px;
+
   }
   @media ${devices.smallTabs} {
     margin-top: 80px;
+    gap: 2px;
+
   }
 
   @media ${devices.smallMobiles} {
-    margin-top: 60px;
+    margin-top: 100px;
+    gap: 2px;
+
   }
 
   .spinnerlogobox {
     display: flex;
     justify-content: center;
+    gap: 10px;
   }
 
   .spinnerlogo {
@@ -64,7 +73,7 @@ export const SpinnerStyles = styled.div`
     height: 10em;
   }
   .loader {
-    margin: 60px auto;
+    margin: 20px auto;
     font-size: 10px;
     position: relative;
     text-indent: -9999em;

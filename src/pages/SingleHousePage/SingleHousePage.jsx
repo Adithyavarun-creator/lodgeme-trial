@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { SingleHousePageStyles } from "./SingleHousePageStyles";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import {
   FaUsers,
   FaUsersSlash,
@@ -29,6 +29,7 @@ import {
   MdApartment,
   MdCleaningServices,
   MdBalcony,
+  MdLocationPin,
 } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
 import { GiModernCity, GiWashingMachine } from "react-icons/gi";
@@ -50,9 +51,11 @@ import { BiSolidBlanket } from "react-icons/bi";
 
 const SingleHousePage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [noPersons, setnoPersons] = useState(1);
+  const [value, setValue] = useState("");
 
   const [diffInDays, setDiffInDays] = useState(0);
 
@@ -72,6 +75,7 @@ const SingleHousePage = () => {
 
   const dateRef = useRef();
   const reviewRef = useRef();
+  const mapRef = useRef();
 
   const personOptions = [
     { value: 1, label: 1 },
@@ -94,8 +98,19 @@ const SingleHousePage = () => {
     reviewRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const clickMap = () => {
+    mapRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const changeHandler = (value) => {
+    setValue(value);
+  };
   const changePersonHandler = (value) => {
     setnoPersons(value);
+  };
+
+  const goBack = () => {
+    navigate("/");
   };
 
   const styles = {
@@ -145,6 +160,9 @@ const SingleHousePage = () => {
         textAlign: "center",
         padding: "0px",
         width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
       },
       "@media (min-width: 481px) and (max-width: 767px) ": {
         ...styles["@media (min-width: 481px) and (max-width: 767px) "],
@@ -155,16 +173,19 @@ const SingleHousePage = () => {
         textAlign: "center",
         padding: "0px",
         width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
       },
       "@media (min-width: 280px) and (max-width: 480px) ": {
         ...styles["@media (min-width: 280px) and (max-width: 480px) "],
         fontSize: "8px",
         backgroundColor: "#015151",
-        height: "10px",
+        height: "25px",
         borderRadius: "10px",
         textAlign: "center",
-        padding: "0",
-        width: "100%",
+        width: "150px",
+        padding: "0px",
       },
     }),
     singleValue: (defaultStyles) => ({ ...defaultStyles, color: "#fff" }),
@@ -183,12 +204,17 @@ const SingleHousePage = () => {
         </Helmet>
         <SingleHousePageStyles>
           <div>
-            <Button title="&#171; Back to Home" />
+            <Button title="&#171; Back to Home" onClick={goBack} />
           </div>
           <div className="singlepagetitlebox">
             <div className="">
-              <h2 className="singlepagetitletext">
+              <h2 className="singlepagetitletext flex">
                 Paris-Montparnasse: superb 34 m2 studio
+                <MdLocationPin
+                  className="rating"
+                  style={{ color: "#EA4335" }}
+                  onClick={clickMap}
+                />
               </h2>
 
               <div className="singlepagetitlecontent" onClick={clickReview}>
@@ -498,9 +524,9 @@ const SingleHousePage = () => {
             </div>
           </div>
 
-          {/* <div className="" style={{ width: "100%" }}>
+          <div className="singlepagemapbox" ref={mapRef}>
             <Mapbox />
-          </div> */}
+          </div>
           {/* review box */}
           <div className="reviewandbookbox">
             <div className="singlepagereviewbox" ref={reviewRef}>
@@ -634,6 +660,7 @@ const SingleHousePage = () => {
               <div>
                 <div className="date-calendar-box">
                   <Select
+                    // className="select"
                     placeholder="Select Persons"
                     options={personOptions}
                     value={noPersons}
@@ -687,62 +714,69 @@ const SingleHousePage = () => {
             </div>
           </div>
 
-          <div className="reviewownerdetail">
-            <div className="reviewownerdetailuserbox">
-              <div>
-                <img
-                  className="hostimage"
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-                  alt=""
-                />
-              </div>
-              <div className="hostdetails">
-                <h2 className="hostdetailname">Serviced by John Doe</h2>
-                <span className="hostdetailsubname">Joined on Feb 2023</span>
-              </div>
-              <div className="verifybox">
-                <span>
-                  <RiVerifiedBadgeFill />
-                </span>
-                <span>Verified</span>
-              </div>
-            </div>
+          <div>
+            <div className="reviewownerdetail">
+              <div className="reviewownerdetailgrid-1">
+                <div className="reviewownerdetailuserbox">
+                  <div>
+                    <img
+                      className="hostimage"
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+                      alt=""
+                    />
+                  </div>
+                  <div className="hostdetails">
+                    <h2 className="hostdetailname">Serviced by John Doe</h2>
+                    <span className="hostdetailsubname">
+                      Joined on Feb 2023
+                    </span>
+                  </div>
+                  <div className="verifybox">
+                    <span>
+                      <RiVerifiedBadgeFill />
+                    </span>
+                    <span>Verified</span>
+                  </div>
+                </div>
 
-            <div>
-              <article className="singlepagearticlecontent">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Architecto minus dolorum odit fugit soluta doloremque laboriosam
-                velit assumenda neque sapiente dolore, ducimus earum aliquam
-                rerum nobis tempore exercitationem. Corporis quod nesciunt id
-                iusto neque quidem ducimus earum, sed aut dolorem consequuntur
-                voluptate repellat odio dolorum quisquam ipsam repudiandae
-                tempore officiis ad. Reiciendis non, modi sapiente optio sint
-                reprehenderit quisquam tenetur deserunt. Iusto at exercitationem
-                eligendi error minima sit! Laborum, nihil.
-              </article>
-            </div>
+                <div>
+                  <article className="singlepagearticlecontent">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Architecto minus dolorum odit fugit soluta doloremque
+                    laboriosam velit assumenda neque sapiente dolore, ducimus
+                    earum aliquam rerum nobis tempore exercitationem. Corporis
+                    quod nesciunt id iusto neque quidem ducimus earum, sed aut
+                    dolorem consequuntur voluptate repellat odio dolorum
+                    quisquam ipsam repudiandae tempore officiis ad. Reiciendis
+                    non, modi sapiente optio sint reprehenderit quisquam tenetur
+                    deserunt. Iusto at exercitationem eligendi error minima sit!
+                    Laborum, nihil.
+                  </article>
+                </div>
+              </div>
 
-            <div className="reviewownerlist">
-              <div>
-                <span className="reviewowneradds">
-                  Registration number: 0*********0
-                </span>
-              </div>
-              <div>
-                <span className="reviewowneradds">
-                  Languages: English, Français, Italiano, Español
-                </span>
-              </div>
-              <div>
-                <span className="reviewowneradds">Response rate: 100%</span>
-              </div>
-              <div>
-                <span className="reviewowneradds">
-                  Response time: within a few hours
-                </span>
-              </div>
-              <div>
-                <Button title="Contact Service" />
+              <div className="reviewownerlist">
+                <div>
+                  <span className="reviewowneradds">
+                    Registration number: 0*********0
+                  </span>
+                </div>
+                <div>
+                  <span className="reviewowneradds">
+                    Languages: English, Français, Italiano, Español
+                  </span>
+                </div>
+                <div>
+                  <span className="reviewowneradds">Response rate: 100%</span>
+                </div>
+                <div>
+                  <span className="reviewowneradds">
+                    Response time: within a few hours
+                  </span>
+                </div>
+                <div>
+                  <Button title="Contact Service" />
+                </div>
               </div>
             </div>
           </div>

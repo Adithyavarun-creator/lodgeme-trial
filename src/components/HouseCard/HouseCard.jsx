@@ -4,15 +4,14 @@ import { FaStar } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { FaHeart } from "react-icons/fa";
 import Slider from "react-slick";
-// import { dummyImages, houseCards } from "../../datas/houseCards";
 import { IoHeartDislikeOutline, IoEarth } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
 import Button from "../Button/Button";
-// import { motion } from 'framer-motion/dist/framer-motion'
 
 const HouseCard = ({ houseCards, title }) => {
   const { t } = useTranslation();
+
 
   const settings = {
     dots: true,

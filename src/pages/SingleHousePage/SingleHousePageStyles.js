@@ -12,24 +12,24 @@ export const SingleHousePageStyles = styled.section`
   padding-bottom: 0;
 
   @media ${devices.bigLaptopsAndDesktops} {
-    gap: 20px;
+    gap: 40px;
   }
 
   @media ${devices.tabletsAndIpads} {
     padding-left: 80px;
     padding-right: 80px;
-    gap: 20px;
+    gap: 40px;
   }
   @media ${devices.smallTabs} {
     padding-left: 30px;
     padding-right: 30px;
-    gap: 15px;
+    gap: 30px;
   }
 
   @media ${devices.smallMobiles} {
     padding-left: 15px;
     padding-right: 15px;
-    gap: 10px;
+    gap: 30px;
   }
 
   .singlepagetitlebox {
@@ -951,11 +951,6 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
-      /* width: 80%; */
-      width: 100%;
-      overflow-y: hidden;
-      align-items:none;
-    justify-content: none;
     }
   }
 
@@ -1013,7 +1008,7 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
-      justify-content: space-around;
+      justify-content: space-between;
       font-size: 7px;
     }
   }
@@ -1425,7 +1420,7 @@ export const SingleHousePageStyles = styled.section`
 
   .reviewownerdetailuserbox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding: 5px;
     gap: 10px;
@@ -1441,6 +1436,7 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
+      gap: 10px;
     }
   }
 
@@ -1606,9 +1602,13 @@ export const SingleHousePageStyles = styled.section`
   .reviewownerlist {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      justify-content: center;
+      align-items: center;
       gap: 15px;
     }
 
@@ -1620,7 +1620,7 @@ export const SingleHousePageStyles = styled.section`
     @media ${devices.smallTabs} {
       justify-content: center;
       align-items: center;
-      gap: 3px;
+      gap: 5px;
     }
 
     @media ${devices.smallMobiles} {
@@ -1646,6 +1646,19 @@ export const SingleHousePageStyles = styled.section`
 
     @media ${devices.smallMobiles} {
       font-size: 6px;
+    }
+  }
+
+  .singlepagemapbox {
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
     }
   }
 `;

@@ -65,6 +65,23 @@ body {
   justify-content: center;
 }
 
+
+.select {
+    font-size: 18px;
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 14px;
+    }
+
+    @media ${devices.smallTabs} {
+      font-size: 14px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 12px;
+    }
+  }
+
 .register_btn {
     width: 672px;
     height: 60px;
