@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./components/ScrollTop/ScrollToTop";
 import Spinner from "./components/Spinner/Spinner";
 import Animate from "./Animate";
+import MapView from "./components/MapBox/MapBox";
 
 const LazyHomepageComponent = React.lazy(() =>
   import("./pages/Homepage/Homepage")
@@ -45,7 +46,7 @@ function App() {
               path="/conditions-general"
               element={<LazyConditionsPageComponent />}
             />
-            <Route path="/animate" element={<Animate />} />
+            <Route path="/animate" element={<MapView />} />
             <Route
               path="/homes&rooms/:id"
               element={<LazySingleHousePageComponent />}

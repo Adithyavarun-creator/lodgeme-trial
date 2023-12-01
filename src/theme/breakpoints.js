@@ -35,4 +35,8 @@ export const devices = {
   
 }
 
+  -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+
 */

@@ -1,48 +1,133 @@
-import Map, { Marker, GeolocateControl } from "react-map-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
+import React, { useState } from "react";
+import {
+  GoogleMap,
+  useJsApiLoader,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
+import LogoMarker from "../../assets/lodgmeblacklogo.png";
 
-function Mapbox() {
-  return (
-    <>
-      {/* <Map
-        mapboxAccessToken="pk.eyJ1IjoiYWRpdGh5YTk1IiwiYSI6ImNscGsxMWtxYjA1czAyaXA3MndsNjViaGkifQ.ce8RjQ_84kY6y2Lhn6gA9w"
-        initialViewState={{
-          longitude: -122.4,
-          latitude: 37.8,
-          zoom: 14,
+const containerStyle = {
+  width: "100%",
+  height: "400px",
+};
+
+const center = {
+  lat: 56.96,
+  lng: 24.13,
+};
+
+const MapBox = () => {
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyB1jyZ_K5vATGK2hpqsXQKidqT6o-TkWmU",
+  });
+
+  const [map, setMap] = useState(null);
+
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+
+    setMap(map);
+  }, []);
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+
+  const mapTheme = [
+    {
+      featureType: "all",
+      elementType: "labels.text",
+      stylers: [
+        {
+          color: "#878787",
+        },
+      ],
+    },
+    {
+      featureType: "all",
+      elementType: "labels.text.stroke",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "landscape",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#f9f5ed",
+        },
+      ],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#f5f5f5",
+        },
+      ],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "geometry.stroke",
+      stylers: [
+        {
+          color: "#c9c9c9",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#aee0f4",
+        },
+      ],
+    },
+  ];
+
+  return isLoaded ? (
+    <div
+      style={{
+        display: "flex",
+      }}
+    >
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={10}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+        options={{
+          mapTypeControl: false,
+          styles: mapTheme,
         }}
-        style={{ width: 600, height: 400 }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-      />
-      <Marker longitude={viewport.longitude} latitude={viewport.latitude} /> */}
-      <Map
-        mapboxAccessToken="pk.eyJ1IjoiYWRpdGh5YTk1IiwiYSI6ImNscGsxMWtxYjA1czAyaXA3MndsNjViaGkifQ.ce8RjQ_84kY6y2Lhn6gA9w"
-        initialViewState={{
-          longitude: -122.4,
-          latitude: 37.8,
-          zoom: 14,
-        }}
-        style={{ width: 600, height: 400 }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-      />
-    </>
+      >
+        <Marker
+          position={center}
+          options={{
+            icon: {
+              url: require("../../assets/maplogo.png"),
+              scaledSize: {
+                width: 70,
+                height: 70,
+              },
+            },
+          }}
+        />
+        <></>
+      </GoogleMap>
+    </div>
+  ) : (
+    <></>
   );
-}
-export default Mapbox;
+};
 
-/**
- <Map
-        mapboxAccessToken="pk.eyJ1IjoiYWRpdGh5YTk1IiwiYSI6ImNscGsxMWtxYjA1czAyaXA3MndsNjViaGkifQ.ce8RjQ_84kY6y2Lhn6gA9w"
-        initialViewState={{
-          longitude: -122.4,
-          latitude: 37.8,
-          zoom: 14,
-        }}
-        style={{ width: 600, height: 400 }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-      />
-      <GeolocateControl
-        positionOptions={{ enableHighAccuracy: true }}
-        trackUserLocation={true}
-      />
- */
+export default MapBox;

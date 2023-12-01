@@ -667,15 +667,16 @@ export const SingleHousePageStyles = styled.section`
 
   .singlepagearticlecontent {
     font-size: 18px;
+    text-align: justify;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 16px;
+      font-size: 14px;
     }
     @media ${devices.tabletsAndIpads} {
-      font-size: 12px;
+      font-size: 10px;
     }
     @media ${devices.smallTabs} {
-      font-size: 10px;
+      font-size: 8px;
     }
     @media ${devices.smallMobiles} {
       font-size: 7px;
@@ -685,6 +686,7 @@ export const SingleHousePageStyles = styled.section`
   .singlepagecalendarcontent {
     display: flex;
     align-items: center;
+
     @media ${devices.bigLaptopsAndDesktops} {
     }
 
@@ -702,6 +704,7 @@ export const SingleHousePageStyles = styled.section`
     align-items: center;
     justify-content: center;
     width: 100%;
+
     @media ${devices.bigLaptopsAndDesktops} {
     }
 
@@ -725,10 +728,11 @@ export const SingleHousePageStyles = styled.section`
     border: 1px solid darkgrey;
     border-radius: 20px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
+    justify-content: center;
+
     @media ${devices.bigLaptopsAndDesktops} {
       gap: 25px;
     }
@@ -741,16 +745,35 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
+      grid-template-columns: 1fr;
       padding: 10px;
       gap: 8px;
     }
   }
 
-  .amenitiesheading {
-    text-decoration: underline;
-    font-size: 20px;
+  .amenities-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+  }
+
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    justify-content: space-between;
+    border-radius: 20px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+  }
+
+  .amenities-listheading {
+    font-size: 18px;
+    font-weight: bold;
+
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -761,7 +784,33 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
-      font-size: 8px;
+      font-size: 7px;
+    }
+  }
+
+  .amenities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .amenitieslisttext {
+    font-size: 18px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 16px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 12px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 9px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 7px;
     }
   }
 
@@ -789,11 +838,13 @@ export const SingleHousePageStyles = styled.section`
     width: 20px;
     color: ${({ theme }) => theme.colors.primaryColor};
     @media ${devices.bigLaptopsAndDesktops} {
-      height: 20px;
-      width: 20px;
+      height: 18px;
+      width: 18px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      height: 15px;
+      width: 15px;
     }
     @media ${devices.smallTabs} {
       height: 15px;
@@ -805,38 +856,77 @@ export const SingleHousePageStyles = styled.section`
       width: 10px;
     }
   }
-  .amenities-list {
-    display: flex;
-    flex-direction: row;
+
+  .reviewandbookbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    flex-wrap: wrap;
-    align-items: center;
-    color: darkgrey;
     justify-content: center;
+
     @media ${devices.bigLaptopsAndDesktops} {
-      gap: 30px;
+      grid-template-columns: 1fr 1fr;
     }
 
     @media ${devices.tabletsAndIpads} {
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
     }
     @media ${devices.smallTabs} {
-      gap: 15px;
+      grid-template-columns: 1fr;
+      gap: 14px;
     }
 
     @media ${devices.smallMobiles} {
-      gap: 8px;
+      grid-template-columns: 1fr;
+      gap: 6px;
     }
   }
 
-  .amenitieslist {
-    font-size: 20px;
+  .reservation-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    padding: 15px;
+    cursor: pointer;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 18px;
+      gap: 10px;
+      padding: 15px;
     }
 
     @media ${devices.tabletsAndIpads} {
-      font-size: 13px;
+      gap: 7px;
+      padding: 10px;
+    }
+    @media ${devices.smallTabs} {
+      gap: 5px;
+      padding: 5px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 10px;
+      padding: 5px;
+      box-shadow: none;
+      overflow-y: hidden;
+    }
+  }
+
+  .reservation-card-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 12px;
     }
     @media ${devices.smallTabs} {
       font-size: 10px;
@@ -847,30 +937,114 @@ export const SingleHousePageStyles = styled.section`
     }
   }
 
-  .singlepagereviewbox {
-    padding: 10px;
+  .date-calendar-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+      /* width: 80%; */
+      width: 100%;
+      overflow-y: hidden;
+      align-items:none;
+    justify-content: none;
+    }
+  }
+
+  .h-line {
+    border: 1px solid ${({ theme }) => theme.colors.primaryColor};
+    /* width: 50%; */
+    width: 100%;
+  }
+
+  .reservation-box {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
+    justify-content: center;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 20px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      padding: 20px;
+      gap: 10px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      padding: 30px;
+      gap: 12px;
+    }
+    @media ${devices.smallTabs} {
+      padding: 10px;
+      gap: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      padding: 4px;
+      gap: 7px;
+    }
+  }
+
+  .reservation-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    color: darkgray;
+    font-weight: bold;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 14px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 12px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 10px;
+    }
+
+    @media ${devices.smallMobiles} {
+      justify-content: space-around;
+      font-size: 7px;
+    }
+  }
+
+  .singlepagereviewbox {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
-    gap: 10px;
+    gap: 20px;
+    /* justify-content: center; */
 
     @media ${devices.bigLaptopsAndDesktops} {
       padding: 8px;
+      gap: 20px;
     }
 
     @media ${devices.tabletsAndIpads} {
       padding: 6px;
+      gap: 15px;
     }
     @media ${devices.smallTabs} {
       padding: 5px;
+      gap: 12px;
     }
 
     @media ${devices.smallMobiles} {
       padding: 3px;
+      gap: 8px;
     }
   }
-
   .singlepagereviewheading {
     text-align: center;
     font-size: 18px;
@@ -918,7 +1092,7 @@ export const SingleHousePageStyles = styled.section`
 
   .reviewpersonsbox {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     align-items: center;
 
@@ -936,7 +1110,8 @@ export const SingleHousePageStyles = styled.section`
 
     @media ${devices.smallMobiles} {
       grid-template-columns: 1fr;
-      gap: 8px;
+      gap: 4px;
+      padding: 8px;
     }
   }
 
@@ -960,8 +1135,9 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
-      padding: 5px;
       gap: 3px;
+      justify-content: center;
+      /* border: 2px solid red; */
     }
   }
 
@@ -1154,8 +1330,8 @@ export const SingleHousePageStyles = styled.section`
     border-top: 1px solid darkgrey;
     border-bottom: 1px solid darkgrey;
     padding: 20px;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 70px;
 
     @media ${devices.bigLaptopsAndDesktops} {
       padding: 20px;
@@ -1167,6 +1343,7 @@ export const SingleHousePageStyles = styled.section`
       padding: 10px;
       gap: 10px;
       grid-template-columns: 1fr;
+      justify-content: center;
     }
     @media ${devices.smallTabs} {
       grid-template-columns: 1fr;
@@ -1249,15 +1426,15 @@ export const SingleHousePageStyles = styled.section`
   .reviewownerdetailuserbox {
     display: flex;
     flex-direction: row;
-
     align-items: center;
     padding: 5px;
-    gap: 15px;
+    gap: 10px;
 
     @media ${devices.bigLaptopsAndDesktops} {
     }
 
     @media ${devices.tabletsAndIpads} {
+      justify-content: center;
     }
     @media ${devices.smallTabs} {
       gap: 10px;
@@ -1317,7 +1494,7 @@ export const SingleHousePageStyles = styled.section`
     font-weight: bold;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -1373,6 +1550,8 @@ export const SingleHousePageStyles = styled.section`
     }
 
     @media ${devices.smallMobiles} {
+      padding: 2px 4px;
+      font-size: 6px;
     }
   }
 
@@ -1424,6 +1603,33 @@ export const SingleHousePageStyles = styled.section`
     }
   }
 
+  .reviewownerlist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      gap: 15px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    @media ${devices.smallTabs} {
+      justify-content: center;
+      align-items: center;
+      gap: 3px;
+    }
+
+    @media ${devices.smallMobiles} {
+      justify-content: center;
+      align-items: center;
+      gap: 3px;
+    }
+  }
+
   .reviewowneradds {
     font-size: 16px;
 
@@ -1435,127 +1641,11 @@ export const SingleHousePageStyles = styled.section`
       font-size: 10px;
     }
     @media ${devices.smallTabs} {
-      font-size: 10px;
-    }
-
-    @media ${devices.smallMobiles} {
-      font-size: 9px;
-    }
-  }
-
-  .reservation-card {
-    /* border: 1px solid red; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    /* align-items: center; */
-    border-radius: 20px;
-    padding: 10px;
-    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
-    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
-    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
-    cursor: pointer;
-
-    @media ${devices.bigLaptopsAndDesktops} {
-      gap: 10px;
-    }
-
-    @media ${devices.tabletsAndIpads} {
-      gap: 7px;
-    }
-    @media ${devices.smallTabs} {
-      gap: 5px;
-    }
-
-    @media ${devices.smallMobiles} {
-      gap: 3px;
-    }
-  }
-
-  .reservation-card-title {
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-
-    @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 14px;
-    }
-
-    @media ${devices.tabletsAndIpads} {
-      font-size: 14px;
-    }
-    @media ${devices.smallTabs} {
-      font-size: 10px;
-    }
-
-    @media ${devices.smallMobiles} {
       font-size: 8px;
     }
-  }
-
-  .date-calendar-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .h-line {
-    border: 1px solid ${({ theme }) => theme.colors.primaryColor};
-    /* width: 50%; */
-    width: 100%;
-  }
-
-  .reservation-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    padding: 30px;
-    gap: 20px;
-
-    @media ${devices.bigLaptopsAndDesktops} {
-      padding: 20px;
-      gap: 10px;
-    }
-
-    @media ${devices.tabletsAndIpads} {
-      padding: 30px;
-      gap: 12px;
-    }
-    @media ${devices.smallTabs} {
-      padding: 15px;
-      gap: 10px;
-    }
 
     @media ${devices.smallMobiles} {
-      padding: 30px;
-      gap: 20px;
-    }
-  }
-
-  .reservation-details {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 16px;
-    color: darkgray;
-    font-weight: bold;
-
-    @media ${devices.bigLaptopsAndDesktops} {
-      font-size: 14px;
-    }
-
-    @media ${devices.tabletsAndIpads} {
-      font-size: 12px;
-    }
-    @media ${devices.smallTabs} {
-      font-size: 10px;
-    }
-
-    @media ${devices.smallMobiles} {
-      font-size: 8px;
+      font-size: 6px;
     }
   }
 `;

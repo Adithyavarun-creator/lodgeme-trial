@@ -1,13 +1,35 @@
 import React, { useEffect, useRef, useState } from "react";
 import { SingleHousePageStyles } from "./SingleHousePageStyles";
 import { Link, useParams } from "react-router-dom";
-import { FaUsers, FaUsersSlash, FaBath, FaWifi, FaStar } from "react-icons/fa";
-import { FaKitchenSet, FaTreeCity, FaElevator } from "react-icons/fa6";
+import {
+  FaUsers,
+  FaUsersSlash,
+  FaBath,
+  FaWifi,
+  FaStar,
+  FaToilet,
+} from "react-icons/fa";
+import {
+  FaKitchenSet,
+  FaTreeCity,
+  FaElevator,
+  FaToiletPortable,
+} from "react-icons/fa6";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Spinner from "../../components/Spinner/Spinner";
 import Button from "../../components/Button/Button";
-import { PiElevatorLight, PiShareFatFill } from "react-icons/pi";
-import { MdFavoriteBorder, MdApartment } from "react-icons/md";
+import {
+  PiElevatorLight,
+  PiShareFatFill,
+  PiBowlFoodBold,
+} from "react-icons/pi";
+import { SiKeepassxc } from "react-icons/si";
+import {
+  MdFavoriteBorder,
+  MdApartment,
+  MdCleaningServices,
+  MdBalcony,
+} from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
 import { GiModernCity, GiWashingMachine } from "react-icons/gi";
 import { IoLocateSharp, IoBedSharp } from "react-icons/io5";
@@ -23,6 +45,8 @@ import { addDays, differenceInDays } from "date-fns";
 import format from "date-fns/format";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import Select from "react-select";
+import { MdOutlineSmokeFree } from "react-icons/md";
+import { BiSolidBlanket } from "react-icons/bi";
 
 const SingleHousePage = () => {
   const { id } = useParams();
@@ -134,12 +158,12 @@ const SingleHousePage = () => {
       },
       "@media (min-width: 280px) and (max-width: 480px) ": {
         ...styles["@media (min-width: 280px) and (max-width: 480px) "],
-        fontSize: "6px",
+        fontSize: "8px",
         backgroundColor: "#015151",
-        height: "25px",
+        height: "10px",
         borderRadius: "10px",
         textAlign: "center",
-        padding: "0px",
+        padding: "0",
         width: "100%",
       },
     }),
@@ -177,13 +201,13 @@ const SingleHousePage = () => {
                 <Button title="Book Now" onClick={onClick} />
               </div>
               <div className="flex">
-                <span className="amenitieslist">
+                <span className="amenitieslisttext">
                   <MdFavoriteBorder className="share-icon" />
                 </span>
                 <span className="sharetext">Save</span>
               </div>
               <div className="flex">
-                <span className="amenitieslist">
+                <span className="amenitieslisttext">
                   <PiShareFatFill className="share-icon" />
                 </span>
                 <span className="sharetext">Share</span>
@@ -312,6 +336,24 @@ const SingleHousePage = () => {
             </div>
           </div>
 
+          {/* <div className="">
+            <div className="singlepagehousepublishbox">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnN8ZW58MHx8MHx8fDA%3D"
+                  alt=""
+                  className="userimage"
+                />
+              </div>
+              <div>
+                <span className="singlepagehousepublishsubname">
+                  <strong>Jack</strong> is responsible service provider for this
+                  house
+                </span>
+              </div>
+            </div>
+          </div> */}
+
           <div className="">
             <div className="singlepagehousepublishbox">
               <div>
@@ -323,601 +365,384 @@ const SingleHousePage = () => {
               </div>
               <div>
                 <span className="singlepagehousepublishsubname">
-                  <strong>Jack</strong>&nbsp; is responsible service provider
-                  for this house
+                  <strong>Jack</strong> is responsible service provider for this
+                  house
                 </span>
-              </div>
-            </div>
-          </div>
-          <div className="singlepagecalendarcontent">
-            <div>
-              <article className="singlepagearticlecontent">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos culpa fuga rerum quas? Harum ut, ab in dolorum
-                delectus modi neque quaerat veniam velit non tempora, eum quos?
-                Aliquam laboriosam dolores magnam earum atque, laudantium
-                similique natus? Eligendi consectetur fugiat voluptatibus soluta
-                voluptatem doloribus earum ducimus commodi, praesentium velit
-                dolores quis in facere? Dolore aspernatur provident quis
-                incidunt doloribus eveniet quas sunt, reiciendis at eius nemo
-                ipsum pariatur ex delectus!
-              </article>
-            </div>
-          </div>
-
-          <div className="amenities-box">
-            <div>
-              <h3 className="amenitiesheading">Amenities Included</h3>
-            </div>
-            <div className="amenities-list">
-              <div className="amenities-singlebox">
-                <FaTreeCity className="amenities-icon" />
-                <span className="amenitieslist">City View</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <FaWifi className="amenities-icon" />
-                <span className="amenitieslist">Wifi</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <FaKitchenSet className="amenities-icon" />
-                <span className="amenitieslist">Kitchen</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <GiWashingMachine className="amenities-icon" />
-                <span className="amenitieslist">Washing Machine</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <FaElevator className="amenities-icon" />
-                <span className="amenitieslist">Elevator</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <RiTempHotFill className="amenities-icon" />
-                <span className="amenitieslist">Heating</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <TbHanger className="amenities-icon" />
-                <span className="amenitieslist">Hanger</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <FaTreeCity className="amenities-icon" />
-                <span className="amenitieslist">City View</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <FaWifi className="amenities-icon" />
-                <span className="amenitieslist">Wifi</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <FaKitchenSet className="amenities-icon" />
-                <span className="amenitieslist">Kitchen</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <GiWashingMachine className="amenities-icon" />
-                <span className="amenitieslist">Washing Machine</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <FaElevator className="amenities-icon" />
-                <span className="amenitieslist">Elevator</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <RiTempHotFill className="amenities-icon" />
-                <span className="amenitieslist">Heating</span>
-              </div>
-
-              <div className="amenities-singlebox">
-                <TbHanger className="amenities-icon" />
-                <span className="amenitieslist">Hanger</span>
-              </div>
-            </div>
-          </div>
-
-          {/* calendar */}
-          {/* <div className="calendarcenter" ref={dateRef}>
-            <DateRangePicker
-              // className="date_range"
-              onChange={(item) => setRange([item.selection])}
-              editableDateInputs={true}
-              moveRangeOnFirstSelection={false}
-              ranges={range}
-              months={2}
-              direction="horizontal"
-              rangeColors={["#015151", "#015151", "#fed14c"]}
-              minDate={new Date()}
-            />
-          </div> */}
-
-          {/* <div className="" style={{ width: "100%" }}>
-            <Mapbox />
-          </div> */}
-          {/* review box */}
-          <div className="singlepagereviewbox" ref={reviewRef}>
-            <div>
-              <h1 className="singlepagereviewheading">
-                Customer Reviews based on stay (10 ratings)
-              </h1>
-            </div>
-            <div className="reviewpersonsbox">
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
-              </div>
-
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
-              </div>
-
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
-              </div>
-
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
-              </div>
-
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
-              </div>
-
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
-              </div>
-
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
-              </div>
-
-              <div className="reviewpersondetailbox">
-                <div className="reviewuserbox">
-                  <div>
-                    <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt=""
-                      className="reviewpersonimg"
-                    />
-                  </div>
-
-                  <div className="reviewwww">
-                    <h2 className="reviewusername">John Doe</h2>
-                    <span className="reviewusercountry">USA</span>
-                  </div>
-                </div>
-                <div className="reviewuserating">
-                  <FaStar className="reviewuserstar" />
-                  <span className="reviewuserpostdate">4.2</span>
-                  <span className="reviewuserpostdated">
-                    Posted on October 4
-                  </span>
-                </div>
-                <div>
-                  <article className="reviewusercomments">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cumque omnis ex cupiditate animi neque. Rem, consequatur
-                    accusantium quis soluta voluptates excepturi perferendis
-                    eaque laboriosam temporibus? Qui officiis suscipit assumenda
-                    molestias facilis sit consequatur aspernatur nostrum.
-                  </article>
-                </div>
               </div>
             </div>
           </div>
 
           <div>
-            <div className="reviewownerdetail">
-              {/* <div className="reviewownerdetailgrid-1">
-                <div className="reviewownerdetailuserbox">
-                  <div>
-                    <img
-                      className="hostimage"
-                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-                      alt=""
-                    />
-                  </div>
-                  <div className="hostdetails">
-                    <h2 className="hostdetailname">Serviced by John Doe</h2>
-                    <span className="hostdetailsubname">
-                      Joined on Feb 2023
-                    </span>
-                  </div>
-                  <div className="verifybox">
-                    <span>
-                      <RiVerifiedBadgeFill />
-                    </span>
-                    <span>Verified</span>
-                  </div>
+            <h1 className="amenities-listheading">
+              TITRE DE L’ANNONCE – STUDIO/APPARTEMENT/VILLA/MAISON
+            </h1>
+          </div>
+
+          <div className="singlepagecalendarcontent">
+            <div>
+              <article className="singlepagearticlecontent">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus autem accusantium ipsum alias cupiditate eos voluptate
+                dolores deserunt, dolorum, exercitationem iste. Aliquid fuga
+                dolorem ratione sunt soluta iure quas repudiandae eos facilis,
+                optio autem inventore possimus excepturi veniam consequatur
+                pariatur? Cupiditate, impedit? Alias, velit eveniet! Quos nobis,
+                maxime similique porro eveniet aperiam perferendis tempora
+                possimus quibusdam mollitia! Aliquam nam quae quo pariatur!
+                Voluptate, excepturi. Alias tempora vel voluptatum molestias
+                illo, dolores eligendi possimus iusto aliquam, repudiandae,
+                ullam illum optio! Neque.
+              </article>
+            </div>
+          </div>
+
+          <div className="amenities-box">
+            {/* grid1 */}
+
+            <div className="amenities-info">
+              <div>
+                <h2 className="amenities-listheading">
+                  Information complémentaire
+                </h2>
+              </div>
+              <div>
+                <article className="singlepagearticlecontent">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+                  vel veniam quod maiores dolorem officia, exercitationem
+                  veritatis blanditiis possimus neque quia totam ab nobis
+                  inventore quaerat. Error nemo dolorem eligendi odit nostrum,
+                  pariatur laborum perspiciatis recusandae quod enim? Adipisci
+                  distinctio aperiam voluptas pariatur error rem itaque autem
+                  rerum, molestias vitae. Dolor ducimus repudiandae accusantium.
+                  Eaque minima maxime quibusdam eius deserunt obcaecati
+                  reiciendis debitis molestias vel, velit officiis temporibus
+                  quae. Quia dolorem assumenda veritatis iure, neque voluptates
+                  adipisci eos dicta tempore consectetur facere numquam non
+                  blanditiis culpa itaque vel ad ducimus voluptatem, fugit
+                  cumque aut atque quo! Recusandae illo sapiente architecto?
+                </article>
+              </div>
+            </div>
+            {/* gird2 */}
+            <div className="amenities-grid">
+              <div className="amenities-list">
+                <div>
+                  <h1 className="amenities-listheading">
+                    Composition du logement
+                  </h1>
+                </div>
+                <div className="amenities-singlebox">
+                  <PiBowlFoodBold className="amenities-icon" />
+                  <span className="amenitieslisttext">Cuisine américaine</span>
                 </div>
 
-                <div>
-                  <article className="reviewownerbio">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Neque modi enim quos illo, minus vitae, perspiciatis labore
-                    animi, laboriosam qui aperiam harum quidem sunt aut?
-                    Consequuntur fuga non laborum voluptatibus!
-                  </article>
+                <div className="amenities-singlebox">
+                  <MdBalcony className="amenities-icon" />
+                  <span className="amenitieslisttext">Terrasse</span>
                 </div>
-              </div> */}
 
-              <div className="reviewownerdetailgrid-1">
-                <div>
-                  <span className='reviewdetailcontent'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minus, qui labore facere beatae dolor tenetur ratione unde
-                    obcaecati, tempora hic dignissimos corporis corrupti alias
-                    tempore laudantium vero? Nesciunt, commodi aliquam?
-                  </span>
+                <div className="amenities-singlebox">
+                  <FaKitchenSet className="amenities-icon" />
+                  <span className="amenitieslisttext">1 salle d'eau</span>
                 </div>
-                <div>
-                  <span className='reviewdetailcontent'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minus, qui labore facere beatae dolor tenetur ratione unde
-                    obcaecati, tempora hic dignissimos corporis corrupti alias
-                    tempore laudantium vero? Nesciunt, commodi aliquam?
-                  </span>
+
+                <div className="amenities-singlebox">
+                  <FaToilet className="amenities-icon" />
+
+                  <span className="amenitieslisttext">1 wc</span>
                 </div>
-                <div>
-                  <span className='reviewdetailcontent'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minus, qui labore facere beatae dolor tenetur ratione unde
-                    obcaecati, tempora hic dignissimos corporis corrupti alias
-                    tempore laudantium vero? Nesciunt, commodi aliquam?
-                  </span>
-                </div>
-                <div>
-                  <span className='reviewdetailcontent'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minus, qui labore facere beatae dolor tenetur ratione unde
-                    obcaecati, tempora hic dignissimos corporis corrupti alias
-                    tempore laudantium vero? Nesciunt, commodi aliquam?
-                  </span>
-                </div>
-                <div>
-                  <span className='reviewdetailcontent'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minus, qui labore facere beatae dolor tenetur ratione unde
-                    obcaecati, tempora hic dignissimos corporis corrupti alias
-                    tempore laudantium vero? Nesciunt, commodi aliquam?
-                  </span>
+
+                <div className="amenities-singlebox">
+                  <IoBedSharp className="amenities-icon" />
+                  <span className="amenitieslisttext">1 lit(s) double</span>
                 </div>
               </div>
 
-              <div className="reviewownerdetailgrid-2">
-                <div className="">
-                  <div className="reviewownerdetailuserbox">
+              <div className="amenities-list">
+                <div>
+                  <h1 className="amenities-listheading">Prestations</h1>
+                </div>
+                <div className="amenities-singlebox">
+                  <FaTreeCity className="amenities-icon" />
+                  <span className="amenitieslisttext">Wifi</span>
+                </div>
+
+                <div className="amenities-singlebox">
+                  <FaWifi className="amenities-icon" />
+                  <span className="amenitieslisttext">Télévision</span>
+                </div>
+
+                <div className="amenities-singlebox">
+                  <MdOutlineSmokeFree className="amenities-icon" />
+                  <span className="amenitieslisttext">
+                    De préférence non fumeur
+                  </span>
+                </div>
+
+                <div className="amenities-singlebox">
+                  <FaKitchenSet className="amenities-icon" />
+                  <span className="amenitieslisttext">
+                    Appareils de cuisson
+                  </span>
+                </div>
+
+                <div className="amenities-singlebox">
+                  <BiSolidBlanket className="amenities-icon" />
+                  <span className="amenitieslisttext">Linge fourni</span>
+                </div>
+                <div className="amenities-singlebox">
+                  <SiKeepassxc className="amenities-icon" />
+                  <span className="amenitieslisttext">Ménage possible</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="" style={{ width: "100%" }}>
+            <Mapbox />
+          </div> */}
+          {/* review box */}
+          <div className="reviewandbookbox">
+            <div className="singlepagereviewbox" ref={reviewRef}>
+              <div>
+                <h1 className="singlepagereviewheading">
+                  Popular Customer Reviews based on stay
+                </h1>
+              </div>
+              <div className="reviewpersonsbox">
+                <div className="reviewpersondetailbox">
+                  <div className="reviewuserbox">
                     <div>
                       <img
-                        className="hostimage"
-                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt=""
+                        className="reviewpersonimg"
                       />
                     </div>
-                    <div className="hostdetails">
-                      <h2 className="hostdetailname">Serviced by John Doe</h2>
-                      <span className="hostdetailsubname">
-                        Joined on Feb 2023
-                      </span>
-                    </div>
-                    <div className="verifybox">
-                      <span>
-                        <RiVerifiedBadgeFill />
-                      </span>
-                      <span>Verified</span>
+
+                    <div className="reviewwww">
+                      <h2 className="reviewusername">John Doe</h2>
+                      <span className="reviewusercountry">USA</span>
                     </div>
                   </div>
-
+                  <div className="reviewuserating">
+                    <FaStar className="reviewuserstar" />
+                    <span className="reviewuserpostdate">4.2</span>
+                    <span className="reviewuserpostdated">
+                      Posted on October 4
+                    </span>
+                  </div>
                   <div>
-                    <article className="reviewownerbio">
+                    <article className="singlepagearticlecontent">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Neque modi enim quos illo, minus vitae, perspiciatis
-                      labore animi, laboriosam qui aperiam harum quidem sunt
-                      aut? Consequuntur fuga non laborum voluptatibus!
+                      Cumque omnis ex cupiditate animi neque. Rem, consequatur
+                      accusantium quis soluta voluptates excepturi perferendis
+                      eaque laboriosam temporibus? Qui officiis suscipit
+                      assumenda molestias facilis sit consequatur aspernatur
+                      nostrum.
                     </article>
                   </div>
                 </div>
 
-                <div className="reservation-card" ref={dateRef}>
-                  <div>
-                    <h2 className="reservation-card-title">0504 par unit</h2>
-                  </div>
-                  <div className="">
-                    <div className="date-calendar-box">
-                      <DateRange
-                        onChange={(item) => setRange([item.selection])}
-                        showSelectionPreview={true}
-                        moveRangeOnFirstSelection={false}
-                        months={1}
-                        ranges={range}
-                        direction="horizontal"
-                        rangeColors={["#015151", "#015151", "#fed14c"]}
-                        minDate={new Date()}
+                <div className="reviewpersondetailbox">
+                  <div className="reviewuserbox">
+                    <div>
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                        className="reviewpersonimg"
                       />
                     </div>
+
+                    <div className="reviewwww">
+                      <h2 className="reviewusername">John Doe</h2>
+                      <span className="reviewusercountry">USA</span>
+                    </div>
+                  </div>
+                  <div className="reviewuserating">
+                    <FaStar className="reviewuserstar" />
+                    <span className="reviewuserpostdate">4.2</span>
+                    <span className="reviewuserpostdated">
+                      Posted on October 4
+                    </span>
                   </div>
                   <div>
-                    <div className="date-calendar-box">
-                      <Select
-                        className="select"
-                        placeholder="Select Persons"
-                        options={personOptions}
-                        value={noPersons}
-                        onChange={changePersonHandler}
-                        styles={styles}
-                        name="person"
+                    <article className="singlepagearticlecontent">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque omnis ex cupiditate animi neque. Rem, consequatur
+                      accusantium quis soluta voluptates excepturi perferendis
+                      eaque laboriosam temporibus? Qui officiis suscipit
+                      assumenda molestias facilis sit consequatur aspernatur
+                      nostrum.
+                    </article>
+                  </div>
+                </div>
+
+                <div className="reviewpersondetailbox">
+                  <div className="reviewuserbox">
+                    <div>
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                        className="reviewpersonimg"
                       />
                     </div>
-                  </div>
-                  <div className="reservation-box">
-                    <div className="reservation-details">
-                      <div>
-                        <span>4504 x 7 nuits</span>
-                      </div>
-                      <div>
-                        <span>31526</span>
-                      </div>
-                    </div>
-                    <div className="reservation-details">
-                      <div>
-                        <span>Frais de manage</span>
-                      </div>
-                      <div>
-                        <span>1984</span>
-                      </div>
-                    </div>
 
-                    <div className="date-calendar-box ">
-                      <hr className="h-line" />
-                    </div>
-
-                    <div className="reservation-details">
-                      <div>
-                        <span>Total hors taxes</span>
-                      </div>
-                      <div>
-                        <span>33510</span>
-                      </div>
-                    </div>
-
-                    <div className="date-calendar-box ">
-                      <hr className="h-line" />
-                    </div>
-
-                    <div className="date-calendar-box ">
-                      <Button title="Book Now" />
+                    <div className="reviewwww">
+                      <h2 className="reviewusername">John Doe</h2>
+                      <span className="reviewusercountry">USA</span>
                     </div>
                   </div>
+                  <div className="reviewuserating">
+                    <FaStar className="reviewuserstar" />
+                    <span className="reviewuserpostdate">4.2</span>
+                    <span className="reviewuserpostdated">
+                      Posted on October 4
+                    </span>
+                  </div>
+                  <div>
+                    <article className="singlepagearticlecontent">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cumque omnis ex cupiditate animi neque. Rem, consequatur
+                      accusantium quis soluta voluptates excepturi perferendis
+                      eaque laboriosam temporibus? Qui officiis suscipit
+                      assumenda molestias facilis sit consequatur aspernatur
+                      nostrum.
+                    </article>
+                  </div>
                 </div>
-                <div>
-                  <span className="reviewowneradds">
-                    Registration number: 0*********0
-                  </span>
+              </div>
+            </div>
+            <div className="reservation-card" ref={dateRef}>
+              <div>
+                <h1 className="singlepagereviewheading">0504 par unit</h1>
+              </div>
+              <div className="">
+                <div className="date-calendar-box">
+                  <DateRange
+                    onChange={(item) => setRange([item.selection])}
+                    showSelectionPreview={true}
+                    moveRangeOnFirstSelection={false}
+                    months={1}
+                    ranges={range}
+                    direction="horizontal"
+                    rangeColors={["#015151", "#015151", "#fed14c"]}
+                    minDate={new Date()}
+                  />
                 </div>
-                <div>
-                  <span className="reviewowneradds">
-                    Languages: English, Français, Italiano, Español
-                  </span>
+              </div>
+              <div>
+                <div className="date-calendar-box">
+                  <Select
+                    placeholder="Select Persons"
+                    options={personOptions}
+                    value={noPersons}
+                    onChange={changePersonHandler}
+                    styles={styles}
+                    name="person"
+                  />
                 </div>
-                <div>
-                  <span className="reviewowneradds">Response rate: 100%</span>
+              </div>
+              <div className="reservation-box">
+                <div className="reservation-details">
+                  <div>
+                    <span>4504 x 7 nuits</span>
+                  </div>
+                  <div>
+                    <span>31526</span>
+                  </div>
                 </div>
-                <div>
-                  <span className="reviewowneradds">
-                    Response time: within a few hours
-                  </span>
+                <div className="reservation-details">
+                  <div>
+                    <span>Frais de manage</span>
+                  </div>
+                  <div>
+                    <span>1984</span>
+                  </div>
                 </div>
-                <div>
-                  <Button title="Contact Service" />
+
+                <div className="date-calendar-box ">
+                  <hr className="h-line" />
                 </div>
+
+                <div className="reservation-details">
+                  <div>
+                    <span>Total hors taxes</span>
+                  </div>
+                  <div>
+                    <span>
+                      <strong>33510</strong>
+                    </span>
+                  </div>
+                </div>
+
+                <div className="date-calendar-box ">
+                  <hr className="h-line" />
+                </div>
+
+                <div className="date-calendar-box ">
+                  <Button title="Book Now" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="reviewownerdetail">
+            <div className="reviewownerdetailuserbox">
+              <div>
+                <img
+                  className="hostimage"
+                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+                  alt=""
+                />
+              </div>
+              <div className="hostdetails">
+                <h2 className="hostdetailname">Serviced by John Doe</h2>
+                <span className="hostdetailsubname">Joined on Feb 2023</span>
+              </div>
+              <div className="verifybox">
+                <span>
+                  <RiVerifiedBadgeFill />
+                </span>
+                <span>Verified</span>
+              </div>
+            </div>
+
+            <div>
+              <article className="singlepagearticlecontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Architecto minus dolorum odit fugit soluta doloremque laboriosam
+                velit assumenda neque sapiente dolore, ducimus earum aliquam
+                rerum nobis tempore exercitationem. Corporis quod nesciunt id
+                iusto neque quidem ducimus earum, sed aut dolorem consequuntur
+                voluptate repellat odio dolorum quisquam ipsam repudiandae
+                tempore officiis ad. Reiciendis non, modi sapiente optio sint
+                reprehenderit quisquam tenetur deserunt. Iusto at exercitationem
+                eligendi error minima sit! Laborum, nihil.
+              </article>
+            </div>
+
+            <div className="reviewownerlist">
+              <div>
+                <span className="reviewowneradds">
+                  Registration number: 0*********0
+                </span>
+              </div>
+              <div>
+                <span className="reviewowneradds">
+                  Languages: English, Français, Italiano, Español
+                </span>
+              </div>
+              <div>
+                <span className="reviewowneradds">Response rate: 100%</span>
+              </div>
+              <div>
+                <span className="reviewowneradds">
+                  Response time: within a few hours
+                </span>
+              </div>
+              <div>
+                <Button title="Contact Service" />
               </div>
             </div>
           </div>
@@ -928,3 +753,5 @@ const SingleHousePage = () => {
 };
 
 export default SingleHousePage;
+
+//[TITRE DE L’ANNONCE – STUDIO/APPARTEMENT/VILLA/MAISON]
