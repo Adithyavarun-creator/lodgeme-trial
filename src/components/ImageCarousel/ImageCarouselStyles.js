@@ -81,7 +81,6 @@ export const ImageCarouselStyles = styled.div`
       height: 25px;
       width: 25px;
       padding: 4px;
-
     }
   }
 

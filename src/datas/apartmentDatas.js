@@ -28,7 +28,46 @@ import chartreux4 from "../assets/chartreux/img4.JPG";
 import chartreux5 from "../assets/chartreux/img5.JPG";
 import chartreux6 from "../assets/chartreux/img6.JPG";
 
+//studio parisa
+import studio1 from "../assets/studioparisa/studio1.jpeg";
+import studio2 from "../assets/studioparisa/studio2.jpeg";
+import studio3 from "../assets/studioparisa/studio3.jpeg";
+import studio4 from "../assets/studioparisa/studio4.jpeg";
+
 export const apartmentDatas = [
+  {
+    id: 8,
+    caption: "STUDIO PARISA",
+    location: "Paris",
+    country: "France",
+    houseTitle: "This beautiful 21 m² studio is available immediately.",
+    houseamenities:
+      "It is composed of an open and equipped kitchen (ceramic hob, fridge, washing machine, microwave, hood), a dining area, a living room (sofa, coffee table, television), a bedroom area and a bathroom + toilet with towel dryer and storage space.",
+    additionalInfo:
+      "Lively neighborhood. Close to metro 12, tram T2 and T3a and several bus stops.",
+    images: [
+      {
+        id: 1,
+        imgSrc: studio1,
+      },
+      {
+        id: 2,
+        imgSrc: studio2,
+      },
+      {
+        id: 3,
+        imgSrc: studio3,
+      },
+      {
+        id: 4,
+        imgSrc: studio4,
+      },
+      {
+        id: 5,
+        imgSrc: studio4,
+      },
+    ],
+  },
   {
     id: 1,
     caption: "Paris 17th",

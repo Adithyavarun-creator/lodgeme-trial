@@ -117,7 +117,6 @@ export const SingleHousePageStyles = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    align-items: center;
     padding: 5px;
     cursor: pointer;
     position: relative;
@@ -234,6 +233,7 @@ export const SingleHousePageStyles = styled.section`
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     gap: 10px;
+    align-items: center;
 
     @media ${devices.bigLaptopsAndDesktops} {
       grid-template-columns: 0.5fr 0.5fr;

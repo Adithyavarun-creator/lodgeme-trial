@@ -50,15 +50,18 @@ import Select from "react-select";
 import { MdOutlineSmokeFree } from "react-icons/md";
 import { BiSolidBlanket } from "react-icons/bi";
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
+import { apartmentDatas } from "../../datas/apartmentDatas";
 
 const SingleHousePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  //datas
+  const [data, setData] = useState(null);
 
   const [loading, setLoading] = useState(false);
   const [noPersons, setnoPersons] = useState(1);
   const [value, setValue] = useState("");
-  const [showImages, setShowImages] = useState(true);
+  const [showImages, setShowImages] = useState(false);
 
   const [diffInDays, setDiffInDays] = useState(0);
 
@@ -115,6 +118,13 @@ const SingleHousePage = () => {
   const goBack = () => {
     navigate("/");
   };
+
+  useEffect(() => {
+    const apartment = apartmentDatas.find((p) => p.id === parseInt(id));
+    if (apartment) {
+      setData(apartment);
+    }
+  }, [id]);
 
   const styles = {
     placeholder: (defaultStyles) => {
@@ -203,7 +213,11 @@ const SingleHousePage = () => {
       <HelmetProvider>
         <Helmet>
           <meta />
-          <title>Paris-Montparnasse: superb 34 m2 studio</title>
+          <title>
+            {data?.caption
+              ? data?.caption
+              : "Paris-Montparnasse: superb 34 m2 studio"}
+          </title>
         </Helmet>
         <SingleHousePageStyles>
           <div>
@@ -212,7 +226,9 @@ const SingleHousePage = () => {
           <div className="singlepagetitlebox">
             <div className="">
               <h2 className="singlepagetitletext flex">
-                Paris-Montparnasse: superb 34 m2 studio
+                {data?.caption
+                  ? data?.caption
+                  : "Paris-Montparnasse: superb 34 m2 studio"}{" "}
                 <MdLocationPin
                   className="rating"
                   style={{ color: "#EA4335" }}
@@ -248,7 +264,11 @@ const SingleHousePage = () => {
             <div className="singlepageposition">
               <div className="item-1">
                 <img
-                  src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src={
+                    data?.images
+                      ? data?.images[0]?.imgSrc
+                      : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  }
                   alt=""
                   className="imgsubgrid"
                 />
@@ -257,28 +277,55 @@ const SingleHousePage = () => {
               <div className="flex-grid">
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1584738766473-61c083514bf4?q=80&w=3781&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={
+                      data?.images
+                        ? data?.images[1]?.imgSrc
+                        : "https://images.unsplash.com/photo-1584738766473-61c083514bf4?q=80&w=3781&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
                     alt=""
                     className="imgsubgrid2"
                   />
                 </div>
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1430285561322-7808604715df?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={
+                      data?.images
+                        ? data?.images[2]?.imgSrc
+                        : "https://images.unsplash.com/photo-1430285561322-7808604715df?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
                     alt=""
                     className="imgsubgrid2"
                   />
                 </div>
                 <div>
                   <img
-                    src="https://plus.unsplash.com/premium_photo-1663133484931-5964e69b9a75?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={
+                      data?.images
+                        ? data?.images[3]?.imgSrc
+                        : "https://plus.unsplash.com/premium_photo-1663133484931-5964e69b9a75?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
                     alt=""
                     className="imgsubgrid2"
                   />
                 </div>
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={
+                      data?.images
+                        ? data?.images[4]?.imgSrc
+                        : "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
+                    alt=""
+                    className="imgsubgrid2"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={
+                      data?.images
+                        ? data?.images[5]?.imgSrc
+                        : "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    }
                     alt=""
                     className="imgsubgrid2"
                   />
@@ -299,6 +346,7 @@ const SingleHousePage = () => {
               <ImageCarousel
                 setShowImages={setShowImages}
                 showImages={showImages}
+                images={data?.images}
               />
             </div>
           )}
@@ -354,17 +402,9 @@ const SingleHousePage = () => {
           <div className="singlepagecalendarcontent">
             <div>
               <article className="singlepagearticlecontent">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus autem accusantium ipsum alias cupiditate eos voluptate
-                dolores deserunt, dolorum, exercitationem iste. Aliquid fuga
-                dolorem ratione sunt soluta iure quas repudiandae eos facilis,
-                optio autem inventore possimus excepturi veniam consequatur
-                pariatur? Cupiditate, impedit? Alias, velit eveniet! Quos nobis,
-                maxime similique porro eveniet aperiam perferendis tempora
-                possimus quibusdam mollitia! Aliquam nam quae quo pariatur!
-                Voluptate, excepturi. Alias tempora vel voluptatum molestias
-                illo, dolores eligendi possimus iusto aliquam, repudiandae,
-                ullam illum optio! Neque.
+                {data?.houseamenities
+                  ? data?.houseamenities
+                  : "Lorem ipsum dolor sit amet consectetur adipisicing elit Accusamus autem accusantium ipsum alias cupiditate eos voluptatedolores deserunt, dolorum, exercitationem iste"}
               </article>
             </div>
           </div>
@@ -380,19 +420,9 @@ const SingleHousePage = () => {
               </div>
               <div>
                 <article className="singlepagearticlecontent">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
-                  vel veniam quod maiores dolorem officia, exercitationem
-                  veritatis blanditiis possimus neque quia totam ab nobis
-                  inventore quaerat. Error nemo dolorem eligendi odit nostrum,
-                  pariatur laborum perspiciatis recusandae quod enim? Adipisci
-                  distinctio aperiam voluptas pariatur error rem itaque autem
-                  rerum, molestias vitae. Dolor ducimus repudiandae accusantium.
-                  Eaque minima maxime quibusdam eius deserunt obcaecati
-                  reiciendis debitis molestias vel, velit officiis temporibus
-                  quae. Quia dolorem assumenda veritatis iure, neque voluptates
-                  adipisci eos dicta tempore consectetur facere numquam non
-                  blanditiis culpa itaque vel ad ducimus voluptatem, fugit
-                  cumque aut atque quo! Recusandae illo sapiente architecto?
+                  {data?.additionalInfo
+                    ? data?.additionalInfo
+                    : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, vel veniam quod maiores dolorem officia, exercitationem veritatis blanditiis possimus neque quia totam ab nobis inventore quaerat. Error nemo dolorem eligendi odit nostrum pariatur laborum perspiciatis recusandae quod enim? Adipisc distinctio aperiam voluptas pariatur error rem itaque autem"}
                 </article>
               </div>
             </div>
