@@ -13,8 +13,6 @@ export const ButtonStyles = styled.button`
   text-transform: capitalize;
   font-weight: bolder;
 
- 
-
   @media ${devices.bigLaptopsAndDesktops} {
     padding: 12px 10px;
     font-size: 16px;
@@ -25,7 +23,7 @@ export const ButtonStyles = styled.button`
     font-size: 12px;
   }
   @media ${devices.smallTabs} {
-    padding: 6px 8px;
+    padding: 6px;
     font-size: 10px;
   }
 

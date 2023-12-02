@@ -19,18 +19,18 @@ export const SingleHousePageStyles = styled.section`
   @media ${devices.tabletsAndIpads} {
     padding-left: 80px;
     padding-right: 80px;
-    gap: 40px;
+    gap: 30px;
   }
   @media ${devices.smallTabs} {
     padding-left: 30px;
     padding-right: 30px;
-    gap: 30px;
+    gap: 20px;
   }
 
   @media ${devices.smallMobiles} {
     padding-left: 15px;
     padding-right: 15px;
-    gap: 30px;
+    gap: 10px;
   }
 
   .singlepagetitlebox {
@@ -117,30 +117,112 @@ export const SingleHousePageStyles = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    padding: 5px;
-    cursor: pointer;
     position: relative;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      grid-template-columns: 1fr 1fr;
     }
 
     @media ${devices.tabletsAndIpads} {
-      grid-template-columns: 1fr 1fr;
+      gap: 5px;
     }
     @media ${devices.smallTabs} {
-      grid-template-columns: 1fr 1fr;
+      gap: 4px;
     }
 
     @media ${devices.smallMobiles} {
-      grid-template-columns: 1fr 1fr;
+      gap: 4px;
     }
+  }
+
+  .item-1 {
+    border-radius: 5px;
+    transition: all 0.6s ease-in;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+
+  .item-1:hover {
+    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+  }
+
+  .imgsubgrid1 {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    height: 100%;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+
+  .item-2 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+      gap: 2px;
+    }
+
+    @media ${devices.smallMobiles} {
+      gap: 2px;
+    }
+  }
+
+  .imgsubgrid2 {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+    width: 100%;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
+    }
+  }
+
+  .imgsubgrid2:hover {
+    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
+    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
   }
 
   .singlepageshowallimages {
     position: absolute;
     bottom: 0;
     right: 0;
+    top: 0;
+    cursor: pointer;
 
     @media ${devices.bigLaptopsAndDesktops} {
     }
@@ -188,6 +270,7 @@ export const SingleHousePageStyles = styled.section`
     transition: all 0.5s ease-in;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      /* height: 1000px; */
     }
 
     @media ${devices.tabletsAndIpads} {
@@ -205,33 +288,10 @@ export const SingleHousePageStyles = styled.section`
     box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
   }
 
-  .imgsubgrid2 {
-    width: 100%;
-    object-fit: fill;
-    border-radius: 10px;
-    transition: all 0.5s ease-in;
-
-    @media ${devices.bigLaptopsAndDesktops} {
-    }
-
-    @media ${devices.tabletsAndIpads} {
-    }
-    @media ${devices.smallTabs} {
-    }
-
-    @media ${devices.smallMobiles} {
-    }
-  }
-
-  .imgsubgrid2:hover {
-    -webkit-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
-    -moz-box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
-    box-shadow: 0px 4px 16px 3px rgba(1, 81, 81, 1);
-  }
-
   .flex-grid {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 300px 300px; */
     gap: 10px;
     align-items: center;
 

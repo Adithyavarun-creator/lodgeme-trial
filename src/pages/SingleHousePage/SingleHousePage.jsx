@@ -270,17 +270,17 @@ const SingleHousePage = () => {
                       : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   }
                   alt=""
-                  className="imgsubgrid"
+                  className="imgsubgrid1"
                 />
               </div>
 
-              <div className="flex-grid">
+              <div className="item-2">
                 <div>
                   <img
                     src={
                       data?.images
                         ? data?.images[1]?.imgSrc
-                        : "https://images.unsplash.com/photo-1584738766473-61c083514bf4?q=80&w=3781&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     }
                     alt=""
                     className="imgsubgrid2"
@@ -291,7 +291,7 @@ const SingleHousePage = () => {
                     src={
                       data?.images
                         ? data?.images[2]?.imgSrc
-                        : "https://images.unsplash.com/photo-1430285561322-7808604715df?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     }
                     alt=""
                     className="imgsubgrid2"
@@ -302,7 +302,7 @@ const SingleHousePage = () => {
                     src={
                       data?.images
                         ? data?.images[3]?.imgSrc
-                        : "https://plus.unsplash.com/premium_photo-1663133484931-5964e69b9a75?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     }
                     alt=""
                     className="imgsubgrid2"
@@ -313,24 +313,14 @@ const SingleHousePage = () => {
                     src={
                       data?.images
                         ? data?.images[4]?.imgSrc
-                        : "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    }
-                    alt=""
-                    className="imgsubgrid2"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={
-                      data?.images
-                        ? data?.images[5]?.imgSrc
-                        : "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     }
                     alt=""
                     className="imgsubgrid2"
                   />
                 </div>
               </div>
+
               {/* show more button */}
               <div className="singlepageshowallimages">
                 <Button
