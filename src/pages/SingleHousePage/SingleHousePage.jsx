@@ -14,6 +14,7 @@ import {
   FaTreeCity,
   FaElevator,
   FaToiletPortable,
+  FaArrowLeftLong,
 } from "react-icons/fa6";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Spinner from "../../components/Spinner/Spinner";
@@ -220,8 +221,8 @@ const SingleHousePage = () => {
           </title>
         </Helmet>
         <SingleHousePageStyles>
-          <div>
-            <Button title="&#171; Back to Home" onClick={goBack} />
+          <div className="">
+            <Button title="Back to Home" onClick={goBack} />
           </div>
           <div className="singlepagetitlebox">
             <div className="">

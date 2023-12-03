@@ -1,7 +1,6 @@
 import React from "react";
 import { ImageCarouselStyles } from "./ImageCarouselStyles";
 import { MdClose } from "react-icons/md";
-import carouselImages from "../../datas/carouselImages";
 
 const ImageCarousel = ({ showImages, setShowImages, images }) => {
   const settings = {

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { devices } from "../../theme/breakpoints";
 
 export const ImageCarouselStyles = styled.div`
-  border-radius: 20px;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -35,6 +34,7 @@ export const ImageCarouselStyles = styled.div`
     display: flex;
     justify-content: flex-end;
     z-index: 30;
+    cursor: pointer;
 
     @media ${devices.bigLaptopsAndDesktops} {
     }
@@ -108,7 +108,7 @@ export const ImageCarouselStyles = styled.div`
   }
 
   .img {
-    object-fit: cover; 
+    object-fit: cover;
     height: 900px;
     width: 100%;
     border-radius: 10px;

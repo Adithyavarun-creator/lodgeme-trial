@@ -46,7 +46,7 @@ function App() {
               path="/conditions-general"
               element={<LazyConditionsPageComponent />}
             />
-            <Route path="/animate" element={<MapView />} />
+            <Route path="/animate" element={<Animate />} />
             <Route
               path="/homes&rooms/:id"
               element={<LazySingleHousePageComponent />}
