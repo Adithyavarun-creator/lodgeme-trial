@@ -137,6 +137,7 @@ export const SingleHousePageStyles = styled.section`
   .item-1 {
     border-radius: 5px;
     transition: all 0.6s ease-in;
+    cursor: pointer;
 
     @media ${devices.bigLaptopsAndDesktops} {
     }
@@ -177,6 +178,8 @@ export const SingleHousePageStyles = styled.section`
   .item-2 {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
+    cursor: pointer;
+
 
     @media ${devices.bigLaptopsAndDesktops} {
     }

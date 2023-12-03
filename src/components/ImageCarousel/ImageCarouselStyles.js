@@ -88,7 +88,7 @@ export const ImageCarouselStyles = styled.div`
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     justify-content: center;
 
     @media ${devices.bigLaptopsAndDesktops} {
@@ -108,10 +108,10 @@ export const ImageCarouselStyles = styled.div`
   }
 
   .img {
-    object-fit: fill;
+    object-fit: cover; 
     height: 900px;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 10px;
 
     @media ${devices.bigLaptopsAndDesktops} {
       height: 400px;
