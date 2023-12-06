@@ -12,7 +12,6 @@ import Button from "../Button/Button";
 const HouseCard = ({ houseCards, title }) => {
   const { t } = useTranslation();
 
-
   const settings = {
     dots: true,
     infinite: true,
@@ -25,9 +24,6 @@ const HouseCard = ({ houseCards, title }) => {
 
   return (
     <HouseCardStyles>
-      {/* <div>
-        <h1>{title}</h1>
-      </div> */}
       <div
         animate={{ x: 100 }}
         transition={{ delay: 1 }}

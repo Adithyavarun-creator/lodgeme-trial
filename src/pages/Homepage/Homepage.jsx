@@ -24,6 +24,7 @@ import HouseCard from "../../components/HouseCard/HouseCard";
 import { useTranslation } from "react-i18next";
 import { houseCards } from "../../datas/houseCards";
 import { apartmentDatas } from "../../datas/apartmentDatas";
+import { HomepageSelectStyles } from "../../components/SelectStyles/Select";
 
 const Homepage = () => {
   const { t } = useTranslation();
@@ -91,77 +92,6 @@ const Homepage = () => {
     { value: 10, label: 10 },
   ];
 
-  const styles = {
-    placeholder: (defaultStyles) => {
-      return {
-        ...defaultStyles,
-        color: "#ffffff",
-      };
-    },
-    option: (defaultStyles, state) => ({
-      ...defaultStyles,
-      color: state.isSelected ? "#015151" : "#fff",
-      backgroundColor: state.isSelected ? "#fff" : "#015151",
-    }),
-
-    control: (defaultStyles) => ({
-      ...defaultStyles,
-      backgroundColor: "#015151",
-      // padding: "10px",
-      border: "none",
-      boxShadow: "none",
-      color: "#ffffff",
-      fontSize: "18px",
-      height: "40px",
-      textAlign: "center",
-
-      "@media only screen and (min-width: 1200px)": {
-        ...styles["@media only screen and (min-width: 1200px)"],
-        fontSize: "18px",
-        height: "40px",
-        backgroundColor: "#015151",
-        borderRadius: "10px",
-        textAlign: "center",
-        padding: "0px",
-
-        // width: "300px",
-      },
-      "@media (min-width: 768px) and (max-width: 1024px) ": {
-        ...styles["@media (min-width: 768px) and (max-width: 1024px) "],
-        fontSize: "14px",
-        height: "30px",
-        backgroundColor: "#015151",
-        borderRadius: "10px",
-        textAlign: "center",
-        // width: "150px",
-        padding: "0px",
-        //width: "300px",
-      },
-      "@media (min-width: 481px) and (max-width: 767px) ": {
-        ...styles["@media (min-width: 481px) and (max-width: 767px) "],
-        fontSize: "12px",
-        backgroundColor: "#015151",
-        borderRadius: "10px",
-        height: "30px",
-        textAlign: "center",
-        padding: "0px",
-        // width: "150px",
-        //width: "300px",
-      },
-      "@media (min-width: 280px) and (max-width: 480px) ": {
-        ...styles["@media (min-width: 280px) and (max-width: 480px) "],
-        fontSize: "12px",
-        backgroundColor: "#015151",
-        height: "25px",
-        borderRadius: "10px",
-        textAlign: "center",
-        width: "180px",
-        padding: "0px",
-      },
-    }),
-    singleValue: (defaultStyles) => ({ ...defaultStyles, color: "#fff" }),
-  };
-
   const changeHandler = (value) => {
     setValue(value);
   };
@@ -211,7 +141,7 @@ const Homepage = () => {
               options={options}
               value={value}
               onChange={changeHandler}
-              styles={styles}
+              styles={HomepageSelectStyles}
               name="location"
             />
           </div>
@@ -264,7 +194,7 @@ const Homepage = () => {
               options={personOptions}
               value={noPersons}
               onChange={changePersonHandler}
-              styles={styles}
+              styles={HomepageSelectStyles}
               name="person"
             />
           </div>

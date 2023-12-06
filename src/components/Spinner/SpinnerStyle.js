@@ -7,30 +7,26 @@ export const SpinnerStyles = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 2px;
-  margin-top: 180px;
+  margin-top: 100px;
 
   @media ${devices.bigLaptopsAndDesktops} {
     gap: 5px;
     margin-top: 100px;
     gap: 2px;
-
   }
 
   @media ${devices.tabletsAndIpads} {
     margin-top: 70px;
     gap: 2px;
-
   }
   @media ${devices.smallTabs} {
     margin-top: 80px;
     gap: 2px;
-
   }
 
   @media ${devices.smallMobiles} {
     margin-top: 100px;
     gap: 2px;
-
   }
 
   .spinnerlogobox {
@@ -73,8 +69,7 @@ export const SpinnerStyles = styled.div`
     height: 10em;
   }
   .loader {
-    margin: 20px auto;
-    font-size: 10px;
+    font-size: 12px;
     position: relative;
     text-indent: -9999em;
     border-top: 1.1em solid rgba(1, 81, 81, 0.2);
@@ -86,6 +81,21 @@ export const SpinnerStyles = styled.div`
     transform: translateZ(0);
     -webkit-animation: load8 1.1s infinite linear;
     animation: load8 1.1s infinite linear;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+      font-size: 10px;
+    }
+
+    @media ${devices.tabletsAndIpads} {
+      font-size: 8px;
+    }
+    @media ${devices.smallTabs} {
+      font-size: 6px;
+    }
+
+    @media ${devices.smallMobiles} {
+      font-size: 4px;
+    }
   }
   @-webkit-keyframes load8 {
     0% {

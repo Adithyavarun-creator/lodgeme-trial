@@ -179,12 +179,14 @@ export const SingleHousePageStyles = styled.section`
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     cursor: pointer;
-
+    gap: 8px;
 
     @media ${devices.bigLaptopsAndDesktops} {
+      gap: 8px;
     }
 
     @media ${devices.tabletsAndIpads} {
+      gap: 6px;
     }
     @media ${devices.smallTabs} {
       gap: 2px;
@@ -641,6 +643,7 @@ export const SingleHousePageStyles = styled.section`
     cursor: pointer;
     background-color: ${({ theme }) => theme.colors.primaryColor};
     color: #fff;
+    font-weight: bolder;
 
     @media ${devices.bigLaptopsAndDesktops} {
       padding: 12px 10px;
@@ -1097,10 +1100,10 @@ export const SingleHousePageStyles = styled.section`
     }
   }
 
-  .reservation-details {
+  .reservation-box {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
     font-size: 16px;
     color: darkgray;
     font-weight: bold;
@@ -1119,6 +1122,22 @@ export const SingleHousePageStyles = styled.section`
     @media ${devices.smallMobiles} {
       justify-content: space-between;
       font-size: 7px;
+    }
+  }
+
+  .reservation-details {
+    display: flex;
+    justify-content: space-between;
+
+    @media ${devices.bigLaptopsAndDesktops} {
+    }
+
+    @media ${devices.tabletsAndIpads} {
+    }
+    @media ${devices.smallTabs} {
+    }
+
+    @media ${devices.smallMobiles} {
     }
   }
 

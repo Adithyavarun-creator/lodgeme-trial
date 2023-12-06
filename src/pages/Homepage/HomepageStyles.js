@@ -293,7 +293,7 @@ export const HomepageStyles = styled(motion.div)`
     padding: 12px 16px;
     height: 40px;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
@@ -310,24 +310,31 @@ export const HomepageStyles = styled(motion.div)`
 
     @media ${devices.bigLaptopsAndDesktops} {
       height: 40px;
-      /* font-size: ${({ theme }) => theme.bigScreens.btnFontsize}; */
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: 400;
+
     }
 
     @media ${devices.tabletsAndIpads} {
       height: 40px;
       /* font-size: ${({ theme }) => theme.tabletAndIpadScreens.inputFont}; */
       font-size: 12px;
+      font-weight: 400;
+
     }
 
     @media ${devices.smallTabs} {
       height: 30px;
       font-size: 9px;
+      font-weight: 400;
+
     }
 
     @media ${devices.smallMobiles} {
       height: 30px;
       font-size: 12px;
+      font-weight: 400;
+
     }
   }
 

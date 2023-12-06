@@ -52,6 +52,7 @@ import { MdOutlineSmokeFree } from "react-icons/md";
 import { BiSolidBlanket } from "react-icons/bi";
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import { apartmentDatas } from "../../datas/apartmentDatas";
+import SingleHouseImages from "../../components/SingleHousePage/SingleHouseImages";
 
 const SingleHousePage = () => {
   const { id } = useParams();
@@ -261,77 +262,13 @@ const SingleHousePage = () => {
             </div>
           </div>
           {/* singlehouseimages */}
-          <div>
-            <div className="singlepageposition">
-              <div className="item-1">
-                <img
-                  src={
-                    data?.images
-                      ? data?.images[0]?.imgSrc
-                      : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  }
-                  alt=""
-                  className="imgsubgrid1"
-                />
-              </div>
+          <SingleHouseImages
+            data={data?.images}
+            setShowImages={setShowImages}
+            showImages={showImages}
+          />
 
-              <div className="item-2">
-                <div>
-                  <img
-                    src={
-                      data?.images
-                        ? data?.images[1]?.imgSrc
-                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    }
-                    alt=""
-                    className="imgsubgrid2"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={
-                      data?.images
-                        ? data?.images[2]?.imgSrc
-                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    }
-                    alt=""
-                    className="imgsubgrid2"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={
-                      data?.images
-                        ? data?.images[3]?.imgSrc
-                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    }
-                    alt=""
-                    className="imgsubgrid2"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={
-                      data?.images
-                        ? data?.images[4]?.imgSrc
-                        : "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=3865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    }
-                    alt=""
-                    className="imgsubgrid2"
-                  />
-                </div>
-              </div>
-
-              {/* show more button */}
-              <div className="singlepageshowallimages">
-                <Button
-                  title="View All Photos"
-                  onClick={() => setShowImages(!showImages)}
-                />
-              </div>
-            </div>
-          </div>
-
+          {/* Image Carousel */}
           {showImages && (
             <div className="singlepagecarouselbox">
               <ImageCarousel
@@ -342,6 +279,7 @@ const SingleHousePage = () => {
             </div>
           )}
 
+          {/* House Amenities */}
           <div className="singlepagehouserooms">
             <div className="singlepagehouseroomdetail">
               <PiArmchairFill />
@@ -366,6 +304,7 @@ const SingleHousePage = () => {
             </div>
           </div>
 
+          {/* User Details */}
           <div className="">
             <div className="singlepagehousepublishbox">
               <div>
@@ -492,6 +431,7 @@ const SingleHousePage = () => {
             </div>
           </div>
 
+          {/* Map Location Pin  */}
           <div className="singlepagemapbox" ref={mapRef}>
             <Mapbox />
           </div>
@@ -628,7 +568,6 @@ const SingleHousePage = () => {
               <div>
                 <div className="date-calendar-box">
                   <Select
-                    // className="select"
                     placeholder="Select Persons"
                     options={personOptions}
                     value={noPersons}

@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollTop/ScrollToTop";
 import Spinner from "./components/Spinner/Spinner";
 import Animate from "./Animate";
 import MapView from "./components/MapBox/MapBox";
+import OnlySpinner from "./components/OnlySpinner/OnlySpinner";
 
 const LazyHomepageComponent = React.lazy(() =>
   import("./pages/Homepage/Homepage")
@@ -47,6 +48,8 @@ function App() {
               element={<LazyConditionsPageComponent />}
             />
             <Route path="/animate" element={<Animate />} />
+            <Route path="/spinner" element={<OnlySpinner />} />
+
             <Route
               path="/homes&rooms/:id"
               element={<LazySingleHousePageComponent />}
