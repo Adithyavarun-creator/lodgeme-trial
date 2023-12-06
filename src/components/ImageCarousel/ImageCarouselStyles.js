@@ -90,20 +90,28 @@ export const ImageCarouselStyles = styled.div`
     flex-direction: column;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 30px;
 
     @media ${devices.bigLaptopsAndDesktops} {
-      margin-top: 100px;
+      margin-top: 100px;    margin-bottom: 30px;
+
     }
 
     @media ${devices.tabletsAndIpads} {
       margin-top: 60px;
+      margin-bottom: 30px;
+
     }
     @media ${devices.smallTabs} {
       margin-top: 40px;
+      margin-bottom: 20px;
+
     }
 
     @media ${devices.smallMobiles} {
       margin-top: 20px;
+      margin-bottom: 10px;
+
     }
   }
 
